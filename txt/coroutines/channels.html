@@ -1,0 +1,2725 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>通道 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exception-handling.html" />
+    
+    
+    <link rel="prev" href="flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../index0.html">
+            
+                <a href="../index0.html">
+            
+                    
+                    语言指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../overview.html">
+            
+                <a href="../overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../server-overview.html">
+            
+                <a href="../server-overview.html">
+            
+                    
+                    Kotlin 用于服务器端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../android-overview.html">
+            
+                <a href="../android-overview.html">
+            
+                    
+                    Kotlin 用于 Android 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-overview.html">
+            
+                <a href="../js-overview.html">
+            
+                    
+                    Kotlin 用于 JavaScript 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../native-overview.html">
+            
+                <a href="../native-overview.html">
+            
+                    
+                    Kotlin 用于原生开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../data-science-overview.html">
+            
+                <a href="../data-science-overview.html">
+            
+                    
+                    Kotlin 用于数据科学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../coroutines-overview.html">
+            
+                <a href="../coroutines-overview.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../multiplatform.html">
+            
+                <a href="../multiplatform.html">
+            
+                    
+                    多平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../whatsnew.html">
+            
+                <a href="../whatsnew.html">
+            
+                    
+                    新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../whatsnew1430.html">
+            
+                <a href="../whatsnew1430.html">
+            
+                    
+                    1.4.30 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../whatsnew-plugin-20203.html">
+            
+                <a href="../whatsnew-plugin-20203.html">
+            
+                    
+                    Kotlin 插件 2020.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../whatsnew1420.html">
+            
+                <a href="../whatsnew1420.html">
+            
+                    
+                    1.4.20 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../whatsnew14.html">
+            
+                <a href="../whatsnew14.html">
+            
+                    
+                    1.4 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../whatsnew13.html">
+            
+                <a href="../whatsnew13.html">
+            
+                    
+                    1.3 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../whatsnew12.html">
+            
+                <a href="../whatsnew12.html">
+            
+                    
+                    1.2 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../whatsnew11.html">
+            
+                <a href="../whatsnew11.html">
+            
+                    
+                    1.1 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../basic-syntax.html">
+            
+                <a href="../basic-syntax.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../idioms.html">
+            
+                <a href="../idioms.html">
+            
+                    
+                    习惯用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../coding-conventions.html">
+            
+                <a href="../coding-conventions.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../basics.html">
+            
+                <a href="../basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../basic-types.html">
+            
+                <a href="../basic-types.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../packages.html">
+            
+                <a href="../packages.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../control-flow.html">
+            
+                <a href="../control-flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../returns.html">
+            
+                <a href="../returns.html">
+            
+                    
+                    返回与跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../classes-and-objects.html">
+            
+                <a href="../classes-and-objects.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../classes.html">
+            
+                <a href="../classes.html">
+            
+                    
+                    类与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../properties.html">
+            
+                <a href="../properties.html">
+            
+                    
+                    属性与字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../interfaces.html">
+            
+                <a href="../interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../fun-interfaces.html">
+            
+                <a href="../fun-interfaces.html">
+            
+                    
+                    函数式（SAM）接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../visibility-modifiers.html">
+            
+                <a href="../visibility-modifiers.html">
+            
+                    
+                    可见性修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../extensions.html">
+            
+                <a href="../extensions.html">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../data-classes.html">
+            
+                <a href="../data-classes.html">
+            
+                    
+                    数据类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../sealed-classes.html">
+            
+                <a href="../sealed-classes.html">
+            
+                    
+                    密封类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../generics.html">
+            
+                <a href="../generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nested-classes.html">
+            
+                <a href="../nested-classes.html">
+            
+                    
+                    嵌套类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../enum-classes.html">
+            
+                <a href="../enum-classes.html">
+            
+                    
+                    枚举类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../object-declarations.html">
+            
+                <a href="../object-declarations.html">
+            
+                    
+                    对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../type-aliases.html">
+            
+                <a href="../type-aliases.html">
+            
+                    
+                    类型别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../inline-classes.html">
+            
+                <a href="../inline-classes.html">
+            
+                    
+                    内联类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../delegation.html">
+            
+                <a href="../delegation.html">
+            
+                    
+                    委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../delegated-properties.html">
+            
+                <a href="../delegated-properties.html">
+            
+                    
+                    委托属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../functions-and-lambdas.html">
+            
+                <a href="../functions-and-lambdas.html">
+            
+                    
+                    函数与 Lambda 表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../functions.html">
+            
+                <a href="../functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../lambdas.html">
+            
+                <a href="../lambdas.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../inline-functions.html">
+            
+                <a href="../inline-functions.html">
+            
+                    
+                    内联函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../collections.html">
+            
+                <a href="../collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../collections-overview.html">
+            
+                <a href="../collections-overview.html">
+            
+                    
+                    集合概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../constructing-collections.html">
+            
+                <a href="../constructing-collections.html">
+            
+                    
+                    构造集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../iterators.html">
+            
+                <a href="../iterators.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../ranges.html">
+            
+                <a href="../ranges.html">
+            
+                    
+                    区间与数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../sequences.html">
+            
+                <a href="../sequences.html">
+            
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../collection-operations.html">
+            
+                <a href="../collection-operations.html">
+            
+                    
+                    操作概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../collection-transformations.html">
+            
+                <a href="../collection-transformations.html">
+            
+                    
+                    转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../collection-filtering.html">
+            
+                <a href="../collection-filtering.html">
+            
+                    
+                    过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../collection-plus-minus.html">
+            
+                <a href="../collection-plus-minus.html">
+            
+                    
+                    加减操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../collection-grouping.html">
+            
+                <a href="../collection-grouping.html">
+            
+                    
+                    分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../collection-parts.html">
+            
+                <a href="../collection-parts.html">
+            
+                    
+                    取集合的一部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../collection-elements.html">
+            
+                <a href="../collection-elements.html">
+            
+                    
+                    取单个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../collection-ordering.html">
+            
+                <a href="../collection-ordering.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../collection-aggregate.html">
+            
+                <a href="../collection-aggregate.html">
+            
+                    
+                    聚合操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../collection-write.html">
+            
+                <a href="../collection-write.html">
+            
+                    
+                    集合写操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../list-operations.html">
+            
+                <a href="../list-operations.html">
+            
+                    
+                    List 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../set-operations.html">
+            
+                <a href="../set-operations.html">
+            
+                    
+                    Set 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../map-operations.html">
+            
+                <a href="../map-operations.html">
+            
+                    
+                    Map 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../coroutines.html">
+            
+                <a href="../coroutines.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="coroutines-guide.html">
+            
+                <a href="coroutines-guide.html">
+            
+                    
+                    协程指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="cancellation-and-timeouts.html">
+            
+                <a href="cancellation-and-timeouts.html">
+            
+                    
+                    取消与超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="composing-suspending-functions.html">
+            
+                <a href="composing-suspending-functions.html">
+            
+                    
+                    组合挂起函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="coroutine-context-and-dispatchers.html">
+            
+                <a href="coroutine-context-and-dispatchers.html">
+            
+                    
+                    协程上下文与调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="flow.html">
+            
+                <a href="flow.html">
+            
+                    
+                    异步流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.7" data-path="channels.html">
+            
+                <a href="channels.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="exception-handling.html">
+            
+                <a href="exception-handling.html">
+            
+                    
+                    异常处理与监督
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="shared-mutable-state-and-concurrency.html">
+            
+                <a href="shared-mutable-state-and-concurrency.html">
+            
+                    
+                    共享的可变状态与并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="select-expression.html">
+            
+                <a href="select-expression.html">
+            
+                    
+                    Select 表达式（实验性的）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../multiplatform-programming.html">
+            
+                <a href="../multiplatform-programming.html">
+            
+                    
+                    多平台程序设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../platform-specific-declarations.html">
+            
+                <a href="../platform-specific-declarations.html">
+            
+                    
+                    平台相关声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../building-mpp-with-gradle.html">
+            
+                <a href="../building-mpp-with-gradle.html">
+            
+                    
+                    以 Gradle 构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../mpp-dsl-reference.html">
+            
+                <a href="../mpp-dsl-reference.html">
+            
+                    
+                    多平台 Gradle DSL 参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../other.html">
+            
+                <a href="../other.html">
+            
+                    
+                    更多语言结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../multi-declarations.html">
+            
+                <a href="../multi-declarations.html">
+            
+                    
+                    解构声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../typecasts.html">
+            
+                <a href="../typecasts.html">
+            
+                    
+                    类型检测与转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../this-expressions.html">
+            
+                <a href="../this-expressions.html">
+            
+                    
+                    This 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../equality.html">
+            
+                <a href="../equality.html">
+            
+                    
+                    相等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../operator-overloading.html">
+            
+                <a href="../operator-overloading.html">
+            
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../null-safety.html">
+            
+                <a href="../null-safety.html">
+            
+                    
+                    空安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../exceptions.html">
+            
+                <a href="../exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../annotations.html">
+            
+                <a href="../annotations.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../reflection.html">
+            
+                <a href="../reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../serialization.html">
+            
+                <a href="../serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../scope-functions.html">
+            
+                <a href="../scope-functions.html">
+            
+                    
+                    作用域函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../type-safe-builders.html">
+            
+                <a href="../type-safe-builders.html">
+            
+                    
+                    类型安全的构建器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../opt-in-requirements.html">
+            
+                <a href="../opt-in-requirements.html">
+            
+                    
+                    选择加入要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../corelibs.html">
+            
+                <a href="../corelibs.html">
+            
+                    
+                    核心库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../reflink.html">
+            
+                <a href="../../reflink.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../testlink.html">
+            
+                <a href="../../testlink.html">
+            
+                    
+                    kotlin.test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../reference0.html">
+            
+                <a href="../reference0.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../keyword-reference.html">
+            
+                <a href="../keyword-reference.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../grammar.html">
+            
+                <a href="../grammar.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../code-style-migration-guide.html">
+            
+                <a href="../code-style-migration-guide.html">
+            
+                    
+                    编码风格约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../interop.html">
+            
+                <a href="../interop.html">
+            
+                    
+                    Java 互操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../java-interop.html">
+            
+                <a href="../java-interop.html">
+            
+                    
+                    Kotlin 中调用 Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../java-to-kotlin-interop.html">
+            
+                <a href="../java-to-kotlin-interop.html">
+            
+                    
+                    Java 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../javascript.html">
+            
+                <a href="../javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../js-project-setup.html">
+            
+                <a href="../js-project-setup.html">
+            
+                    
+                    搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../dynamic-type.html">
+            
+                <a href="../dynamic-type.html">
+            
+                    
+                    动态类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../js-interop.html">
+            
+                <a href="../js-interop.html">
+            
+                    
+                    Kotlin 中调用 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../js-to-kotlin-interop.html">
+            
+                <a href="../js-to-kotlin-interop.html">
+            
+                    
+                    JavaScript 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../js-modules.html">
+            
+                <a href="../js-modules.html">
+            
+                    
+                    JavaScript 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../js-reflection.html">
+            
+                <a href="../js-reflection.html">
+            
+                    
+                    JavaScript 反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../javascript-dce.html">
+            
+                <a href="../javascript-dce.html">
+            
+                    
+                    JavaScript DCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../js-ir-compiler.html">
+            
+                <a href="../js-ir-compiler.html">
+            
+                    
+                    IR 编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="../js-external-declarations-with-dukat.html">
+            
+                <a href="../js-external-declarations-with-dukat.html">
+            
+                    
+                    用 Dukat 生成外部声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../native.html">
+            
+                <a href="../native.html">
+            
+                    
+                    原生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../native/concurrency.html">
+            
+                <a href="../native/concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../native/immutability.html">
+            
+                <a href="../native/immutability.html">
+            
+                    
+                    不可变性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../native/libraries.html">
+            
+                <a href="../native/libraries.html">
+            
+                    
+                    Kotlin 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../native/platform_libs.html">
+            
+                <a href="../native/platform_libs.html">
+            
+                    
+                    平台库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../native/c_interop.html">
+            
+                <a href="../native/c_interop.html">
+            
+                    
+                    与 C 语言互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../native/objc_interop.html">
+            
+                <a href="../native/objc_interop.html">
+            
+                    
+                    与 Objective-C 及 Swift 互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../native/cocoapods.html">
+            
+                <a href="../native/cocoapods.html">
+            
+                    
+                    CocoaPods 集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../native/gradle_plugin.html">
+            
+                <a href="../native/gradle_plugin.html">
+            
+                    
+                    Gradle 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../native/debugging.html">
+            
+                <a href="../native/debugging.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../native/faq.html">
+            
+                <a href="../native/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../tools.html">
+            
+                <a href="../tools.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../using-gradle.html">
+            
+                <a href="../using-gradle.html">
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../using-maven.html">
+            
+                <a href="../using-maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../using-ant.html">
+            
+                <a href="../using-ant.html">
+            
+                    
+                    Ant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../compiler-reference.html">
+            
+                <a href="../compiler-reference.html">
+            
+                    
+                    编译器选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../compiler-plugins.html">
+            
+                <a href="../compiler-plugins.html">
+            
+                    
+                    编译器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../kapt.html">
+            
+                <a href="../kapt.html">
+            
+                    
+                    Kapt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../kotlin-doc.html">
+            
+                <a href="../kotlin-doc.html">
+            
+                    
+                    Dokka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../kotlin-osgi.html">
+            
+                <a href="../kotlin-osgi.html">
+            
+                    
+                    OSGi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../evolution.html">
+            
+                <a href="../evolution.html">
+            
+                    
+                    演进
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../evolution/kotlin-evolution.html">
+            
+                <a href="../evolution/kotlin-evolution.html">
+            
+                    
+                    Kotlin 语言演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../evolution/components-stability.html">
+            
+                <a href="../evolution/components-stability.html">
+            
+                    
+                    不同组件的稳定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../compatibility-guide-13.html">
+            
+                <a href="../compatibility-guide-13.html">
+            
+                    
+                    Kotlin 1.3 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../compatibility-guide-14.html">
+            
+                <a href="../compatibility-guide-14.html">
+            
+                    
+                    Kotlin 1.4 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../faq0.html">
+            
+                <a href="../faq0.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../comparison-to-java.html">
+            
+                <a href="../comparison-to-java.html">
+            
+                    
+                    与 Java 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../comparison-to-scala.html">
+            
+                <a href="../comparison-to-scala.html">
+            
+                    
+                    与 Scala 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >通道</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--- TEST_NAME ChannelsGuideTest -->
+<p><strong>&#x76EE;&#x5F55;</strong></p>
+<!--- TOC -->
+<ul>
+<li><a href="#&#x901A;&#x9053;">&#x901A;&#x9053;</a><ul>
+<li><a href="#&#x901A;&#x9053;&#x57FA;&#x7840;">&#x901A;&#x9053;&#x57FA;&#x7840;</a></li>
+<li><a href="#&#x5173;&#x95ED;&#x4E0E;&#x8FED;&#x4EE3;&#x901A;&#x9053;">&#x5173;&#x95ED;&#x4E0E;&#x8FED;&#x4EE3;&#x901A;&#x9053;</a></li>
+<li><a href="#&#x6784;&#x5EFA;&#x901A;&#x9053;&#x751F;&#x4EA7;&#x8005;">&#x6784;&#x5EFA;&#x901A;&#x9053;&#x751F;&#x4EA7;&#x8005;</a></li>
+<li><a href="#&#x7BA1;&#x9053;">&#x7BA1;&#x9053;</a></li>
+<li><a href="#&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x7684;&#x7D20;&#x6570;">&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x7684;&#x7D20;&#x6570;</a></li>
+<li><a href="#&#x6247;&#x51FA;">&#x6247;&#x51FA;</a></li>
+<li><a href="#&#x6247;&#x5165;">&#x6247;&#x5165;</a></li>
+<li><a href="#&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;">&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;</a></li>
+<li><a href="#&#x901A;&#x9053;&#x662F;&#x516C;&#x5E73;&#x7684;">&#x901A;&#x9053;&#x662F;&#x516C;&#x5E73;&#x7684;</a></li>
+<li><a href="#&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;">&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;</a></li>
+</ul>
+</li>
+</ul>
+<!--- END -->
+<h2 id="&#x901A;&#x9053;">&#x901A;&#x9053;</h2>
+<p>&#x5EF6;&#x671F;&#x7684;&#x503C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x4FBF;&#x6377;&#x7684;&#x65B9;&#x6CD5;&#x4F7F;&#x5355;&#x4E2A;&#x503C;&#x5728;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x76F8;&#x4E92;&#x4F20;&#x8F93;&#x3002;
+&#x901A;&#x9053;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5728;&#x6D41;&#x4E2D;&#x4F20;&#x8F93;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x901A;&#x9053;&#x57FA;&#x7840;">&#x901A;&#x9053;&#x57FA;&#x7840;</h3>
+<p>&#x4E00;&#x4E2A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-channel/index.html" target="_blank">Channel</a> &#x662F;&#x4E00;&#x4E2A;&#x548C; <code>BlockingQueue</code> &#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x662F;<!--
+-->&#x5B83;&#x4EE3;&#x66FF;&#x4E86;&#x963B;&#x585E;&#x7684; <code>put</code> &#x64CD;&#x4F5C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x6302;&#x8D77;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-send-channel/send.html" target="_blank">send</a>&#xFF0C;&#x8FD8;&#x66FF;&#x4EE3;&#x4E86;<!--
+-->&#x963B;&#x585E;&#x7684; <code>take</code> &#x64CD;&#x4F5C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x6302;&#x8D77;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-receive-channel/receive.html" target="_blank">receive</a>&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> channel</span> = Channel<span class="hljs-type">&lt;Int&gt;</span>()
+    launch {
+        <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x53EF;&#x80FD;&#x662F;&#x6D88;&#x8017;&#x5927;&#x91CF; CPU &#x8FD0;&#x7B97;&#x7684;&#x5F02;&#x6B65;&#x903B;&#x8F91;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4EC5;&#x4EC5;&#x505A; 5 &#x6B21;&#x6574;&#x6570;&#x7684;&#x5E73;&#x65B9;&#x5E76;&#x53D1;&#x9001;</span>
+        <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span><span class="hljs-number">.5</span>) channel.send(x * x)
+    }
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x6253;&#x5370;&#x4E86; 5 &#x6B21;&#x88AB;&#x63A5;&#x6536;&#x7684;&#x6574;&#x6570;&#xFF1A;</span>
+    repeat(<span class="hljs-number">5</span>) { println(channel.receive()) }
+    println(<span class="hljs-string">&quot;Done!&quot;</span>)
+<span class="hljs-comment">//sampleEnd</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-01.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">1
+4
+9
+16
+25
+Done!
+</code></pre>
+<!--- TEST -->
+<h3 id="&#x5173;&#x95ED;&#x4E0E;&#x8FED;&#x4EE3;&#x901A;&#x9053;">&#x5173;&#x95ED;&#x4E0E;&#x8FED;&#x4EE3;&#x901A;&#x9053;</h3>
+<p>&#x548C;&#x961F;&#x5217;&#x4E0D;&#x540C;&#xFF0C;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x88AB;&#x5173;&#x95ED;&#x6765;&#x8868;&#x660E;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x7684;&#x5143;&#x7D20;&#x5C06;&#x4F1A;&#x8FDB;&#x5165;&#x901A;&#x9053;&#x3002;
+&#x5728;&#x63A5;&#x6536;&#x8005;&#x4E2D;&#x53EF;&#x4EE5;&#x5B9A;&#x671F;&#x7684;&#x4F7F;&#x7528; <code>for</code> &#x5FAA;&#x73AF;&#x6765;&#x4ECE;&#x901A;&#x9053;&#x4E2D;<!--
+-->&#x63A5;&#x6536;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x4ECE;&#x6982;&#x5FF5;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x4E00;&#x4E2A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-send-channel/close.html" target="_blank">close</a> &#x64CD;&#x4F5C;&#x5C31;&#x50CF;&#x5411;&#x901A;&#x9053;&#x53D1;&#x9001;&#x4E86;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5173;&#x95ED;&#x6307;&#x4EE4;&#x3002;
+&#x8FD9;&#x4E2A;&#x8FED;&#x4EE3;&#x505C;&#x6B62;&#x5C31;&#x8BF4;&#x660E;&#x5173;&#x95ED;&#x6307;&#x4EE4;&#x5DF2;&#x7ECF;&#x88AB;&#x63A5;&#x6536;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x4FDD;&#x8BC1;<!--
+-->&#x6240;&#x6709;&#x5148;&#x524D;&#x53D1;&#x9001;&#x51FA;&#x53BB;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5728;&#x901A;&#x9053;&#x5173;&#x95ED;&#x524D;&#x88AB;&#x63A5;&#x6536;&#x5230;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> channel</span> = Channel<span class="hljs-type">&lt;Int&gt;</span>()
+    launch {
+        <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span><span class="hljs-number">.5</span>) channel.send(x * x)
+        channel.close() <span class="hljs-comment">// &#x6211;&#x4EEC;&#x7ED3;&#x675F;&#x53D1;&#x9001;</span>
+    }
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528; `for` &#x5FAA;&#x73AF;&#x6765;&#x6253;&#x5370;&#x6240;&#x6709;&#x88AB;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x76F4;&#x5230;&#x901A;&#x9053;&#x88AB;&#x5173;&#x95ED;&#xFF09;</span>
+    <span class="hljs-keyword">for</span> (y <span class="hljs-keyword">in</span> channel) println(y)
+    println(<span class="hljs-string">&quot;Done!&quot;</span>)
+<span class="hljs-comment">//sampleEnd</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-02.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<!--- TEST 
+1
+4
+9
+16
+25
+Done!
+-->
+<h3 id="&#x6784;&#x5EFA;&#x901A;&#x9053;&#x751F;&#x4EA7;&#x8005;">&#x6784;&#x5EFA;&#x901A;&#x9053;&#x751F;&#x4EA7;&#x8005;</h3>
+<p>&#x534F;&#x7A0B;&#x751F;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x5143;&#x7D20;&#x7684;&#x6A21;&#x5F0F;&#x5F88;&#x5E38;&#x89C1;&#x3002;
+&#x8FD9;&#x662F; <em>&#x751F;&#x4EA7;&#x8005;&#x2014;&#x2014;&#x6D88;&#x8D39;&#x8005;</em> &#x6A21;&#x5F0F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5E76;&#x4E14;&#x7ECF;&#x5E38;&#x80FD;&#x5728;&#x5E76;&#x53D1;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x770B;&#x5230;&#x5B83;&#x3002;
+&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x751F;&#x4EA7;&#x8005;&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x901A;&#x9053;&#x4F5C;&#x4E3A;&#x5B83;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x8FD9;&#x4E0E;<!--
+-->&#x5FC5;&#x987B;&#x4ECE;&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x5E38;&#x8BC6;&#x76F8;&#x8FDD;&#x6096;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/produce.html" target="_blank">produce</a> &#x7684;&#x4FBF;&#x6377;&#x7684;&#x534F;&#x7A0B;&#x6784;&#x5EFA;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x7AEF;&#x6B63;&#x786E;&#x5DE5;&#x4F5C;&#xFF0C;
+&#x5E76;&#x4E14;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6269;&#x5C55;&#x51FD;&#x6570; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/consume-each.html" target="_blank">consumeEach</a> &#x5728;&#x6D88;&#x8D39;&#x8005;&#x7AEF;&#x66FF;&#x4EE3; <code>for</code> &#x5FAA;&#x73AF;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">produceSquares</span><span class="hljs-params">()</span>: ReceiveChannel<span class="hljs-type">&lt;Int&gt;</span> = produce {</span>
+    <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span><span class="hljs-number">.5</span>) send(x * x)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> squares</span> = produceSquares()
+    squares.consumeEach { println(it) }
+    println(<span class="hljs-string">&quot;Done!&quot;</span>)
+<span class="hljs-comment">//sampleEnd</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-03.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<!--- TEST 
+1
+4
+9
+16
+25
+Done!
+-->
+<h3 id="&#x7BA1;&#x9053;">&#x7BA1;&#x9053;</h3>
+<p>&#x7BA1;&#x9053;&#x662F;&#x4E00;&#x79CD;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x5728;&#x6D41;&#x4E2D;&#x5F00;&#x59CB;&#x751F;&#x4EA7;&#x53EF;&#x80FD;&#x65E0;&#x7A77;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">produceNumbers</span><span class="hljs-params">()</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> x</span> = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) send(x++) <span class="hljs-comment">// &#x5728;&#x6D41;&#x4E2D;&#x5F00;&#x59CB;&#x4ECE; 1 &#x751F;&#x4EA7;&#x65E0;&#x7A77;&#x591A;&#x4E2A;&#x6574;&#x6570;</span>
+}
+</code></pre>
+<p>&#x5E76;&#x4E14;&#x53E6;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x5F00;&#x59CB;&#x6D88;&#x8D39;&#x8FD9;&#x4E9B;&#x6D41;&#xFF0C;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x751F;&#x4EA7;&#x4E86;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x7ED3;&#x679C;&#x3002;
+&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5BF9;&#x8FD9;&#x4E9B;&#x6570;&#x5B57;&#x4EC5;&#x4EC5;&#x505A;&#x4E86;&#x5E73;&#x65B9;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">square</span><span class="hljs-params">(numbers: <span class="hljs-type">ReceiveChannel&lt;Int&gt;</span>)</span>: ReceiveChannel<span class="hljs-type">&lt;Int&gt;</span> = produce {</span>
+    <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> numbers) send(x * x)
+}
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x7684;&#x4EE3;&#x7801;&#x542F;&#x52A8;&#x5E76;&#x8FDE;&#x63A5;&#x4E86;&#x6574;&#x4E2A;&#x7BA1;&#x9053;&#xFF1A;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> numbers</span> = produceNumbers() <span class="hljs-comment">// &#x4ECE; 1 &#x5F00;&#x59CB;&#x751F;&#x6210;&#x6574;&#x6570;</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> squares</span> = square(numbers) <span class="hljs-comment">// &#x6574;&#x6570;&#x6C42;&#x5E73;&#x65B9;</span>
+    repeat(<span class="hljs-number">5</span>) {
+        println(squares.receive()) <span class="hljs-comment">// &#x8F93;&#x51FA;&#x524D;&#x4E94;&#x4E2A;</span>
+    }
+    println(<span class="hljs-string">&quot;Done!&quot;</span>) <span class="hljs-comment">// &#x81F3;&#x6B64;&#x5DF2;&#x5B8C;&#x6210;</span>
+    coroutineContext.cancelChildren() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x5B50;&#x534F;&#x7A0B;</span>
+<span class="hljs-comment">//sampleEnd</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">produceNumbers</span><span class="hljs-params">()</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> x</span> = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) send(x++) <span class="hljs-comment">// &#x4ECE; 1 &#x5F00;&#x59CB;&#x7684;&#x65E0;&#x9650;&#x7684;&#x6574;&#x6570;&#x6D41;</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">square</span><span class="hljs-params">(numbers: <span class="hljs-type">ReceiveChannel&lt;Int&gt;</span>)</span>: ReceiveChannel<span class="hljs-type">&lt;Int&gt;</span> = produce {</span>
+    <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> numbers) send(x * x)
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-04.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<!--- TEST 
+1
+4
+9
+16
+25
+Done!
+-->
+<blockquote>
+<p>&#x6240;&#x6709;&#x521B;&#x5EFA;&#x4E86;&#x534F;&#x7A0B;&#x7684;&#x51FD;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x5728;&#x4E86; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html" target="_blank">CoroutineScope</a> &#x7684;&#x6269;&#x5C55;&#x4E0A;&#xFF0C;
+&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F9D;&#x9760;<a href="https://kotlinlang.org/docs/reference/coroutines/composing-suspending-functions.html#structured-concurrency-with-async" target="_blank">&#x7ED3;&#x6784;&#x5316;&#x5E76;&#x53D1;</a>&#x6765;&#x786E;&#x4FDD;<!--
+-->&#x6CA1;&#x6709;&#x5E38;&#x9A7B;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5168;&#x5C40;&#x534F;&#x7A0B;&#x3002;</p>
+</blockquote>
+<h3 id="&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x7684;&#x7D20;&#x6570;">&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x7684;&#x7D20;&#x6570;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x6781;&#x7AEF;&#x7684;&#x4F8B;&#x5B50;&#x2014;&#x2014;&#x5728;&#x534F;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7BA1;&#x9053;&#x6765;&#x751F;&#x6210;<!--
+-->&#x7D20;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x5F00;&#x542F;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x65E0;&#x9650;&#x5E8F;&#x5217;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">numbersFrom</span><span class="hljs-params">(start: <span class="hljs-type">Int</span>)</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> x</span> = start
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) send(x++) <span class="hljs-comment">// &#x5F00;&#x542F;&#x4E86;&#x4E00;&#x4E2A;&#x65E0;&#x9650;&#x7684;&#x6574;&#x6570;&#x6D41;</span>
+}
+</code></pre>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x7BA1;&#x9053;&#x9636;&#x6BB5;&#x4E2D;&#x8FC7;&#x6EE4;&#x4E86;&#x6765;&#x6E90;&#x4E8E;&#x6D41;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x5220;&#x9664;&#x4E86;&#x6240;&#x6709;<!--
+-->&#x53EF;&#x4EE5;&#x88AB;&#x7ED9;&#x5B9A;&#x7D20;&#x6570;&#x6574;&#x9664;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">filter</span><span class="hljs-params">(numbers: <span class="hljs-type">ReceiveChannel&lt;Int&gt;, prime: Int</span>)</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> numbers) <span class="hljs-keyword">if</span> (x % prime != <span class="hljs-number">0</span>) send(x)
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5F00;&#x542F;&#x4E86;&#x4E00;&#x4E2A;&#x4ECE; 2 &#x5F00;&#x59CB;&#x7684;&#x6570;&#x5B57;&#x6D41;&#x7BA1;&#x9053;&#xFF0C;&#x4ECE;&#x5F53;&#x524D;&#x7684;&#x901A;&#x9053;&#x4E2D;&#x53D6;&#x4E00;&#x4E2A;&#x7D20;&#x6570;&#xFF0C;
+&#x5E76;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x7684;&#x7D20;&#x6570;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x6D41;&#x6C34;&#x7EBF;&#x9636;&#x6BB5;&#xFF1A;</p>
+<pre><code>numbersFrom(2) -&gt; filter(2) -&gt; filter(3) -&gt; filter(5) -&gt; filter(7) &#x2026;&#x2026;
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6253;&#x5370;&#x4E86;&#x524D;&#x5341;&#x4E2A;&#x7D20;&#x6570;&#xFF0C;
+&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x8FD0;&#x884C;&#x6574;&#x4E2A;&#x7BA1;&#x9053;&#x3002;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684;&#x534F;&#x7A0B;&#x5728;<!--
+-->&#x8BE5;&#x4E3B;&#x534F;&#x7A0B; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html" target="_blank">runBlocking</a> &#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x88AB;&#x542F;&#x52A8;&#x5B8C;&#x6210;&#x3002;
+&#x6211;&#x4EEC;&#x4E0D;&#x5FC5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x663E;&#x5F0F;&#x7684;&#x5217;&#x8868;&#x6765;&#x4FDD;&#x5B58;&#x6240;&#x6709;&#x88AB;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x7684;&#x534F;&#x7A0B;&#x3002;
+&#x6211;&#x4EEC;&#x4F7F;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/kotlin.coroutines.-coroutine-context/cancel-children.html" target="_blank">cancelChildren</a>
+&#x6269;&#x5C55;&#x51FD;&#x6570;&#x5728;&#x6211;&#x4EEC;&#x6253;&#x5370;&#x4E86;&#x524D;&#x5341;&#x4E2A;&#x7D20;&#x6570;&#x4EE5;&#x540E;<!--
+-->&#x6765;&#x53D6;&#x6D88;&#x6240;&#x6709;&#x7684;&#x5B50;&#x534F;&#x7A0B;&#x3002;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> cur</span> = numbersFrom(<span class="hljs-number">2</span>)
+    repeat(<span class="hljs-number">10</span>) {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> prime</span> = cur.receive()
+        println(prime)
+        cur = filter(cur, prime)
+    }
+    coroutineContext.cancelChildren() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x6240;&#x6709;&#x7684;&#x5B50;&#x534F;&#x7A0B;&#x6765;&#x8BA9;&#x4E3B;&#x534F;&#x7A0B;&#x7ED3;&#x675F;</span>
+<span class="hljs-comment">//sampleEnd    </span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">numbersFrom</span><span class="hljs-params">(start: <span class="hljs-type">Int</span>)</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> x</span> = start
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) send(x++) <span class="hljs-comment">// &#x4ECE; start &#x5F00;&#x59CB;&#x8FC7;&#x6EE4;&#x6574;&#x6570;&#x6D41;</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">filter</span><span class="hljs-params">(numbers: <span class="hljs-type">ReceiveChannel&lt;Int&gt;, prime: Int</span>)</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-keyword">for</span> (x <span class="hljs-keyword">in</span> numbers) <span class="hljs-keyword">if</span> (x % prime != <span class="hljs-number">0</span>) send(x)
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-05.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+</code></pre>
+<!--- TEST -->
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x4F7F;&#x7528;
+<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/iterator.html" target="_blank"><code>iterator</code></a>
+&#x534F;&#x7A0B;&#x6784;&#x5EFA;&#x5668;&#x6765;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x76F8;&#x4F3C;&#x7684;&#x7BA1;&#x9053;&#x3002;
+&#x4F7F;&#x7528; <code>iterator</code> &#x66FF;&#x6362; <code>produce</code>&#x3001;<code>yield</code> &#x66FF;&#x6362; <code>send</code>&#x3001;<code>next</code> &#x66FF;&#x6362; <code>receive</code>&#x3001;
+<code>Iterator</code> &#x66FF;&#x6362; <code>ReceiveChannel</code> &#x6765;&#x6446;&#x8131;&#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x4F60;&#x5C06;&#x4E0D;&#x518D;&#x9700;&#x8981; <code>runBlocking</code>&#x3002;
+&#x7136;&#x800C;&#xFF0C;&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5728; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html" target="_blank">Dispatchers.Default</a> &#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x8FD0;&#x884C;&#x5B83;&#xFF0C;&#x4F7F;&#x7528;&#x901A;&#x9053;&#x7684;&#x7BA1;&#x9053;&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E;<!--
+-->&#x5B83;&#x53EF;&#x4EE5;&#x5145;&#x5206;&#x5229;&#x7528;&#x591A;&#x6838;&#x5FC3; CPU&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x4E0D;&#x5207;&#x5B9E;&#x9645;&#x7684;&#x5BFB;&#x627E;&#x7D20;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;&#x7BA1;&#x9053;&#x8C03;&#x7528;&#x4E86;&#x53E6;&#x5916;&#x7684;&#x4E00;&#x4E9B;<!--
+-->&#x6302;&#x8D77;&#x4E2D;&#x7684;&#x8C03;&#x7528;&#xFF08;&#x5C31;&#x50CF;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#xFF09;&#x5E76;&#x4E14;&#x8FD9;&#x4E9B;&#x7BA1;&#x9053;&#x4E0D;&#x80FD;<!--
+-->&#x5185;&#x7F6E;&#x4F7F;&#x7528; <code>sequence</code>/<code>iterator</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x4E0D;&#x88AB;&#x5141;&#x8BB8;&#x968F;&#x610F;&#x7684;&#x6302;&#x8D77;&#xFF0C;&#x4E0D;&#x50CF;
+<code>produce</code> &#x662F;&#x5B8C;&#x5168;&#x5F02;&#x6B65;&#x7684;&#x3002;</p>
+<h3 id="&#x6247;&#x51FA;">&#x6247;&#x51FA;</h3>
+<p>&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x4E5F;&#x8BB8;&#x4F1A;&#x63A5;&#x6536;&#x76F8;&#x540C;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x5728;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x5206;&#x5E03;&#x5F0F;&#x5DE5;&#x4F5C;&#x3002;
+&#x8BA9;&#x6211;&#x4EEC;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x5B9A;&#x671F;&#x4EA7;&#x751F;&#x6574;&#x6570;&#x7684;&#x751F;&#x4EA7;&#x8005;&#x534F;&#x7A0B;
+&#xFF08;&#x6BCF;&#x79D2;&#x5341;&#x4E2A;&#x6570;&#x5B57;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">produceNumbers</span><span class="hljs-params">()</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> x</span> = <span class="hljs-number">1</span> <span class="hljs-comment">// &#x4ECE; 1 &#x5F00;&#x59CB;</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+        send(x++) <span class="hljs-comment">// &#x4EA7;&#x751F;&#x4E0B;&#x4E00;&#x4E2A;&#x6570;&#x5B57;</span>
+        delay(<span class="hljs-number">100</span>) <span class="hljs-comment">// &#x7B49;&#x5F85; 0.1 &#x79D2;</span>
+    }
+}
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x51E0;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x534F;&#x7A0B;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5B83;&#x4EEC;&#x53EA;&#x662F;&#x6253;&#x5370;&#x5B83;&#x4EEC;&#x7684; id &#x548C;<!--
+-->&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x5B57;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">launchProcessor</span><span class="hljs-params">(id: <span class="hljs-type">Int, channel: ReceiveChannel&lt;Int&gt;</span>)</span> = launch {</span>
+    <span class="hljs-keyword">for</span> (msg <span class="hljs-keyword">in</span> channel) {
+        println(<span class="hljs-string">&quot;Processor #$id received $msg&quot;</span>)
+    }    
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x542F;&#x52A8;&#x4E94;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x534F;&#x7A0B;&#x5E76;&#x8BA9;&#x5B83;&#x4EEC;&#x5DE5;&#x4F5C;&#x5C06;&#x8FD1;&#x4E00;&#x79D2;&#x3002;&#x770B;&#x770B;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> producer</span> = produceNumbers()
+    repeat(<span class="hljs-number">5</span>) { launchProcessor(it, producer) }
+    delay(<span class="hljs-number">950</span>)
+    producer.cancel() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x534F;&#x7A0B;&#x751F;&#x4EA7;&#x8005;&#x4ECE;&#x800C;&#x5C06;&#x5B83;&#x4EEC;&#x5168;&#x90E8;&#x6740;&#x6B7B;</span>
+<span class="hljs-comment">//sampleEnd</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">produceNumbers</span><span class="hljs-params">()</span> = produce<span class="hljs-type">&lt;Int&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> x</span> = <span class="hljs-number">1</span> <span class="hljs-comment">// start from 1</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+        send(x++) <span class="hljs-comment">// &#x4EA7;&#x751F;&#x4E0B;&#x4E00;&#x4E2A;&#x6570;&#x5B57;</span>
+        delay(<span class="hljs-number">100</span>) <span class="hljs-comment">// &#x7B49;&#x5F85; 0.1 &#x79D2;</span>
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> CoroutineScope.<span class="hljs-title">launchProcessor</span><span class="hljs-params">(id: <span class="hljs-type">Int, channel: ReceiveChannel&lt;Int&gt;</span>)</span> = launch {</span>
+    <span class="hljs-keyword">for</span> (msg <span class="hljs-keyword">in</span> channel) {
+        println(<span class="hljs-string">&quot;Processor #$id received $msg&quot;</span>)
+    }    
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-06.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8BE5;&#x8F93;&#x51FA;&#x5C06;&#x7C7B;&#x4F3C;&#x4E8E;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5C3D;&#x7BA1;&#x63A5;&#x6536;<!--
+-->&#x6BCF;&#x4E2A;&#x7279;&#x5B9A;&#x6574;&#x6570;&#x7684;&#x5904;&#x7406;&#x5668; id &#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x540C;&#xFF1A;</p>
+<pre><code>Processor #2 received 1
+Processor #4 received 2
+Processor #0 received 3
+Processor #1 received 4
+Processor #3 received 5
+Processor #2 received 6
+Processor #4 received 7
+Processor #0 received 8
+Processor #1 received 9
+Processor #3 received 10
+</code></pre><!--- TEST lines.size == 10 && lines.withIndex().all { (i, line) -> line.startsWith("Processor #") && line.endsWith(" received ${i + 1}") } -->
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x53D6;&#x6D88;&#x751F;&#x4EA7;&#x8005;&#x534F;&#x7A0B;&#x5C06;&#x5173;&#x95ED;&#x5B83;&#x7684;&#x901A;&#x9053;&#xFF0C;&#x4ECE;&#x800C;&#x6700;&#x7EC8;&#x7EC8;&#x6B62;<!--
+-->&#x5904;&#x7406;&#x5668;&#x534F;&#x7A0B;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x6B64;&#x901A;&#x9053;&#x4E0A;&#x7684;&#x8FED;&#x4EE3;&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#xFF0C;&#x6CE8;&#x610F;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x4F7F;&#x7528; <code>for</code> &#x5FAA;&#x73AF;&#x663E;&#x5F0F;&#x8FED;&#x4EE3;&#x901A;&#x9053;&#x4EE5;&#x5728; <code>launchProcessor</code> &#x4EE3;&#x7801;&#x4E2D;&#x6267;&#x884C;&#x6247;&#x51FA;&#x3002;
+&#x4E0E; <code>consumeEach</code> &#x4E0D;&#x540C;&#xFF0C;&#x8FD9;&#x4E2A; <code>for</code> &#x5FAA;&#x73AF;&#x662F;&#x5B89;&#x5168;&#x5B8C;&#x7F8E;&#x5730;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x7684;&#x3002;&#x5982;&#x679C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x5668;<!--
+-->&#x534F;&#x7A0B;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x5176;&#x5B83;&#x7684;&#x5904;&#x7406;&#x5668;&#x534F;&#x7A0B;&#x4ECD;&#x7136;&#x4F1A;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x901A;&#x9053;&#xFF0C;&#x800C;&#x901A;&#x8FC7; <code>consumeEach</code>
+&#x7F16;&#x5199;&#x7684;&#x5904;&#x7406;&#x5668;&#x59CB;&#x7EC8;&#x5728;&#x6B63;&#x5E38;&#x6216;&#x975E;&#x6B63;&#x5E38;&#x5B8C;&#x6210;&#x65F6;&#x6D88;&#x8017;&#xFF08;&#x53D6;&#x6D88;&#xFF09;&#x5E95;&#x5C42;&#x901A;&#x9053;&#x3002;</p>
+<h3 id="&#x6247;&#x5165;">&#x6247;&#x5165;</h3>
+<p>&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x3002;
+&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x901A;&#x9053;&#xFF0C;&#x548C;&#x4E00;&#x4E2A;&#x5728;&#x8FD9;&#x4E2A;&#x901A;&#x9053;&#x4E2D;<!--
+-->&#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x5EF6;&#x8FDF;&#x53CD;&#x590D;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6302;&#x8D77;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-kotlin">suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">sendString</span><span class="hljs-params">(channel: <span class="hljs-type">SendChannel&lt;String&gt;, s: String, time: Long</span>)</span> {</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+        delay(time)
+        channel.send(s)
+    }
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x542F;&#x52A8;&#x4E86;&#x51E0;&#x4E2A;&#x53D1;&#x9001;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x534F;&#x7A0B;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;
+&#xFF08;&#x5728;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x4F5C;&#x4E3A;&#x4E3B;&#x534F;&#x7A0B;&#x7684;&#x5B50;&#x534F;&#x7A0B;&#x6765;&#x542F;&#x52A8;&#x5B83;&#x4EEC;&#xFF09;&#xFF1A;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> channel</span> = Channel<span class="hljs-type">&lt;String&gt;</span>()
+    launch { sendString(channel, <span class="hljs-string">&quot;foo&quot;</span>, <span class="hljs-number">200</span>L) }
+    launch { sendString(channel, <span class="hljs-string">&quot;BAR!&quot;</span>, <span class="hljs-number">500</span>L) }
+    repeat(<span class="hljs-number">6</span>) { <span class="hljs-comment">// &#x63A5;&#x6536;&#x524D;&#x516D;&#x4E2A;</span>
+        println(channel.receive())
+    }
+    coroutineContext.cancelChildren() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x6240;&#x6709;&#x5B50;&#x534F;&#x7A0B;&#x6765;&#x8BA9;&#x4E3B;&#x534F;&#x7A0B;&#x7ED3;&#x675F;</span>
+<span class="hljs-comment">//sampleEnd</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">sendString</span><span class="hljs-params">(channel: <span class="hljs-type">SendChannel&lt;String&gt;, s: String, time: Long</span>)</span> {</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+        delay(time)
+        channel.send(s)
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-07.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">foo
+foo
+BAR!
+foo
+foo
+BAR!
+</code></pre>
+<!--- TEST -->
+<h3 id="&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;">&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;</h3>
+<p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x5C55;&#x793A;&#x7684;&#x901A;&#x9053;&#x90FD;&#x662F;&#x6CA1;&#x6709;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x3002;&#x65E0;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#x5728;&#x53D1;&#x9001;&#x8005;&#x548C;&#x63A5;&#x6536;&#x8005;&#x76F8;&#x9047;&#x65F6;<!--
+-->&#x4F20;&#x8F93;&#x5143;&#x7D20;&#xFF08;&#x4E5F;&#x79F0;&#x201C;&#x5BF9;&#x63A5;&#x201D;&#xFF09;&#x3002;&#x5982;&#x679C;&#x53D1;&#x9001;&#x5148;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5219;&#x5B83;&#x5C06;&#x88AB;&#x6302;&#x8D77;&#x76F4;&#x5230;&#x63A5;&#x6536;&#x88AB;&#x8C03;&#x7528;&#xFF0C;
+&#x5982;&#x679C;&#x63A5;&#x6536;&#x5148;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5C06;&#x88AB;&#x6302;&#x8D77;&#x76F4;&#x5230;&#x53D1;&#x9001;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+<p><a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-channel.html" target="_blank">Channel()</a> &#x5DE5;&#x5382;&#x51FD;&#x6570;&#x4E0E; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/produce.html" target="_blank">produce</a> &#x5EFA;&#x9020;&#x5668;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570; <code>capacity</code>
+&#x6765;&#x6307;&#x5B9A; <em>&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;</em> &#x3002;&#x7F13;&#x51B2;&#x5141;&#x8BB8;&#x53D1;&#x9001;&#x8005;&#x5728;&#x88AB;&#x6302;&#x8D77;&#x524D;&#x53D1;&#x9001;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;
+&#x5C31;&#x50CF; <code>BlockingQueue</code> &#x6709;&#x6307;&#x5B9A;&#x7684;&#x5BB9;&#x91CF;&#x4E00;&#x6837;&#xFF0C;&#x5F53;&#x7F13;&#x51B2;&#x533A;&#x88AB;&#x5360;&#x6EE1;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x4F1A;&#x5F15;&#x8D77;&#x963B;&#x585E;&#x3002;</p>
+<p>&#x770B;&#x770B;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x7684;&#x8868;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> channel</span> = Channel<span class="hljs-type">&lt;Int&gt;</span>(<span class="hljs-number">4</span>) <span class="hljs-comment">// &#x542F;&#x52A8;&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> sender</span> = launch { <span class="hljs-comment">// &#x542F;&#x52A8;&#x53D1;&#x9001;&#x8005;&#x534F;&#x7A0B;</span>
+        repeat(<span class="hljs-number">10</span>) {
+            println(<span class="hljs-string">&quot;Sending $it&quot;</span>) <span class="hljs-comment">// &#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53D1;&#x9001;&#x524D;&#x6253;&#x5370;&#x5B83;&#x4EEC;</span>
+            channel.send(it) <span class="hljs-comment">// &#x5C06;&#x5728;&#x7F13;&#x51B2;&#x533A;&#x88AB;&#x5360;&#x6EE1;&#x65F6;&#x6302;&#x8D77;</span>
+        }
+    }
+    <span class="hljs-comment">// &#x6CA1;&#x6709;&#x63A5;&#x6536;&#x5230;&#x4E1C;&#x897F;&#x2026;&#x2026;&#x53EA;&#x662F;&#x7B49;&#x5F85;&#x2026;&#x2026;</span>
+    delay(<span class="hljs-number">1000</span>)
+    sender.cancel() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x53D1;&#x9001;&#x8005;&#x534F;&#x7A0B;</span>
+<span class="hljs-comment">//sampleEnd    </span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-08.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x4F7F;&#x7528;&#x7F13;&#x51B2;&#x901A;&#x9053;&#x5E76;&#x7ED9; capacity &#x53C2;&#x6570;&#x4F20;&#x5165; <em>&#x56DB;</em> &#x5B83;&#x5C06;&#x6253;&#x5370;&#x201C;sending&#x201D; <em>&#x4E94;</em> &#x6B21;&#xFF1A;</p>
+<pre><code class="lang-text">Sending 0
+Sending 1
+Sending 2
+Sending 3
+Sending 4
+</code></pre>
+<!--- TEST -->
+<p>&#x524D;&#x56DB;&#x4E2A;&#x5143;&#x7D20;&#x88AB;&#x52A0;&#x5165;&#x5230;&#x4E86;&#x7F13;&#x51B2;&#x533A;&#x5E76;&#x4E14;&#x53D1;&#x9001;&#x8005;&#x5728;&#x8BD5;&#x56FE;&#x53D1;&#x9001;&#x7B2C;&#x4E94;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x88AB;&#x6302;&#x8D77;&#x3002;</p>
+<h3 id="&#x901A;&#x9053;&#x662F;&#x516C;&#x5E73;&#x7684;">&#x901A;&#x9053;&#x662F;&#x516C;&#x5E73;&#x7684;</h3>
+<p>&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x64CD;&#x4F5C;&#x662F; <em>&#x516C;&#x5E73;&#x7684;</em> &#x5E76;&#x4E14;&#x5C0A;&#x91CD;&#x8C03;&#x7528;&#x5B83;&#x4EEC;&#x7684;<!--
+-->&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x3002;&#x5B83;&#x4EEC;&#x9075;&#x5B88;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x539F;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x8C03;&#x7528; <code>receive</code>
+&#x5E76;&#x5F97;&#x5230;&#x4E86;&#x5143;&#x7D20;&#x3002;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x4E24;&#x4E2A;&#x534F;&#x7A0B;&#x201C;&#x4E52;&#x201D;&#x548C;&#x201C;&#x4E53;&#x201D;&#x90FD;<!--
+-->&#x4ECE;&#x5171;&#x4EAB;&#x7684;&#x201C;&#x684C;&#x5B50;&#x201D;&#x901A;&#x9053;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x201C;&#x7403;&#x201D;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-comment">//sampleStart</span>
+data <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span></span>(<span class="hljs-variable"><span class="hljs-keyword">var</span> hits</span>: <span class="hljs-keyword">Int</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> table</span> = Channel<span class="hljs-type">&lt;Ball&gt;</span>() <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x7684; table&#xFF08;&#x684C;&#x5B50;&#xFF09;</span>
+    launch { player(<span class="hljs-string">&quot;ping&quot;</span>, table) }
+    launch { player(<span class="hljs-string">&quot;pong&quot;</span>, table) }
+    table.send(Ball(<span class="hljs-number">0</span>)) <span class="hljs-comment">// &#x4E52;&#x4E53;&#x7403;</span>
+    delay(<span class="hljs-number">1000</span>) <span class="hljs-comment">// &#x5EF6;&#x8FDF; 1 &#x79D2;&#x949F;</span>
+    coroutineContext.cancelChildren() <span class="hljs-comment">// &#x6E38;&#x620F;&#x7ED3;&#x675F;&#xFF0C;&#x53D6;&#x6D88;&#x5B83;&#x4EEC;</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">player</span><span class="hljs-params">(name: <span class="hljs-type">String, table: Channel&lt;Ball&gt;</span>)</span> {</span>
+    <span class="hljs-keyword">for</span> (ball <span class="hljs-keyword">in</span> table) { <span class="hljs-comment">// &#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x63A5;&#x6536;&#x7403;</span>
+        ball.hits++
+        println(<span class="hljs-string">&quot;$name $ball&quot;</span>)
+        delay(<span class="hljs-number">300</span>) <span class="hljs-comment">// &#x7B49;&#x5F85;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;</span>
+        table.send(ball) <span class="hljs-comment">// &#x5C06;&#x7403;&#x53D1;&#x9001;&#x56DE;&#x53BB;</span>
+    }
+}
+<span class="hljs-comment">//sampleEnd</span>
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-09.kt">&#x8FD9;&#x91CC;</a>&#x5F97;&#x5230;&#x5B8C;&#x6574;&#x4EE3;&#x7801;</p>
+</blockquote>
+<p>&#x201C;&#x4E52;&#x201D;&#x534F;&#x7A0B;&#x9996;&#x5148;&#x88AB;&#x542F;&#x52A8;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x9996;&#x5148;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x7403;&#x3002;&#x751A;&#x81F3;&#x867D;&#x7136;&#x201C;&#x4E52;&#x201D;
+&#x534F;&#x7A0B;&#x5728;&#x5C06;&#x7403;&#x53D1;&#x9001;&#x4F1A;&#x684C;&#x5B50;&#x4EE5;&#x540E;&#x7ACB;&#x5373;&#x5F00;&#x59CB;&#x63A5;&#x6536;&#xFF0C;&#x4F46;&#x662F;&#x7403;&#x8FD8;&#x662F;&#x88AB;&#x201C;&#x4E53;&#x201D;
+&#x534F;&#x7A0B;&#x63A5;&#x6536;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4E00;&#x76F4;&#x5728;&#x7B49;&#x5F85;&#x7740;&#x63A5;&#x6536;&#x7403;&#xFF1A;</p>
+<pre><code class="lang-text">ping Ball(hits=1)
+pong Ball(hits=2)
+ping Ball(hits=3)
+pong Ball(hits=4)
+</code></pre>
+<!--- TEST -->
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x901A;&#x9053;&#x6267;&#x884C;&#x65F6;&#x7531;&#x4E8E;&#x6267;&#x884C;&#x8005;&#x7684;&#x6027;&#x8D28;&#x800C;&#x770B;&#x8D77;&#x6765;<!--
+-->&#x4E0D;&#x90A3;&#x4E48;&#x516C;&#x5E73;&#x3002;&#x70B9;&#x51FB;<a href="https://github.com/Kotlin/kotlinx.coroutines/issues/111" target="_blank">&#x8FD9;&#x4E2A;&#x63D0;&#x6848;</a>&#x6765;&#x67E5;&#x770B;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+<h3 id="&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;">&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;</h3>
+<p>&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x522B;&#x7684;&#x4F1A;&#x5408;&#x901A;&#x9053;&#xFF0C;&#x6BCF;&#x6B21;&#x7ECF;&#x8FC7;&#x7279;&#x5B9A;&#x7684;&#x5EF6;&#x8FDF;&#x90FD;&#x4F1A;&#x4ECE;&#x8BE5;&#x901A;&#x9053;&#x8FDB;&#x884C;&#x6D88;&#x8D39;&#x5E76;&#x4EA7;&#x751F; <code>Unit</code>&#x3002;
+&#x867D;&#x7136;&#x5B83;&#x770B;&#x8D77;&#x6765;&#x4F3C;&#x4E4E;&#x6CA1;&#x7528;&#xFF0C;&#x5B83;&#x88AB;&#x7528;&#x6765;&#x6784;&#x5EFA;&#x5206;&#x6BB5;&#x6765;&#x521B;&#x5EFA;&#x590D;&#x6742;&#x7684;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/produce.html" target="_blank">produce</a>
+&#x7BA1;&#x9053;&#x548C;&#x8FDB;&#x884C;&#x7A97;&#x53E3;&#x5316;&#x64CD;&#x4F5C;&#x4EE5;&#x53CA;&#x5176;&#x5B83;&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7684;&#x5904;&#x7406;&#x3002;
+&#x53EF;&#x4EE5;&#x5728; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.selects/select.html" target="_blank">select</a> &#x4E2D;&#x4F7F;&#x7528;&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;&#x6765;&#x8FDB;&#x884C;&#x201C;&#x6253;&#x52FE;&#x201D;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5DE5;&#x5382;&#x65B9;&#x6CD5; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/ticker.html" target="_blank">ticker</a> &#x6765;&#x521B;&#x5EFA;&#x8FD9;&#x4E9B;&#x901A;&#x9053;&#x3002;
+&#x4E3A;&#x4E86;&#x8868;&#x660E;&#x4E0D;&#x9700;&#x8981;&#x5176;&#x5B83;&#x5143;&#x7D20;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-receive-channel/cancel.html" target="_blank">ReceiveChannel.cancel</a> &#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#x5DE5;&#x4F5C;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.channels.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> tickerChannel</span> = ticker(delayMillis = <span class="hljs-number">100</span>, initialDelayMillis = <span class="hljs-number">0</span>) <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8BA1;&#x65F6;&#x5668;&#x901A;&#x9053;</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> nextElement</span> = withTimeoutOrNull(<span class="hljs-number">1</span>) { tickerChannel.receive() }
+    println(<span class="hljs-string">&quot;Initial element is available immediately: $nextElement&quot;</span>) <span class="hljs-comment">// no initial delay</span>
+
+    nextElement = withTimeoutOrNull(<span class="hljs-number">50</span>) { tickerChannel.receive() } <span class="hljs-comment">// all subsequent elements have 100ms delay</span>
+    println(<span class="hljs-string">&quot;Next element is not ready in 50 ms: $nextElement&quot;</span>)
+
+    nextElement = withTimeoutOrNull(<span class="hljs-number">60</span>) { tickerChannel.receive() }
+    println(<span class="hljs-string">&quot;Next element is ready in 100 ms: $nextElement&quot;</span>)
+
+    <span class="hljs-comment">// &#x6A21;&#x62DF;&#x5927;&#x91CF;&#x6D88;&#x8D39;&#x5EF6;&#x8FDF;</span>
+    println(<span class="hljs-string">&quot;Consumer pauses for 150ms&quot;</span>)
+    delay(<span class="hljs-number">150</span>)
+    <span class="hljs-comment">// &#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7ACB;&#x5373;&#x53EF;&#x7528;</span>
+    nextElement = withTimeoutOrNull(<span class="hljs-number">1</span>) { tickerChannel.receive() }
+    println(<span class="hljs-string">&quot;Next element is available immediately after large consumer delay: $nextElement&quot;</span>)
+    <span class="hljs-comment">// &#x8BF7;&#x6CE8;&#x610F;&#xFF0C;`receive` &#x8C03;&#x7528;&#x4E4B;&#x95F4;&#x7684;&#x6682;&#x505C;&#x88AB;&#x8003;&#x8651;&#x5728;&#x5185;&#xFF0C;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5230;&#x8FBE;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;</span>
+    nextElement = withTimeoutOrNull(<span class="hljs-number">60</span>) { tickerChannel.receive() } 
+    println(<span class="hljs-string">&quot;Next element is ready in 50ms after consumer pause in 150ms: $nextElement&quot;</span>)
+
+    tickerChannel.cancel() <span class="hljs-comment">// &#x8868;&#x660E;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x5143;&#x7D20;</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-channel-10.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5B83;&#x7684;&#x6253;&#x5370;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">Initial element is available immediately: kotlin.Unit
+Next element is not ready in 50 ms: null
+Next element is ready in 100 ms: kotlin.Unit
+Consumer pauses for 150ms
+Next element is available immediately after large consumer delay: kotlin.Unit
+Next element is ready in 50ms after consumer pause in 150ms: kotlin.Unit
+</code></pre>
+<!--- TEST -->
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/ticker.html" target="_blank">ticker</a> &#x77E5;&#x9053;&#x53EF;&#x80FD;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x6682;&#x505C;&#xFF0C;&#x5E76;&#x4E14;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x8C03;&#x6574;&#x4E0B;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x7684;&#x5143;&#x7D20;<!--
+-->&#x5982;&#x679C;&#x53D1;&#x751F;&#x6682;&#x505C;&#x5219;&#x5EF6;&#x8FDF;&#xFF0C;&#x8BD5;&#x56FE;&#x4FDD;&#x6301;&#x56FA;&#x5B9A;&#x7684;&#x751F;&#x6210;&#x5143;&#x7D20;&#x7387;&#x3002;</p>
+<p>&#x7ED9;&#x53EF;&#x9009;&#x7684; <code>mode</code> &#x53C2;&#x6570;&#x4F20;&#x5165; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-ticker-mode/-f-i-x-e-d_-d-e-l-a-y.html" target="_blank">TickerMode.FIXED_DELAY</a> &#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x56FA;&#x5B9A;<!--
+-->&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x5EF6;&#x8FDF;&#x3002;</p>
+<!--- MODULE kotlinx-coroutines-core -->
+<!--- INDEX kotlinx.coroutines -->
+<!--- INDEX kotlinx.coroutines.channels -->
+<!--- INDEX kotlinx.coroutines.selects -->
+<!--- END -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="flow.html" class="navigation navigation-prev " aria-label="Previous page: 异步流">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exception-handling.html" class="navigation navigation-next " aria-label="Next page: 异常处理与监督">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"通道","level":"1.9.7","depth":2,"next":{"title":"异常处理与监督","level":"1.9.8","depth":2,"path":"txt/coroutines/exception-handling.md","ref":"txt/coroutines/exception-handling.md","articles":[]},"previous":{"title":"异步流","level":"1.9.6","depth":2,"path":"txt/coroutines/flow.md","ref":"txt/coroutines/flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["regexplace"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<em>([^<]+)</em>\\{: ?\\.keyword\\ ?}","flags":"g","substitute":"<em><strong><code>$1</code></strong></em>"},{"pattern":"<p>\\{:#([^} ]+)\\}</p>","flags":"g","substitute":"<a name=\"$1\"></a>"},{"pattern":"\"/docs/tutorials/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/tutorials/"},{"pattern":"\"/docs/diagnostics/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/diagnostics/"},{"pattern":"\"/community/","flags":"g","substitute":"\"https://www.kotlincn.net/community/"}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"txt/coroutines/channels.md","mtime":"2021-08-17T05:13:50.066Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-18T05:55:43.929Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

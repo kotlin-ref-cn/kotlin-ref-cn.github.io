@@ -1,0 +1,2625 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>异常处理与监督 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shared-mutable-state-and-concurrency.html" />
+    
+    
+    <link rel="prev" href="channels.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../index0.html">
+            
+                <a href="../index0.html">
+            
+                    
+                    语言指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../overview.html">
+            
+                <a href="../overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../server-overview.html">
+            
+                <a href="../server-overview.html">
+            
+                    
+                    Kotlin 用于服务器端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../android-overview.html">
+            
+                <a href="../android-overview.html">
+            
+                    
+                    Kotlin 用于 Android 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-overview.html">
+            
+                <a href="../js-overview.html">
+            
+                    
+                    Kotlin 用于 JavaScript 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../native-overview.html">
+            
+                <a href="../native-overview.html">
+            
+                    
+                    Kotlin 用于原生开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../data-science-overview.html">
+            
+                <a href="../data-science-overview.html">
+            
+                    
+                    Kotlin 用于数据科学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../coroutines-overview.html">
+            
+                <a href="../coroutines-overview.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../multiplatform.html">
+            
+                <a href="../multiplatform.html">
+            
+                    
+                    多平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../whatsnew.html">
+            
+                <a href="../whatsnew.html">
+            
+                    
+                    新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../whatsnew1430.html">
+            
+                <a href="../whatsnew1430.html">
+            
+                    
+                    1.4.30 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../whatsnew-plugin-20203.html">
+            
+                <a href="../whatsnew-plugin-20203.html">
+            
+                    
+                    Kotlin 插件 2020.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../whatsnew1420.html">
+            
+                <a href="../whatsnew1420.html">
+            
+                    
+                    1.4.20 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../whatsnew14.html">
+            
+                <a href="../whatsnew14.html">
+            
+                    
+                    1.4 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../whatsnew13.html">
+            
+                <a href="../whatsnew13.html">
+            
+                    
+                    1.3 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../whatsnew12.html">
+            
+                <a href="../whatsnew12.html">
+            
+                    
+                    1.2 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../whatsnew11.html">
+            
+                <a href="../whatsnew11.html">
+            
+                    
+                    1.1 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../basic-syntax.html">
+            
+                <a href="../basic-syntax.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../idioms.html">
+            
+                <a href="../idioms.html">
+            
+                    
+                    习惯用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../coding-conventions.html">
+            
+                <a href="../coding-conventions.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../basics.html">
+            
+                <a href="../basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../basic-types.html">
+            
+                <a href="../basic-types.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../packages.html">
+            
+                <a href="../packages.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../control-flow.html">
+            
+                <a href="../control-flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../returns.html">
+            
+                <a href="../returns.html">
+            
+                    
+                    返回与跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../classes-and-objects.html">
+            
+                <a href="../classes-and-objects.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../classes.html">
+            
+                <a href="../classes.html">
+            
+                    
+                    类与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../properties.html">
+            
+                <a href="../properties.html">
+            
+                    
+                    属性与字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../interfaces.html">
+            
+                <a href="../interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../fun-interfaces.html">
+            
+                <a href="../fun-interfaces.html">
+            
+                    
+                    函数式（SAM）接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../visibility-modifiers.html">
+            
+                <a href="../visibility-modifiers.html">
+            
+                    
+                    可见性修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../extensions.html">
+            
+                <a href="../extensions.html">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../data-classes.html">
+            
+                <a href="../data-classes.html">
+            
+                    
+                    数据类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../sealed-classes.html">
+            
+                <a href="../sealed-classes.html">
+            
+                    
+                    密封类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../generics.html">
+            
+                <a href="../generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nested-classes.html">
+            
+                <a href="../nested-classes.html">
+            
+                    
+                    嵌套类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../enum-classes.html">
+            
+                <a href="../enum-classes.html">
+            
+                    
+                    枚举类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../object-declarations.html">
+            
+                <a href="../object-declarations.html">
+            
+                    
+                    对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../type-aliases.html">
+            
+                <a href="../type-aliases.html">
+            
+                    
+                    类型别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../inline-classes.html">
+            
+                <a href="../inline-classes.html">
+            
+                    
+                    内联类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../delegation.html">
+            
+                <a href="../delegation.html">
+            
+                    
+                    委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../delegated-properties.html">
+            
+                <a href="../delegated-properties.html">
+            
+                    
+                    委托属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../functions-and-lambdas.html">
+            
+                <a href="../functions-and-lambdas.html">
+            
+                    
+                    函数与 Lambda 表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../functions.html">
+            
+                <a href="../functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../lambdas.html">
+            
+                <a href="../lambdas.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../inline-functions.html">
+            
+                <a href="../inline-functions.html">
+            
+                    
+                    内联函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../collections.html">
+            
+                <a href="../collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../collections-overview.html">
+            
+                <a href="../collections-overview.html">
+            
+                    
+                    集合概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../constructing-collections.html">
+            
+                <a href="../constructing-collections.html">
+            
+                    
+                    构造集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../iterators.html">
+            
+                <a href="../iterators.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../ranges.html">
+            
+                <a href="../ranges.html">
+            
+                    
+                    区间与数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../sequences.html">
+            
+                <a href="../sequences.html">
+            
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../collection-operations.html">
+            
+                <a href="../collection-operations.html">
+            
+                    
+                    操作概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../collection-transformations.html">
+            
+                <a href="../collection-transformations.html">
+            
+                    
+                    转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../collection-filtering.html">
+            
+                <a href="../collection-filtering.html">
+            
+                    
+                    过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../collection-plus-minus.html">
+            
+                <a href="../collection-plus-minus.html">
+            
+                    
+                    加减操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../collection-grouping.html">
+            
+                <a href="../collection-grouping.html">
+            
+                    
+                    分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../collection-parts.html">
+            
+                <a href="../collection-parts.html">
+            
+                    
+                    取集合的一部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../collection-elements.html">
+            
+                <a href="../collection-elements.html">
+            
+                    
+                    取单个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../collection-ordering.html">
+            
+                <a href="../collection-ordering.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../collection-aggregate.html">
+            
+                <a href="../collection-aggregate.html">
+            
+                    
+                    聚合操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../collection-write.html">
+            
+                <a href="../collection-write.html">
+            
+                    
+                    集合写操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../list-operations.html">
+            
+                <a href="../list-operations.html">
+            
+                    
+                    List 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../set-operations.html">
+            
+                <a href="../set-operations.html">
+            
+                    
+                    Set 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../map-operations.html">
+            
+                <a href="../map-operations.html">
+            
+                    
+                    Map 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../coroutines.html">
+            
+                <a href="../coroutines.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="coroutines-guide.html">
+            
+                <a href="coroutines-guide.html">
+            
+                    
+                    协程指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="cancellation-and-timeouts.html">
+            
+                <a href="cancellation-and-timeouts.html">
+            
+                    
+                    取消与超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="composing-suspending-functions.html">
+            
+                <a href="composing-suspending-functions.html">
+            
+                    
+                    组合挂起函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="coroutine-context-and-dispatchers.html">
+            
+                <a href="coroutine-context-and-dispatchers.html">
+            
+                    
+                    协程上下文与调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="flow.html">
+            
+                <a href="flow.html">
+            
+                    
+                    异步流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="channels.html">
+            
+                <a href="channels.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.8" data-path="exception-handling.html">
+            
+                <a href="exception-handling.html">
+            
+                    
+                    异常处理与监督
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="shared-mutable-state-and-concurrency.html">
+            
+                <a href="shared-mutable-state-and-concurrency.html">
+            
+                    
+                    共享的可变状态与并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="select-expression.html">
+            
+                <a href="select-expression.html">
+            
+                    
+                    Select 表达式（实验性的）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../multiplatform-programming.html">
+            
+                <a href="../multiplatform-programming.html">
+            
+                    
+                    多平台程序设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../platform-specific-declarations.html">
+            
+                <a href="../platform-specific-declarations.html">
+            
+                    
+                    平台相关声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../building-mpp-with-gradle.html">
+            
+                <a href="../building-mpp-with-gradle.html">
+            
+                    
+                    以 Gradle 构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../mpp-dsl-reference.html">
+            
+                <a href="../mpp-dsl-reference.html">
+            
+                    
+                    多平台 Gradle DSL 参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../other.html">
+            
+                <a href="../other.html">
+            
+                    
+                    更多语言结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../multi-declarations.html">
+            
+                <a href="../multi-declarations.html">
+            
+                    
+                    解构声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../typecasts.html">
+            
+                <a href="../typecasts.html">
+            
+                    
+                    类型检测与转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../this-expressions.html">
+            
+                <a href="../this-expressions.html">
+            
+                    
+                    This 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../equality.html">
+            
+                <a href="../equality.html">
+            
+                    
+                    相等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../operator-overloading.html">
+            
+                <a href="../operator-overloading.html">
+            
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../null-safety.html">
+            
+                <a href="../null-safety.html">
+            
+                    
+                    空安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../exceptions.html">
+            
+                <a href="../exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../annotations.html">
+            
+                <a href="../annotations.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../reflection.html">
+            
+                <a href="../reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../serialization.html">
+            
+                <a href="../serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../scope-functions.html">
+            
+                <a href="../scope-functions.html">
+            
+                    
+                    作用域函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../type-safe-builders.html">
+            
+                <a href="../type-safe-builders.html">
+            
+                    
+                    类型安全的构建器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../opt-in-requirements.html">
+            
+                <a href="../opt-in-requirements.html">
+            
+                    
+                    选择加入要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../corelibs.html">
+            
+                <a href="../corelibs.html">
+            
+                    
+                    核心库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../reflink.html">
+            
+                <a href="../../reflink.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../testlink.html">
+            
+                <a href="../../testlink.html">
+            
+                    
+                    kotlin.test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../reference0.html">
+            
+                <a href="../reference0.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../keyword-reference.html">
+            
+                <a href="../keyword-reference.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../grammar.html">
+            
+                <a href="../grammar.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../code-style-migration-guide.html">
+            
+                <a href="../code-style-migration-guide.html">
+            
+                    
+                    编码风格约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../interop.html">
+            
+                <a href="../interop.html">
+            
+                    
+                    Java 互操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../java-interop.html">
+            
+                <a href="../java-interop.html">
+            
+                    
+                    Kotlin 中调用 Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../java-to-kotlin-interop.html">
+            
+                <a href="../java-to-kotlin-interop.html">
+            
+                    
+                    Java 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../javascript.html">
+            
+                <a href="../javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../js-project-setup.html">
+            
+                <a href="../js-project-setup.html">
+            
+                    
+                    搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../dynamic-type.html">
+            
+                <a href="../dynamic-type.html">
+            
+                    
+                    动态类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../js-interop.html">
+            
+                <a href="../js-interop.html">
+            
+                    
+                    Kotlin 中调用 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../js-to-kotlin-interop.html">
+            
+                <a href="../js-to-kotlin-interop.html">
+            
+                    
+                    JavaScript 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../js-modules.html">
+            
+                <a href="../js-modules.html">
+            
+                    
+                    JavaScript 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../js-reflection.html">
+            
+                <a href="../js-reflection.html">
+            
+                    
+                    JavaScript 反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../javascript-dce.html">
+            
+                <a href="../javascript-dce.html">
+            
+                    
+                    JavaScript DCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../js-ir-compiler.html">
+            
+                <a href="../js-ir-compiler.html">
+            
+                    
+                    IR 编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="../js-external-declarations-with-dukat.html">
+            
+                <a href="../js-external-declarations-with-dukat.html">
+            
+                    
+                    用 Dukat 生成外部声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../native.html">
+            
+                <a href="../native.html">
+            
+                    
+                    原生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../native/concurrency.html">
+            
+                <a href="../native/concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../native/immutability.html">
+            
+                <a href="../native/immutability.html">
+            
+                    
+                    不可变性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../native/libraries.html">
+            
+                <a href="../native/libraries.html">
+            
+                    
+                    Kotlin 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../native/platform_libs.html">
+            
+                <a href="../native/platform_libs.html">
+            
+                    
+                    平台库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../native/c_interop.html">
+            
+                <a href="../native/c_interop.html">
+            
+                    
+                    与 C 语言互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../native/objc_interop.html">
+            
+                <a href="../native/objc_interop.html">
+            
+                    
+                    与 Objective-C 及 Swift 互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../native/cocoapods.html">
+            
+                <a href="../native/cocoapods.html">
+            
+                    
+                    CocoaPods 集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../native/gradle_plugin.html">
+            
+                <a href="../native/gradle_plugin.html">
+            
+                    
+                    Gradle 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../native/debugging.html">
+            
+                <a href="../native/debugging.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../native/faq.html">
+            
+                <a href="../native/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../tools.html">
+            
+                <a href="../tools.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../using-gradle.html">
+            
+                <a href="../using-gradle.html">
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../using-maven.html">
+            
+                <a href="../using-maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../using-ant.html">
+            
+                <a href="../using-ant.html">
+            
+                    
+                    Ant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../compiler-reference.html">
+            
+                <a href="../compiler-reference.html">
+            
+                    
+                    编译器选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../compiler-plugins.html">
+            
+                <a href="../compiler-plugins.html">
+            
+                    
+                    编译器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../kapt.html">
+            
+                <a href="../kapt.html">
+            
+                    
+                    Kapt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../kotlin-doc.html">
+            
+                <a href="../kotlin-doc.html">
+            
+                    
+                    Dokka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../kotlin-osgi.html">
+            
+                <a href="../kotlin-osgi.html">
+            
+                    
+                    OSGi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../evolution.html">
+            
+                <a href="../evolution.html">
+            
+                    
+                    演进
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../evolution/kotlin-evolution.html">
+            
+                <a href="../evolution/kotlin-evolution.html">
+            
+                    
+                    Kotlin 语言演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../evolution/components-stability.html">
+            
+                <a href="../evolution/components-stability.html">
+            
+                    
+                    不同组件的稳定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../compatibility-guide-13.html">
+            
+                <a href="../compatibility-guide-13.html">
+            
+                    
+                    Kotlin 1.3 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../compatibility-guide-14.html">
+            
+                <a href="../compatibility-guide-14.html">
+            
+                    
+                    Kotlin 1.4 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../faq0.html">
+            
+                <a href="../faq0.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../comparison-to-java.html">
+            
+                <a href="../comparison-to-java.html">
+            
+                    
+                    与 Java 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../comparison-to-scala.html">
+            
+                <a href="../comparison-to-scala.html">
+            
+                    
+                    与 Scala 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >异常处理与监督</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--- TEST_NAME ExceptionsGuideTest -->
+<p><strong>&#x76EE;&#x5F55;</strong></p>
+<!--- TOC -->
+<ul>
+<li><a href="#&#x5F02;&#x5E38;&#x5904;&#x7406;">&#x5F02;&#x5E38;&#x5904;&#x7406;</a><ul>
+<li><a href="#&#x5F02;&#x5E38;&#x7684;&#x4F20;&#x64AD;">&#x5F02;&#x5E38;&#x7684;&#x4F20;&#x64AD;</a></li>
+<li><a href="#coroutineexceptionhandler">CoroutineExceptionHandler</a></li>
+<li><a href="#&#x53D6;&#x6D88;&#x4E0E;&#x5F02;&#x5E38;">&#x53D6;&#x6D88;&#x4E0E;&#x5F02;&#x5E38;</a></li>
+<li><a href="#&#x5F02;&#x5E38;&#x805A;&#x5408;">&#x5F02;&#x5E38;&#x805A;&#x5408;</a></li>
+<li><a href="#&#x76D1;&#x7763;">&#x76D1;&#x7763;</a><ul>
+<li><a href="#&#x76D1;&#x7763;&#x4F5C;&#x4E1A;">&#x76D1;&#x7763;&#x4F5C;&#x4E1A;</a></li>
+<li><a href="#&#x76D1;&#x7763;&#x4F5C;&#x7528;&#x57DF;">&#x76D1;&#x7763;&#x4F5C;&#x7528;&#x57DF;</a></li>
+<li><a href="#&#x76D1;&#x7763;&#x534F;&#x7A0B;&#x4E2D;&#x7684;&#x5F02;&#x5E38;">&#x76D1;&#x7763;&#x534F;&#x7A0B;&#x4E2D;&#x7684;&#x5F02;&#x5E38;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!--- END -->
+<h2 id="&#x5F02;&#x5E38;&#x5904;&#x7406;">&#x5F02;&#x5E38;&#x5904;&#x7406;</h2>
+<p>&#x672C;&#x8282;&#x5185;&#x5BB9;&#x6DB5;&#x76D6;&#x4E86;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x4E0E;&#x5728;&#x5F02;&#x5E38;&#x4E0A;&#x53D6;&#x6D88;&#x3002;
+&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x88AB;&#x53D6;&#x6D88;&#x7684;&#x534F;&#x7A0B;&#x4F1A;&#x5728;&#x6302;&#x8D77;&#x70B9;&#x629B;&#x51FA; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellation-exception/index.html" target="_blank">CancellationException</a>
+&#x5E76;&#x4E14;&#x5B83;&#x4F1A;&#x88AB;&#x534F;&#x7A0B;&#x7684;&#x673A;&#x5236;&#x6240;&#x5FFD;&#x7565;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F1A;&#x770B;&#x770B;&#x5728;&#x53D6;&#x6D88;&#x8FC7;&#x7A0B;&#x4E2D;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x6216;&#x540C;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x7684;<!--
+-->&#x591A;&#x4E2A;&#x5B50;&#x534F;&#x7A0B;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x65F6;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x3002;</p>
+<h3 id="&#x5F02;&#x5E38;&#x7684;&#x4F20;&#x64AD;">&#x5F02;&#x5E38;&#x7684;&#x4F20;&#x64AD;</h3>
+<p>&#x534F;&#x7A0B;&#x6784;&#x5EFA;&#x5668;&#x6709;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;&#x81EA;&#x52A8;&#x4F20;&#x64AD;&#x5F02;&#x5E38;&#xFF08;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/launch.html" target="_blank">launch</a> &#x4E0E; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/actor.html" target="_blank">actor</a>&#xFF09;&#x6216;<!--
+-->&#x5411;&#x7528;&#x6237;&#x66B4;&#x9732;&#x5F02;&#x5E38;&#xFF08;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x4E0E; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/produce.html" target="_blank">produce</a>&#xFF09;&#x3002;
+&#x5F53;&#x8FD9;&#x4E9B;&#x6784;&#x5EFA;&#x5668;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<em>&#x6839;</em>&#x534F;&#x7A0B;&#x65F6;&#xFF0C;&#x5373;&#x8BE5;&#x534F;&#x7A0B;&#x4E0D;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x7684;<em>&#x5B50;</em>&#x534F;&#x7A0B;&#xFF0C;
+&#x524D;&#x8005;&#x8FD9;&#x7C7B;&#x6784;&#x5EFA;&#x5668;&#x5C06;&#x5F02;&#x5E38;&#x89C6;&#x4E3A;<strong>&#x672A;&#x6355;&#x83B7;</strong>&#x5F02;&#x5E38;&#xFF0C;&#x7C7B;&#x4F3C; Java &#x7684; <code>Thread.uncaughtExceptionHandler</code>&#xFF0C;
+&#x800C;&#x540E;&#x8005;&#x5219;&#x4F9D;&#x8D56;&#x7528;&#x6237;&#x6765;&#x6700;&#x7EC8;&#x6D88;&#x8D39;<!--
+-->&#x5F02;&#x5E38;&#xFF0C;&#x4F8B;&#x5982;&#x901A;&#x8FC7; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html" target="_blank">await</a> &#x6216; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-receive-channel/receive.html" target="_blank">receive</a><!--
+-->&#xFF08;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/produce.html" target="_blank">produce</a> &#x4E0E; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-receive-channel/receive.html" target="_blank">receive</a> &#x7684;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x4E8E;<a href="https://github.com/Kotlin/kotlinx.coroutines/blob/master/docs/channels.md" target="_blank">&#x901A;&#x9053;</a>&#x7AE0;&#x8282;&#xFF09;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F7F;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-global-scope/index.html" target="_blank">GlobalScope</a> &#x521B;&#x5EFA;&#x6839;&#x534F;&#x7A0B;&#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;&#x6765;&#x8FDB;&#x884C;&#x6F14;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> job</span> = GlobalScope.launch { <span class="hljs-comment">// launch &#x6839;&#x534F;&#x7A0B;</span>
+        println(<span class="hljs-string">&quot;Throwing exception from launch&quot;</span>)
+        <span class="hljs-keyword">throw</span> IndexOutOfBoundsException() <span class="hljs-comment">// &#x6211;&#x4EEC;&#x5C06;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370; Thread.defaultUncaughtExceptionHandler</span>
+    }
+    job.join()
+    println(<span class="hljs-string">&quot;Joined failed job&quot;</span>)
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> deferred</span> = GlobalScope.async { <span class="hljs-comment">// async &#x6839;&#x534F;&#x7A0B;</span>
+        println(<span class="hljs-string">&quot;Throwing exception from async&quot;</span>)
+        <span class="hljs-keyword">throw</span> ArithmeticException() <span class="hljs-comment">// &#x6CA1;&#x6709;&#x6253;&#x5370;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#xFF0C;&#x4F9D;&#x8D56;&#x7528;&#x6237;&#x53BB;&#x8C03;&#x7528;&#x7B49;&#x5F85;</span>
+    }
+    <span class="hljs-keyword">try</span> {
+        deferred.await()
+        println(<span class="hljs-string">&quot;Unreached&quot;</span>)
+    } <span class="hljs-keyword">catch</span> (e: ArithmeticException) {
+        println(<span class="hljs-string">&quot;Caught ArithmeticException&quot;</span>)
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-exceptions-01.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF08;<a href="https://github.com/hltj/kotlinx.coroutines-cn/blob/master/docs/coroutine-context-and-dispatchers.md#&#x8C03;&#x8BD5;&#x534F;&#x7A0B;&#x4E0E;&#x7EBF;&#x7A0B;" target="_blank">&#x8C03;&#x8BD5;</a>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-text">Throwing exception from launch
+Exception in thread &quot;DefaultDispatcher-worker-2 @coroutine#2&quot; java.lang.IndexOutOfBoundsException
+Joined failed job
+Throwing exception from async
+Caught ArithmeticException
+</code></pre>
+<!--- TEST EXCEPTION-->
+<h3 id="coroutineexceptionhandler">CoroutineExceptionHandler</h3>
+<p>&#x5C06;<strong>&#x672A;&#x6355;&#x83B7;</strong>&#x5F02;&#x5E38;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x662F;&#x53EF;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x3002;
+<em>&#x6839;</em>&#x534F;&#x7A0B;&#x4E2D;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-exception-handler/index.html" target="_blank">CoroutineExceptionHandler</a> &#x4E0A;&#x4E0B;&#x6587;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x4E8E;&#x8FD9;&#x4E2A;&#x6839;&#x534F;&#x7A0B;<!--
+-->&#x901A;&#x7528;&#x7684; <code>catch</code> &#x5757;&#xFF0C;&#x53CA;&#x5176;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x81EA;&#x5B9A;&#x4E49;&#x4E86;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B50;&#x534F;&#x7A0B;&#x3002;
+&#x5B83;&#x7C7B;&#x4F3C;&#x4E8E; <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html#setUncaughtExceptionHandler(java.lang.Thread.UncaughtExceptionHandler" target="_blank"><code>Thread.uncaughtExceptionHandler</code></a>) &#x3002;
+&#x4F60;&#x65E0;&#x6CD5;&#x4ECE; <code>CoroutineExceptionHandler</code> &#x7684;&#x5F02;&#x5E38;&#x4E2D;&#x6062;&#x590D;&#x3002;&#x5F53;&#x8C03;&#x7528;&#x5904;&#x7406;&#x8005;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x534F;&#x7A0B;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;<!--
+-->&#x5E76;&#x5E26;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x5F02;&#x5E38;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x8BE5;&#x5904;&#x7406;&#x8005;&#x7528;&#x4E8E;<!--
+-->&#x8BB0;&#x5F55;&#x5F02;&#x5E38;&#xFF0C;&#x663E;&#x793A;&#x67D0;&#x79CD;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#xFF0C;&#x7EC8;&#x6B62;&#x548C;&#xFF08;&#x6216;&#xFF09;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x5728; JVM &#x4E2D;&#x53EF;&#x4EE5;&#x91CD;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#x6765;&#x5C06;&#x6240;&#x6709;&#x7684;&#x534F;&#x7A0B;&#x901A;&#x8FC7;
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html" target="_blank"><code>ServiceLoader</code></a> &#x6CE8;&#x518C;&#x5230; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-exception-handler/index.html" target="_blank">CoroutineExceptionHandler</a>&#x3002;
+&#x5168;&#x5C40;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#x5C31;&#x5982;&#x540C;
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html#setDefaultUncaughtExceptionHandler(java.lang.Thread.UncaughtExceptionHandler" target="_blank"><code>Thread.defaultUncaughtExceptionHandler</code></a>) 
+&#x4E00;&#x6837;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x7684;&#x6307;&#x5B9A;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#x88AB;&#x6CE8;&#x518C;&#x7684;&#x65F6;&#x5019;&#x88AB;&#x4F7F;&#x7528;&#x3002;
+&#x5728; Android &#x4E2D;&#xFF0C;<code>uncaughtExceptionPreHandler</code> &#x88AB;&#x8BBE;&#x7F6E;&#x5728;&#x5168;&#x5C40;&#x534F;&#x7A0B;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#x4E2D;&#x3002;</p>
+<p><code>CoroutineExceptionHandler</code> &#x4EC5;&#x5728;<strong>&#x672A;&#x6355;&#x83B7;</strong>&#x7684;&#x5F02;&#x5E38;&#x4E0A;&#x8C03;&#x7528; &#x2014; &#x6CA1;&#x6709;&#x4EE5;&#x5176;&#x4ED6;&#x4EFB;&#x4F55;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;&#x3002;
+&#x7279;&#x522B;&#x662F;&#xFF0C;&#x6240;&#x6709;<em>&#x5B50;</em>&#x534F;&#x7A0B;&#xFF08;&#x5728;&#x53E6;&#x4E00;&#x4E2A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html" target="_blank">Job</a> &#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x521B;&#x5EFA;&#x7684;&#x534F;&#x7A0B;&#xFF09;&#x59D4;&#x6258;&lt;!--
+&#x5B83;&#x4EEC;&#x7684;&#x7236;&#x534F;&#x7A0B;&#x5904;&#x7406;&#x5B83;&#x4EEC;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x7136;&#x540E;&#x5B83;&#x4EEC;&#x4E5F;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x7236;&#x534F;&#x7A0B;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x76F4;&#x5230;&#x6839;&#x534F;&#x7A0B;&#xFF0C;
+&#x56E0;&#x6B64;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x5728;&#x5176;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684; <code>CoroutineExceptionHandler</code>&#x3002;
+&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x6784;&#x5EFA;&#x5668;&#x59CB;&#x7EC8;&#x4F1A;&#x6355;&#x83B7;&#x6240;&#x6709;&#x5F02;&#x5E38;&#x5E76;&#x5C06;&#x5176;&#x8868;&#x793A;&#x5728;&#x7ED3;&#x679C; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html" target="_blank">Deferred</a> &#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;
+&#x56E0;&#x6B64;&#x5B83;&#x7684; <code>CoroutineExceptionHandler</code> &#x4E5F;&#x65E0;&#x6548;&#x3002;</p>
+<blockquote>
+<p>&#x5728;&#x76D1;&#x7763;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x8FD0;&#x884C;&#x7684;&#x534F;&#x7A0B;&#x4E0D;&#x4F1A;&#x5C06;&#x5F02;&#x5E38;&#x4F20;&#x64AD;&#x5230;&#x5176;&#x7236;&#x534F;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;<!--
+-->&#x4F1A;&#x4ECE;&#x6B64;&#x89C4;&#x5219;&#x4E2D;&#x6392;&#x9664;&#x3002;&#x672C;&#x6587;&#x6863;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x5C0F;&#x8282;&#x2014;&#x2014;<a href="#&#x76D1;&#x7763;">&#x76D1;&#x7763;</a>&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span> = CoroutineExceptionHandler { _, exception -&gt; 
+        println(<span class="hljs-string">&quot;CoroutineExceptionHandler got $exception&quot;</span>) 
+    }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> job</span> = GlobalScope.launch(handler) { <span class="hljs-comment">// &#x6839;&#x534F;&#x7A0B;&#xFF0C;&#x8FD0;&#x884C;&#x5728; GlobalScope &#x4E2D;</span>
+        <span class="hljs-keyword">throw</span> AssertionError()
+    }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> deferred</span> = GlobalScope.async(handler) { <span class="hljs-comment">// &#x540C;&#x6837;&#x662F;&#x6839;&#x534F;&#x7A0B;&#xFF0C;&#x4F46;&#x4F7F;&#x7528; async &#x4EE3;&#x66FF;&#x4E86; launch</span>
+        <span class="hljs-keyword">throw</span> ArithmeticException() <span class="hljs-comment">// &#x6CA1;&#x6709;&#x6253;&#x5370;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#xFF0C;&#x4F9D;&#x8D56;&#x7528;&#x6237;&#x53BB;&#x8C03;&#x7528; deferred.await()</span>
+    }
+    joinAll(job, deferred)
+<span class="hljs-comment">//sampleEnd    </span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-exceptions-02.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">CoroutineExceptionHandler got java.lang.AssertionError
+</code></pre>
+<!--- TEST-->
+<h3 id="&#x53D6;&#x6D88;&#x4E0E;&#x5F02;&#x5E38;">&#x53D6;&#x6D88;&#x4E0E;&#x5F02;&#x5E38;</h3>
+<p>&#x53D6;&#x6D88;&#x4E0E;&#x5F02;&#x5E38;&#x7D27;&#x5BC6;&#x76F8;&#x5173;&#x3002;&#x534F;&#x7A0B;&#x5185;&#x90E8;&#x4F7F;&#x7528; <code>CancellationException</code> &#x6765;&#x8FDB;&#x884C;&#x53D6;&#x6D88;&#xFF0C;&#x8FD9;&#x4E2A;<!--
+-->&#x5F02;&#x5E38;&#x4F1A;&#x88AB;&#x6240;&#x6709;&#x7684;&#x5904;&#x7406;&#x8005;&#x5FFD;&#x7565;&#xFF0C;&#x6240;&#x4EE5;&#x90A3;&#x4E9B;&#x53EF;&#x4EE5;&#x88AB; <code>catch</code> &#x4EE3;&#x7801;&#x5757;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;<!--
+-->&#x4EC5;&#x4EC5;&#x5E94;&#x8BE5;&#x88AB;&#x7528;&#x6765;&#x4F5C;&#x4E3A;&#x989D;&#x5916;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x7684;&#x8D44;&#x6E90;&#x3002;
+&#x5F53;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x4F7F;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/cancel.html" target="_blank">Job.cancel</a> &#x53D6;&#x6D88;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x4F1A;&#x88AB;&#x7EC8;&#x6B62;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E0D;&#x4F1A;&#x53D6;&#x6D88;&#x5B83;&#x7684;&#x7236;&#x534F;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> job</span> = launch {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> child</span> = launch {
+            <span class="hljs-keyword">try</span> {
+                delay(<span class="hljs-keyword">Long</span>.MAX_VALUE)
+            } <span class="hljs-keyword">finally</span> {
+                println(<span class="hljs-string">&quot;Child is cancelled&quot;</span>)
+            }
+        }
+        yield()
+        println(<span class="hljs-string">&quot;Cancelling child&quot;</span>)
+        child.cancel()
+        child.join()
+        yield()
+        println(<span class="hljs-string">&quot;Parent is not cancelled&quot;</span>)
+    }
+    job.join()
+<span class="hljs-comment">//sampleEnd    </span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-exceptions-03.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">Cancelling child
+Child is cancelled
+Parent is not cancelled
+</code></pre>
+<!--- TEST-->
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x9047;&#x5230;&#x4E86; <code>CancellationException</code> &#x4EE5;&#x5916;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x5B83;&#x5C06;&#x4F7F;&#x7528;&#x8BE5;&#x5F02;&#x5E38;&#x53D6;&#x6D88;&#x5B83;&#x7684;&#x7236;&#x534F;&#x7A0B;&#x3002;
+&#x8FD9;&#x4E2A;&#x884C;&#x4E3A;&#x65E0;&#x6CD5;&#x88AB;&#x8986;&#x76D6;&#xFF0C;&#x5E76;&#x4E14;&#x7528;&#x4E8E;&#x4E3A;<!--
+--><a href="https://github.com/Kotlin/kotlinx.coroutines/blob/master/docs/composing-suspending-functions.md#structured-concurrency-with-async" target="_blank">&#x7ED3;&#x6784;&#x5316;&#x7684;&#x5E76;&#x53D1;&#xFF08;structured concurrency&#xFF09;</a> &#x63D0;&#x4F9B;&#x7A33;&#x5B9A;&#x7684;&#x534F;&#x7A0B;&#x5C42;&#x7EA7;&#x7ED3;&#x6784;&#x3002;
+<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-exception-handler/index.html" target="_blank">CoroutineExceptionHandler</a> &#x7684;&#x5B9E;&#x73B0;&#x5E76;&#x4E0D;&#x662F;&#x7528;&#x4E8E;&#x5B50;&#x534F;&#x7A0B;&#x3002;</p>
+<blockquote>
+<p>&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-exception-handler/index.html" target="_blank">CoroutineExceptionHandler</a> &#x603B;&#x662F;&#x88AB;&#x8BBE;&#x7F6E;&#x5728;&#x7531; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-global-scope/index.html" target="_blank">GlobalScope</a>
+&#x542F;&#x52A8;&#x7684;&#x534F;&#x7A0B;&#x4E2D;&#x3002;&#x5C06;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#x8BBE;&#x7F6E;&#x5728;
+<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/run-blocking.html" target="_blank">runBlocking</a> &#x4E3B;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x542F;&#x52A8;&#x7684;&#x534F;&#x7A0B;&#x4E2D;&#x662F;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x7684;&#xFF0C;&#x5C3D;&#x7BA1;&#x5B50;&#x534F;&#x7A0B;&#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x4E86;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#xFF0C;
+&#x4F46;&#x662F;&#x4E3B;&#x534F;&#x7A0B;&#x4E5F;&#x603B;&#x662F;&#x4F1A;&#x88AB;&#x53D6;&#x6D88;&#x7684;&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x7236;&#x534F;&#x7A0B;&#x7684;&#x6240;&#x6709;&#x5B50;&#x534F;&#x7A0B;&#x90FD;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x539F;&#x59CB;&#x7684;&#x5F02;&#x5E38;&#x624D;&#x4F1A;&#x88AB;&#x7236;&#x534F;&#x7A0B;&#x5904;&#x7406;&#xFF0C;
+&#x89C1;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span> = CoroutineExceptionHandler { _, exception -&gt; 
+        println(<span class="hljs-string">&quot;CoroutineExceptionHandler got $exception&quot;</span>) 
+    }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> job</span> = GlobalScope.launch(handler) {
+        launch { <span class="hljs-comment">// &#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x534F;&#x7A0B;</span>
+            <span class="hljs-keyword">try</span> {
+                delay(<span class="hljs-keyword">Long</span>.MAX_VALUE)
+            } <span class="hljs-keyword">finally</span> {
+                withContext(NonCancellable) {
+                    println(<span class="hljs-string">&quot;Children are cancelled, but exception is not handled until all children terminate&quot;</span>)
+                    delay(<span class="hljs-number">100</span>)
+                    println(<span class="hljs-string">&quot;The first child finished its non cancellable block&quot;</span>)
+                }
+            }
+        }
+        launch { <span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x534F;&#x7A0B;</span>
+            delay(<span class="hljs-number">10</span>)
+            println(<span class="hljs-string">&quot;Second child throws an exception&quot;</span>)
+            <span class="hljs-keyword">throw</span> ArithmeticException()
+        }
+    }
+    job.join()
+<span class="hljs-comment">//sampleEnd    </span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-exceptions-04.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">Second child throws an exception
+Children are cancelled, but exception is not handled until all children terminate
+The first child finished its non cancellable block
+CoroutineExceptionHandler got java.lang.ArithmeticException
+</code></pre>
+<!--- TEST-->
+<h3 id="&#x5F02;&#x5E38;&#x805A;&#x5408;">&#x5F02;&#x5E38;&#x805A;&#x5408;</h3>
+<p>&#x5F53;&#x534F;&#x7A0B;&#x7684;&#x591A;&#x4E2A;&#x5B50;&#x534F;&#x7A0B;&#x56E0;&#x5F02;&#x5E38;&#x800C;&#x5931;&#x8D25;&#x65F6;&#xFF0C;
+&#x4E00;&#x822C;&#x89C4;&#x5219;&#x662F;&#x201C;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x201D;&#xFF0C;&#x56E0;&#x6B64;&#x5C06;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;
+&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x4E4B;&#x540E;&#x53D1;&#x751F;&#x7684;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x5F02;&#x5E38;&#x90FD;&#x4F5C;&#x4E3A;&#x88AB;&#x6291;&#x5236;&#x7684;&#x5F02;&#x5E38;&#x7ED1;&#x5B9A;&#x81F3;&#x7B2C;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;</p>
+<!--- INCLUDE
+import kotlinx.coroutines.exceptions.*
+-->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> java.io.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span> = CoroutineExceptionHandler { _, exception -&gt;
+        println(<span class="hljs-string">&quot;CoroutineExceptionHandler got $exception with suppressed ${exception.suppressed.contentToString()}&quot;</span>)
+    }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> job</span> = GlobalScope.launch(handler) {
+        launch {
+            <span class="hljs-keyword">try</span> {
+                delay(<span class="hljs-keyword">Long</span>.MAX_VALUE) <span class="hljs-comment">// &#x5F53;&#x53E6;&#x4E00;&#x4E2A;&#x540C;&#x7EA7;&#x7684;&#x534F;&#x7A0B;&#x56E0; IOException  &#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x88AB;&#x53D6;&#x6D88;</span>
+            } <span class="hljs-keyword">finally</span> {
+                <span class="hljs-keyword">throw</span> ArithmeticException() <span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x4E2A;&#x5F02;&#x5E38;</span>
+            }
+        }
+        launch {
+            delay(<span class="hljs-number">100</span>)
+            <span class="hljs-keyword">throw</span> IOException() <span class="hljs-comment">// &#x9996;&#x4E2A;&#x5F02;&#x5E38;</span>
+        }
+        delay(<span class="hljs-keyword">Long</span>.MAX_VALUE)
+    }
+    job.join()  
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-exceptions-05.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x53EA;&#x5728; JDK7 &#x4EE5;&#x4E0A;&#x652F;&#x6301; <code>suppressed</code> &#x5F02;&#x5E38;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x624D;&#x80FD;&#x6B63;&#x786E;&#x5DE5;&#x4F5C;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">CoroutineExceptionHandler got java.io.IOException with suppressed [java.lang.ArithmeticException]
+</code></pre>
+<!--- TEST-->
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x5F53;&#x524D;&#x53EA;&#x80FD;&#x5728; Java 1.7 &#x4EE5;&#x4E0A;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x4F7F;&#x7528;&#x3002;
+&#x5728; JS &#x548C;&#x539F;&#x751F;&#x73AF;&#x5883;&#x4E0B;&#x6682;&#x65F6;&#x4F1A;&#x53D7;&#x5230;&#x9650;&#x5236;&#xFF0C;&#x4F46;&#x5C06;&#x6765;&#x4F1A;&#x53D6;&#x6D88;&#x3002;</p>
+</blockquote>
+<p>&#x53D6;&#x6D88;&#x5F02;&#x5E38;&#x662F;&#x900F;&#x660E;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x672A;&#x5305;&#x88C5;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> java.io.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span> = CoroutineExceptionHandler { _, exception -&gt;
+        println(<span class="hljs-string">&quot;CoroutineExceptionHandler got $exception&quot;</span>)
+    }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> job</span> = GlobalScope.launch(handler) {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> inner</span> = launch { <span class="hljs-comment">// &#x8BE5;&#x6808;&#x5185;&#x7684;&#x534F;&#x7A0B;&#x90FD;&#x5C06;&#x88AB;&#x53D6;&#x6D88;</span>
+            launch {
+                launch {
+                    <span class="hljs-keyword">throw</span> IOException() <span class="hljs-comment">// &#x539F;&#x59CB;&#x5F02;&#x5E38;</span>
+                }
+            }
+        }
+        <span class="hljs-keyword">try</span> {
+            inner.join()
+        } <span class="hljs-keyword">catch</span> (e: CancellationException) {
+            println(<span class="hljs-string">&quot;Rethrowing CancellationException with original cause&quot;</span>)
+            <span class="hljs-keyword">throw</span> e <span class="hljs-comment">// &#x53D6;&#x6D88;&#x5F02;&#x5E38;&#x88AB;&#x91CD;&#x65B0;&#x629B;&#x51FA;&#xFF0C;&#x4F46;&#x539F;&#x59CB; IOException &#x5F97;&#x5230;&#x4E86;&#x5904;&#x7406;</span>
+        }
+    }
+    job.join()
+<span class="hljs-comment">//sampleEnd    </span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-exceptions-06.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">Rethrowing CancellationException with original cause
+CoroutineExceptionHandler got java.io.IOException
+</code></pre>
+<!--- TEST-->
+<h3 id="&#x76D1;&#x7763;">&#x76D1;&#x7763;</h3>
+<p>&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7814;&#x7A76;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x53D6;&#x6D88;&#x662F;&#x5728;&#x534F;&#x7A0B;&#x7684;&#x6574;&#x4E2A;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x4E2D;&#x4F20;&#x64AD;&#x7684;&#x53CC;<!--
+-->&#x5411;&#x5173;&#x7CFB;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x9700;&#x8981;&#x5355;&#x5411;&#x53D6;&#x6D88;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x6B64;&#x7C7B;&#x9700;&#x6C42;&#x7684;&#x4E00;&#x4E2A;&#x826F;&#x597D;&#x793A;&#x4F8B;&#x662F;&#x5728;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x5B9A;&#x4E49;&#x4F5C;&#x4E1A;&#x7684; UI &#x7EC4;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A; UI &#x7684;&#x5B50;&#x4F5C;&#x4E1A;<!--
+-->&#x6267;&#x884C;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x5B83;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x6709;&#x5FC5;&#x8981;&#x53D6;&#x6D88;&#xFF08;&#x6709;&#x6548;&#x5730;&#x6740;&#x6B7B;&#xFF09;&#x6574;&#x4E2A; UI &#x7EC4;&#x4EF6;&#xFF0C;
+&#x4F46;&#x662F;&#x5982;&#x679C; UI &#x7EC4;&#x4EF6;&#x88AB;&#x9500;&#x6BC1;&#x4E86;&#xFF08;&#x5E76;&#x4E14;&#x5B83;&#x7684;&#x4F5C;&#x4E1A;&#x4E5F;&#x88AB;&#x53D6;&#x6D88;&#x4E86;&#xFF09;&#xFF0C;&#x7531;&#x4E8E;&#x5B83;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x518D;&#x88AB;&#x9700;&#x8981;&#x4E86;&#xFF0C;&#x5B83;&#x6709;&#x5FC5;&#x8981;&#x4F7F;&#x6240;&#x6709;&#x7684;&#x5B50;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x662F;&#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x5B75;&#x5316;&#x4E86;&#x4E00;&#x4E9B;&#x5B50;&#x4F5C;&#x4E1A;&#x5E76;&#x4E14;&#x9700;&#x8981; <em>&#x76D1;&#x7763;</em>
+&#x5B83;&#x4EEC;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x8FFD;&#x8E2A;&#x5B83;&#x4EEC;&#x7684;&#x6545;&#x969C;&#x5E76;&#x5728;&#x8FD9;&#x4E9B;&#x5B50;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x5019;&#x91CD;&#x542F;&#x3002;</p>
+<h4 id="&#x76D1;&#x7763;&#x4F5C;&#x4E1A;">&#x76D1;&#x7763;&#x4F5C;&#x4E1A;</h4>
+<p><a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-supervisor-job.html" target="_blank">SupervisorJob</a> &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8FD9;&#x4E9B;&#x76EE;&#x7684;&#x3002;
+&#x5B83;&#x7C7B;&#x4F3C;&#x4E8E;&#x5E38;&#x89C4;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job.html" target="_blank">Job</a>&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x4E0D;&#x540C;&#x662F;&#xFF1A;<!--
+-->SupervisorJob &#x7684;&#x53D6;&#x6D88;&#x53EA;&#x4F1A;&#x5411;&#x4E0B;&#x4F20;&#x64AD;&#x3002;&#x8FD9;&#x662F;&#x5F88;&#x5BB9;&#x6613;&#x7528;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x6F14;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> supervisor</span> = SupervisorJob()
+    with(CoroutineScope(coroutineContext + supervisor)) {
+        <span class="hljs-comment">// &#x542F;&#x52A8;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x4F5C;&#x4E1A;&#x2014;&#x2014;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x5C06;&#x4F1A;&#x5FFD;&#x7565;&#x5B83;&#x7684;&#x5F02;&#x5E38;&#xFF08;&#x4E0D;&#x8981;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#x8FD9;&#x4E48;&#x505A;&#xFF01;&#xFF09;</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> firstChild</span> = launch(CoroutineExceptionHandler { _, _ -&gt;  }) {
+            println(<span class="hljs-string">&quot;The first child is failing&quot;</span>)
+            <span class="hljs-keyword">throw</span> AssertionError(<span class="hljs-string">&quot;The first child is cancelled&quot;</span>)
+        }
+        <span class="hljs-comment">// &#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x4F5C;&#x4E1A;</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> secondChild</span> = launch {
+            firstChild.join()
+            <span class="hljs-comment">// &#x53D6;&#x6D88;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x4F5C;&#x4E1A;&#x4E14;&#x6CA1;&#x6709;&#x4F20;&#x64AD;&#x7ED9;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B50;&#x4F5C;&#x4E1A;</span>
+            println(<span class="hljs-string">&quot;The first child is cancelled: ${firstChild.isCancelled}, but the second one is still active&quot;</span>)
+            <span class="hljs-keyword">try</span> {
+                delay(<span class="hljs-keyword">Long</span>.MAX_VALUE)
+            } <span class="hljs-keyword">finally</span> {
+                <span class="hljs-comment">// &#x4F46;&#x662F;&#x53D6;&#x6D88;&#x4E86;&#x76D1;&#x7763;&#x7684;&#x4F20;&#x64AD;</span>
+                println(<span class="hljs-string">&quot;The second child is cancelled because the supervisor was cancelled&quot;</span>)
+            }
+        }
+        <span class="hljs-comment">// &#x7B49;&#x5F85;&#x76F4;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x4F5C;&#x4E1A;&#x5931;&#x8D25;&#x4E14;&#x6267;&#x884C;&#x5B8C;&#x6210;</span>
+        firstChild.join()
+        println(<span class="hljs-string">&quot;Cancelling the supervisor&quot;</span>)
+        supervisor.cancel()
+        secondChild.join()
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-supervision-01.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">The first child is failing
+The first child is cancelled: true, but the second one is still active
+Cancelling the supervisor
+The second child is cancelled because the supervisor was cancelled
+</code></pre>
+<!--- TEST-->
+<h4 id="&#x76D1;&#x7763;&#x4F5C;&#x7528;&#x57DF;">&#x76D1;&#x7763;&#x4F5C;&#x7528;&#x57DF;</h4>
+<p>&#x5BF9;&#x4E8E;<em>&#x4F5C;&#x7528;&#x57DF;</em>&#x7684;&#x5E76;&#x53D1;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/supervisor-scope.html" target="_blank">supervisorScope</a> &#x6765;&#x66FF;&#x4EE3; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/coroutine-scope.html" target="_blank">coroutineScope</a> &#x6765;&#x5B9E;&#x73B0;&#x76F8;&#x540C;&#x7684;&#x76EE;&#x7684;&#x3002;&#x5B83;&#x53EA;&#x4F1A;&#x5355;&#x5411;&#x7684;&#x4F20;&#x64AD;<!--
+-->&#x5E76;&#x4E14;&#x5F53;&#x4F5C;&#x4E1A;&#x81EA;&#x8EAB;&#x6267;&#x884C;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x6240;&#x6709;&#x5B50;&#x4F5C;&#x4E1A;&#x5168;&#x90E8;&#x53D6;&#x6D88;&#x3002;&#x4F5C;&#x4E1A;&#x81EA;&#x8EAB;&#x4E5F;&#x4F1A;&#x5728;&#x6240;&#x6709;&#x7684;&#x5B50;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x524D;&#x7B49;&#x5F85;&#xFF0C;
+&#x5C31;&#x50CF; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/coroutine-scope.html" target="_blank">coroutineScope</a> &#x6240;&#x505A;&#x7684;&#x90A3;&#x6837;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlin.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+    <span class="hljs-keyword">try</span> {
+        supervisorScope {
+            <span class="hljs-variable"><span class="hljs-keyword">val</span> child</span> = launch {
+                <span class="hljs-keyword">try</span> {
+                    println(<span class="hljs-string">&quot;The child is sleeping&quot;</span>)
+                    delay(<span class="hljs-keyword">Long</span>.MAX_VALUE)
+                } <span class="hljs-keyword">finally</span> {
+                    println(<span class="hljs-string">&quot;The child is cancelled&quot;</span>)
+                }
+            }
+            <span class="hljs-comment">// &#x4F7F;&#x7528; yield &#x6765;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x5B50;&#x4F5C;&#x4E1A;&#x4E00;&#x4E2A;&#x673A;&#x4F1A;&#x6765;&#x6267;&#x884C;&#x6253;&#x5370;</span>
+            yield()
+            println(<span class="hljs-string">&quot;Throwing an exception from the scope&quot;</span>)
+            <span class="hljs-keyword">throw</span> AssertionError()
+        }
+    } <span class="hljs-keyword">catch</span>(e: AssertionError) {
+        println(<span class="hljs-string">&quot;Caught an assertion error&quot;</span>)
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-supervision-02.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">The child is sleeping
+Throwing an exception from the scope
+The child is cancelled
+Caught an assertion error
+</code></pre>
+<!--- TEST-->
+<h4 id="&#x76D1;&#x7763;&#x534F;&#x7A0B;&#x4E2D;&#x7684;&#x5F02;&#x5E38;">&#x76D1;&#x7763;&#x534F;&#x7A0B;&#x4E2D;&#x7684;&#x5F02;&#x5E38;</h4>
+<p>&#x5E38;&#x89C4;&#x7684;&#x4F5C;&#x4E1A;&#x548C;&#x76D1;&#x7763;&#x4F5C;&#x4E1A;&#x4E4B;&#x95F4;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x533A;&#x522B;&#x662F;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x3002;
+&#x76D1;&#x7763;&#x534F;&#x7A0B;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x4F5C;&#x4E1A;&#x5E94;&#x8BE5;&#x901A;&#x8FC7;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x673A;&#x5236;&#x5904;&#x7406;&#x81EA;&#x8EAB;&#x7684;&#x5F02;&#x5E38;&#x3002;
+&#x8FD9;&#x79CD;&#x5DEE;&#x5F02;&#x6765;&#x81EA;&#x4E8E;&#x5B50;&#x4F5C;&#x4E1A;&#x7684;&#x6267;&#x884C;&#x5931;&#x8D25;&#x4E0D;&#x4F1A;&#x4F20;&#x64AD;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x4F5C;&#x4E1A;&#x7684;&#x4E8B;&#x5B9E;&#x3002;
+&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5728; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/supervisor-scope.html" target="_blank">supervisorScope</a> &#x5185;&#x90E8;&#x76F4;&#x63A5;&#x542F;&#x52A8;&#x7684;&#x534F;&#x7A0B;<em>&#x786E;&#x5B9E;</em>&#x4F7F;&#x7528;&#x4E86;<!--
+-->&#x8BBE;&#x7F6E;&#x5728;&#x5B83;&#x4EEC;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-exception-handler/index.html" target="_blank">CoroutineExceptionHandler</a>&#xFF0C;&#x4E0E;&#x7236;&#x534F;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x76F8;&#x540C;
+&#xFF08;&#x53C2;&#x89C1; <a href="#coroutineexceptionhandler">CoroutineExceptionHandler</a> &#x5C0F;&#x8282;&#x4EE5;&#x83B7;&#x77E5;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#xFF09;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlin.coroutines.*
+<span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span> = CoroutineExceptionHandler { _, exception -&gt; 
+        println(<span class="hljs-string">&quot;CoroutineExceptionHandler got $exception&quot;</span>) 
+    }
+    supervisorScope {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> child</span> = launch(handler) {
+            println(<span class="hljs-string">&quot;The child throws an exception&quot;</span>)
+            <span class="hljs-keyword">throw</span> AssertionError()
+        }
+        println(<span class="hljs-string">&quot;The scope is completing&quot;</span>)
+    }
+    println(<span class="hljs-string">&quot;The scope is completed&quot;</span>)
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-supervision-03.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">The scope is completing
+The child throws an exception
+CoroutineExceptionHandler got java.lang.AssertionError
+The scope is completed
+</code></pre>
+<!--- TEST-->
+<!--- MODULE kotlinx-coroutines-core -->
+<!--- INDEX kotlinx.coroutines -->
+<!--- INDEX kotlinx.coroutines.channels -->
+<!--- END -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="channels.html" class="navigation navigation-prev " aria-label="Previous page: 通道">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shared-mutable-state-and-concurrency.html" class="navigation navigation-next " aria-label="Next page: 共享的可变状态与并发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"异常处理与监督","level":"1.9.8","depth":2,"next":{"title":"共享的可变状态与并发","level":"1.9.9","depth":2,"path":"txt/coroutines/shared-mutable-state-and-concurrency.md","ref":"txt/coroutines/shared-mutable-state-and-concurrency.md","articles":[]},"previous":{"title":"通道","level":"1.9.7","depth":2,"path":"txt/coroutines/channels.md","ref":"txt/coroutines/channels.md","articles":[]},"dir":"ltr"},"config":{"plugins":["regexplace"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<em>([^<]+)</em>\\{: ?\\.keyword\\ ?}","flags":"g","substitute":"<em><strong><code>$1</code></strong></em>"},{"pattern":"<p>\\{:#([^} ]+)\\}</p>","flags":"g","substitute":"<a name=\"$1\"></a>"},{"pattern":"\"/docs/tutorials/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/tutorials/"},{"pattern":"\"/docs/diagnostics/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/diagnostics/"},{"pattern":"\"/community/","flags":"g","substitute":"\"https://www.kotlincn.net/community/"}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"txt/coroutines/exception-handling.md","mtime":"2021-08-17T05:13:50.066Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-18T05:55:43.929Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

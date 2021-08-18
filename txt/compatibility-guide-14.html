@@ -1,0 +1,2803 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Kotlin 1.4 的兼容性指南 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="faq0.html" />
+    
+    
+    <link rel="prev" href="compatibility-guide-13.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="index0.html">
+            
+                <a href="index0.html">
+            
+                    
+                    语言指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="server-overview.html">
+            
+                <a href="server-overview.html">
+            
+                    
+                    Kotlin 用于服务器端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="android-overview.html">
+            
+                <a href="android-overview.html">
+            
+                    
+                    Kotlin 用于 Android 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="js-overview.html">
+            
+                <a href="js-overview.html">
+            
+                    
+                    Kotlin 用于 JavaScript 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="native-overview.html">
+            
+                <a href="native-overview.html">
+            
+                    
+                    Kotlin 用于原生开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="data-science-overview.html">
+            
+                <a href="data-science-overview.html">
+            
+                    
+                    Kotlin 用于数据科学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="coroutines-overview.html">
+            
+                <a href="coroutines-overview.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="multiplatform.html">
+            
+                <a href="multiplatform.html">
+            
+                    
+                    多平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="whatsnew.html">
+            
+                <a href="whatsnew.html">
+            
+                    
+                    新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="whatsnew1430.html">
+            
+                <a href="whatsnew1430.html">
+            
+                    
+                    1.4.30 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="whatsnew-plugin-20203.html">
+            
+                <a href="whatsnew-plugin-20203.html">
+            
+                    
+                    Kotlin 插件 2020.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="whatsnew1420.html">
+            
+                <a href="whatsnew1420.html">
+            
+                    
+                    1.4.20 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="whatsnew14.html">
+            
+                <a href="whatsnew14.html">
+            
+                    
+                    1.4 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="whatsnew13.html">
+            
+                <a href="whatsnew13.html">
+            
+                    
+                    1.3 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="whatsnew12.html">
+            
+                <a href="whatsnew12.html">
+            
+                    
+                    1.2 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="whatsnew11.html">
+            
+                <a href="whatsnew11.html">
+            
+                    
+                    1.1 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="basic-syntax.html">
+            
+                <a href="basic-syntax.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="idioms.html">
+            
+                <a href="idioms.html">
+            
+                    
+                    习惯用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="coding-conventions.html">
+            
+                <a href="coding-conventions.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="basic-types.html">
+            
+                <a href="basic-types.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="control-flow.html">
+            
+                <a href="control-flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="returns.html">
+            
+                <a href="returns.html">
+            
+                    
+                    返回与跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="classes-and-objects.html">
+            
+                <a href="classes-and-objects.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="classes.html">
+            
+                <a href="classes.html">
+            
+                    
+                    类与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="properties.html">
+            
+                <a href="properties.html">
+            
+                    
+                    属性与字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="fun-interfaces.html">
+            
+                <a href="fun-interfaces.html">
+            
+                    
+                    函数式（SAM）接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="visibility-modifiers.html">
+            
+                <a href="visibility-modifiers.html">
+            
+                    
+                    可见性修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="extensions.html">
+            
+                <a href="extensions.html">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="data-classes.html">
+            
+                <a href="data-classes.html">
+            
+                    
+                    数据类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="sealed-classes.html">
+            
+                <a href="sealed-classes.html">
+            
+                    
+                    密封类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="generics.html">
+            
+                <a href="generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="nested-classes.html">
+            
+                <a href="nested-classes.html">
+            
+                    
+                    嵌套类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="enum-classes.html">
+            
+                <a href="enum-classes.html">
+            
+                    
+                    枚举类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="object-declarations.html">
+            
+                <a href="object-declarations.html">
+            
+                    
+                    对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="type-aliases.html">
+            
+                <a href="type-aliases.html">
+            
+                    
+                    类型别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="inline-classes.html">
+            
+                <a href="inline-classes.html">
+            
+                    
+                    内联类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="delegation.html">
+            
+                <a href="delegation.html">
+            
+                    
+                    委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="delegated-properties.html">
+            
+                <a href="delegated-properties.html">
+            
+                    
+                    委托属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="functions-and-lambdas.html">
+            
+                <a href="functions-and-lambdas.html">
+            
+                    
+                    函数与 Lambda 表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="lambdas.html">
+            
+                <a href="lambdas.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="inline-functions.html">
+            
+                <a href="inline-functions.html">
+            
+                    
+                    内联函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="collections-overview.html">
+            
+                <a href="collections-overview.html">
+            
+                    
+                    集合概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="constructing-collections.html">
+            
+                <a href="constructing-collections.html">
+            
+                    
+                    构造集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="iterators.html">
+            
+                <a href="iterators.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="ranges.html">
+            
+                <a href="ranges.html">
+            
+                    
+                    区间与数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="sequences.html">
+            
+                <a href="sequences.html">
+            
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="collection-operations.html">
+            
+                <a href="collection-operations.html">
+            
+                    
+                    操作概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="collection-transformations.html">
+            
+                <a href="collection-transformations.html">
+            
+                    
+                    转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="collection-filtering.html">
+            
+                <a href="collection-filtering.html">
+            
+                    
+                    过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="collection-plus-minus.html">
+            
+                <a href="collection-plus-minus.html">
+            
+                    
+                    加减操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="collection-grouping.html">
+            
+                <a href="collection-grouping.html">
+            
+                    
+                    分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="collection-parts.html">
+            
+                <a href="collection-parts.html">
+            
+                    
+                    取集合的一部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="collection-elements.html">
+            
+                <a href="collection-elements.html">
+            
+                    
+                    取单个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="collection-ordering.html">
+            
+                <a href="collection-ordering.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="collection-aggregate.html">
+            
+                <a href="collection-aggregate.html">
+            
+                    
+                    聚合操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="collection-write.html">
+            
+                <a href="collection-write.html">
+            
+                    
+                    集合写操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="list-operations.html">
+            
+                <a href="list-operations.html">
+            
+                    
+                    List 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="set-operations.html">
+            
+                <a href="set-operations.html">
+            
+                    
+                    Set 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="map-operations.html">
+            
+                <a href="map-operations.html">
+            
+                    
+                    Map 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="coroutines.html">
+            
+                <a href="coroutines.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="coroutines/coroutines-guide.html">
+            
+                <a href="coroutines/coroutines-guide.html">
+            
+                    
+                    协程指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="coroutines/basics.html">
+            
+                <a href="coroutines/basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="coroutines/cancellation-and-timeouts.html">
+            
+                <a href="coroutines/cancellation-and-timeouts.html">
+            
+                    
+                    取消与超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="coroutines/composing-suspending-functions.html">
+            
+                <a href="coroutines/composing-suspending-functions.html">
+            
+                    
+                    组合挂起函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="coroutines/coroutine-context-and-dispatchers.html">
+            
+                <a href="coroutines/coroutine-context-and-dispatchers.html">
+            
+                    
+                    协程上下文与调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="coroutines/flow.html">
+            
+                <a href="coroutines/flow.html">
+            
+                    
+                    异步流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="coroutines/channels.html">
+            
+                <a href="coroutines/channels.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="coroutines/exception-handling.html">
+            
+                <a href="coroutines/exception-handling.html">
+            
+                    
+                    异常处理与监督
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="coroutines/shared-mutable-state-and-concurrency.html">
+            
+                <a href="coroutines/shared-mutable-state-and-concurrency.html">
+            
+                    
+                    共享的可变状态与并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="coroutines/select-expression.html">
+            
+                <a href="coroutines/select-expression.html">
+            
+                    
+                    Select 表达式（实验性的）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="multiplatform-programming.html">
+            
+                <a href="multiplatform-programming.html">
+            
+                    
+                    多平台程序设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="platform-specific-declarations.html">
+            
+                <a href="platform-specific-declarations.html">
+            
+                    
+                    平台相关声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="building-mpp-with-gradle.html">
+            
+                <a href="building-mpp-with-gradle.html">
+            
+                    
+                    以 Gradle 构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="mpp-dsl-reference.html">
+            
+                <a href="mpp-dsl-reference.html">
+            
+                    
+                    多平台 Gradle DSL 参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="other.html">
+            
+                <a href="other.html">
+            
+                    
+                    更多语言结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="multi-declarations.html">
+            
+                <a href="multi-declarations.html">
+            
+                    
+                    解构声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="typecasts.html">
+            
+                <a href="typecasts.html">
+            
+                    
+                    类型检测与转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="this-expressions.html">
+            
+                <a href="this-expressions.html">
+            
+                    
+                    This 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="equality.html">
+            
+                <a href="equality.html">
+            
+                    
+                    相等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="operator-overloading.html">
+            
+                <a href="operator-overloading.html">
+            
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="null-safety.html">
+            
+                <a href="null-safety.html">
+            
+                    
+                    空安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="reflection.html">
+            
+                <a href="reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="serialization.html">
+            
+                <a href="serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="scope-functions.html">
+            
+                <a href="scope-functions.html">
+            
+                    
+                    作用域函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="type-safe-builders.html">
+            
+                <a href="type-safe-builders.html">
+            
+                    
+                    类型安全的构建器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="opt-in-requirements.html">
+            
+                <a href="opt-in-requirements.html">
+            
+                    
+                    选择加入要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="corelibs.html">
+            
+                <a href="corelibs.html">
+            
+                    
+                    核心库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../reflink.html">
+            
+                <a href="../reflink.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../testlink.html">
+            
+                <a href="../testlink.html">
+            
+                    
+                    kotlin.test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="reference0.html">
+            
+                <a href="reference0.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="keyword-reference.html">
+            
+                <a href="keyword-reference.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="grammar.html">
+            
+                <a href="grammar.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="code-style-migration-guide.html">
+            
+                <a href="code-style-migration-guide.html">
+            
+                    
+                    编码风格约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="interop.html">
+            
+                <a href="interop.html">
+            
+                    
+                    Java 互操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Kotlin 中调用 Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="java-to-kotlin-interop.html">
+            
+                <a href="java-to-kotlin-interop.html">
+            
+                    
+                    Java 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="js-project-setup.html">
+            
+                <a href="js-project-setup.html">
+            
+                    
+                    搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="dynamic-type.html">
+            
+                <a href="dynamic-type.html">
+            
+                    
+                    动态类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="js-interop.html">
+            
+                <a href="js-interop.html">
+            
+                    
+                    Kotlin 中调用 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="js-to-kotlin-interop.html">
+            
+                <a href="js-to-kotlin-interop.html">
+            
+                    
+                    JavaScript 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="js-modules.html">
+            
+                <a href="js-modules.html">
+            
+                    
+                    JavaScript 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="js-reflection.html">
+            
+                <a href="js-reflection.html">
+            
+                    
+                    JavaScript 反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="javascript-dce.html">
+            
+                <a href="javascript-dce.html">
+            
+                    
+                    JavaScript DCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="js-ir-compiler.html">
+            
+                <a href="js-ir-compiler.html">
+            
+                    
+                    IR 编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="js-external-declarations-with-dukat.html">
+            
+                <a href="js-external-declarations-with-dukat.html">
+            
+                    
+                    用 Dukat 生成外部声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="native.html">
+            
+                <a href="native.html">
+            
+                    
+                    原生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="native/concurrency.html">
+            
+                <a href="native/concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="native/immutability.html">
+            
+                <a href="native/immutability.html">
+            
+                    
+                    不可变性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="native/libraries.html">
+            
+                <a href="native/libraries.html">
+            
+                    
+                    Kotlin 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="native/platform_libs.html">
+            
+                <a href="native/platform_libs.html">
+            
+                    
+                    平台库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="native/c_interop.html">
+            
+                <a href="native/c_interop.html">
+            
+                    
+                    与 C 语言互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="native/objc_interop.html">
+            
+                <a href="native/objc_interop.html">
+            
+                    
+                    与 Objective-C 及 Swift 互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="native/cocoapods.html">
+            
+                <a href="native/cocoapods.html">
+            
+                    
+                    CocoaPods 集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="native/gradle_plugin.html">
+            
+                <a href="native/gradle_plugin.html">
+            
+                    
+                    Gradle 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="native/debugging.html">
+            
+                <a href="native/debugging.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="native/faq.html">
+            
+                <a href="native/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="tools.html">
+            
+                <a href="tools.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="using-gradle.html">
+            
+                <a href="using-gradle.html">
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="using-maven.html">
+            
+                <a href="using-maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="using-ant.html">
+            
+                <a href="using-ant.html">
+            
+                    
+                    Ant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="compiler-reference.html">
+            
+                <a href="compiler-reference.html">
+            
+                    
+                    编译器选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="compiler-plugins.html">
+            
+                <a href="compiler-plugins.html">
+            
+                    
+                    编译器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="kapt.html">
+            
+                <a href="kapt.html">
+            
+                    
+                    Kapt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="kotlin-doc.html">
+            
+                <a href="kotlin-doc.html">
+            
+                    
+                    Dokka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="kotlin-osgi.html">
+            
+                <a href="kotlin-osgi.html">
+            
+                    
+                    OSGi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="evolution.html">
+            
+                <a href="evolution.html">
+            
+                    
+                    演进
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="evolution/kotlin-evolution.html">
+            
+                <a href="evolution/kotlin-evolution.html">
+            
+                    
+                    Kotlin 语言演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="evolution/components-stability.html">
+            
+                <a href="evolution/components-stability.html">
+            
+                    
+                    不同组件的稳定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="compatibility-guide-13.html">
+            
+                <a href="compatibility-guide-13.html">
+            
+                    
+                    Kotlin 1.3 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18.4" data-path="compatibility-guide-14.html">
+            
+                <a href="compatibility-guide-14.html">
+            
+                    
+                    Kotlin 1.4 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="faq0.html">
+            
+                <a href="faq0.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="comparison-to-java.html">
+            
+                <a href="comparison-to-java.html">
+            
+                    
+                    与 Java 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="comparison-to-scala.html">
+            
+                <a href="comparison-to-scala.html">
+            
+                    
+                    与 Scala 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Kotlin 1.4 的兼容性指南</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <hr>
+<p>type: doc
+layout: reference</p>
+<h2 id="title-kotlin-14-&#x7684;&#x517C;&#x5BB9;&#x6027;&#x6307;&#x5357;">title: &quot;Kotlin 1.4 &#x7684;&#x517C;&#x5BB9;&#x6027;&#x6307;&#x5357;&quot;</h2>
+<h1 id="kotlin-14-&#x7684;&#x517C;&#x5BB9;&#x6027;&#x6307;&#x5357;">Kotlin 1.4 &#x7684;&#x517C;&#x5BB9;&#x6027;&#x6307;&#x5357;</h1>
+<p><a href="evolution/kotlin-evolution.html"><em>Keeping the Language Modern</em> and <em>Comfortable Updates</em></a> are among the fundamental principles in Kotlin Language Design.
+The former says that constructs which obstruct language evolution should be removed, and the latter says that this
+removal should be well-communicated beforehand to make code migration as smooth as possible.</p>
+<p>While most of the language changes were already announced through other channels, like update changelogs or compiler warnings,
+this document summarizes them all, providing a complete reference for migration from Kotlin 1.3 to Kotlin 1.4.</p>
+<h2 id="basic-terms">Basic terms</h2>
+<p>In this document we introduce several kinds of compatibility:</p>
+<ul>
+<li><em>source</em>: source-incompatible change stops code that used to compile fine (without errors or warnings) from compiling anymore</li>
+<li><em>binary</em>: two binary artifacts are said to be binary-compatible if interchanging them doesn&apos;t lead to loading or linkage errors </li>
+<li><em>behavioral</em>: a change is said to be behavioral-incompatible if the same program demonstrates different behavior before and after applying the change</li>
+</ul>
+<p>Remember that those definitions are given only for pure Kotlin. Compatibility of Kotlin code from the other languages perspective
+(for example, from Java) is out of the scope of this document.</p>
+<h2 id="language-and-stdlib">Language and stdlib</h2>
+<h3 id="unexpected-behavior-with-in-infix-operator-and-concurrenthashmap">Unexpected behavior with <code>in</code> infix operator and <code>ConcurrentHashMap</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-18053" target="_blank">KT-18053</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: Kotlin 1.4 will outlaw auto operator <code>contains</code> coming from the implementors of <code>java.util.Map</code> written in Java</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: introduce warning for problematic operators at call-site</li>
+<li>&gt;= 1.4: raise this warning to an error,
+<code>-XXLanguage:-ProhibitConcurrentHashMapContains</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="prohibit-access-to-protected-members-inside-public-inline-members">Prohibit access to protected members inside public inline members</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-21178" target="_blank">KT-21178</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: Kotlin 1.4 will prohibit access to protected members from public inline members.</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: introduce warning at call-site for problematic cases</li>
+<li>1.4: raise this warning to an error,
+<code>-XXLanguage:-ProhibitProtectedCallFromInline</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="contracts-on-calls-with-implicit-receivers">Contracts on calls with implicit receivers</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-28672" target="_blank">KT-28672</a></p>
+<p><strong>Component</strong>: Core Language</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: smart casts from contracts will be available on calls with implicit receivers in 1.4</p>
+<p><strong>Deprecation cycle</strong>: </p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-ContractsOnCallsWithImplicitReceiver</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="inconsistent-behavior-of-floating-point-number-comparisons">Inconsistent behavior of floating-point number comparisons</h3>
+<blockquote>
+<p><strong>Issues</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-22723" target="_blank">KT-22723</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, Kotlin compiler will use IEEE 754 standard to compare floating-point numbers</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-ProperIeee754Comparisons</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="no-smart-cast-on-the-last-expression-in-a-generic-lambda">No smart cast on the last expression in a generic lambda</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-15020" target="_blank">KT-15020</a></p>
+<p><strong>Component</strong>: Core Language</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: smart casts for last expressions in lambdas will be correctly applied since 1.4</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features. </li>
+</ul>
+</blockquote>
+<h3 id="do-not-depend-on-the-order-of-lambda-arguments-to-coerce-result-to-unit">Do not depend on the order of lambda arguments to coerce result to <code>Unit</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-36045" target="_blank">KT-36045</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, lambda arguments will be resolved independently without implicit coercion to <code>Unit</code></p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features. </li>
+</ul>
+</blockquote>
+<h3 id="wrong-common-supertype-between-raw-and-integer-literal-type-leads-to-unsound-code">Wrong common supertype between raw and integer literal type leads to unsound code</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35681" target="_blank">KT-35681</a></p>
+<p><strong>Components</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, common supertype between raw <code>Comparable</code> type and integer literal type will be more specific</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features. </li>
+</ul>
+</blockquote>
+<h3 id="type-safety-problem-because-several-equal-type-variables-are-instantiated-with-a-different-types">Type safety problem because several equal type variables are instantiated with a different types</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35679" target="_blank">KT-35679</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, Kotlin compiler will prohibit instantiating equal type variables with different types   </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="type-safety-problem-because-of-incorrect-subtyping-for-intersection-types">Type safety problem because of incorrect subtyping for intersection types</h3>
+<blockquote>
+<p><strong>Issues</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-22474" target="_blank">KT-22474</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: in Kotlin 1.4, subtyping for intersection types will be refined to work more correctly    </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="no-type-mismatch-with-an-empty-when-expression-inside-lambda">No type mismatch with an empty <code>when</code> expression inside lambda</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-17995" target="_blank">KT-17995</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, there will be a type mismatch for empty <code>when</code> expression if it&apos;s used  as the last expression in a lambda</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="return-type-any-inferred-for-lambda-with-early-return-with-integer-literal-in-one-of-possible-return-values">Return type <code>Any</code> inferred for lambda with early return with integer literal in one of possible return values</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-20226" target="_blank">KT-20226</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, integer type returning from a lambda will be more specific for cases when there is early return  </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="proper-capturing-of-star-projections-with-recursive-types">Proper capturing of star projections with recursive types</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-33012" target="_blank">KT-33012</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, more candidates will become applicable because capturing for recursive types will work more correctly </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="common-supertype-calculation-with-non-proper-type-and-flexible-one-leads-to-incorrect-results">Common supertype calculation with non-proper type and flexible one leads to incorrect results</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-37054" target="_blank">KT-37054</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, common supertype between flexible types will be more specific protecting from runtime errors </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="type-safety-problem-because-of-lack-of-captured-conversion-against-nullable-type-argument">Type safety problem because of lack of captured conversion against nullable type argument</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35487" target="_blank">KT-35487</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, subtyping between captured and nullable types will be more correct protecting from runtime errors </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="preserve-intersection-type-for-covariant-types-after-unchecked-cast">Preserve intersection type for covariant types after unchecked cast</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-37280" target="_blank">KT-37280</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, uchecked casts of covariant types produce the intersection type for smart casts,
+ not the type of the unchecked cast. </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="type-variable-leaks-from-builder-inference-because-of-using-this-expression">Type variable leaks from builder inference because of using <code>this</code> expression</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-32126" target="_blank">KT-32126</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, using <code>this</code> inside builder functions like <code>sequence {}</code> is prohibited if there are no other proper constraints</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="wrong-overload-resolution-for-contravariant-types-with-nullable-type-arguments">Wrong overload resolution for contravariant types with nullable type arguments</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-31670" target="_blank">KT-31670</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, if two overloads of a function that takes contravariant type arguments differ only
+by the nullability of the type (such as <code>In&lt;T&gt;</code> and <code>In&lt;T?&gt;</code>), the nullable type is considered more specific. </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="builder-inference-with-non-nested-recursive-constraints">Builder inference with non-nested recursive constraints</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-34975" target="_blank">KT-34975</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, builder functions such as <code>sequence {}</code> with type that depends on a recursive
+constraint inside the passed lambda cause a compiler error. </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="eager-type-variable-fixation-leads-to-a-contradictory-constraint-system">Eager type variable fixation leads to a contradictory constraint system</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-25175" target="_blank">KT-25175</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, the type inference in certain cases works less eagerly allowing to find the 
+constraint system that is not contradictory.</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NewInference</code> can be used to temporarily revert to pre-1.4 behavior. Note that this flag will also
+disable several new language features.</li>
+</ul>
+</blockquote>
+<h3 id="prohibit-tailrec-modifier-on-open-functions">Prohibit <code>tailrec</code> modifier on <code>open</code> functions</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-18541" target="_blank">KT-18541</a></p>
+<p><strong>Component</strong>: Core language</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, functions can&apos;t have <code>open</code> and <code>tailrec</code> modifiers at the same time. </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: report a warning on functions that have <code>open</code> and <code>tailrec</code> modifiers together (error in the progressive mode).</li>
+<li>&gt;= 1.4: raise this warning to an error.</li>
+</ul>
+</blockquote>
+<h3 id="the-instance-field-of-a-companion-object-more-visible-than-the-companion-object-class-itself">The <code>INSTANCE</code> field of a companion object more visible than the companion object class itself</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-11567" target="_blank">KT-11567</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, if a companion object is private, then its field <code>INSTANCE</code> will be also private</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: the compiler generates object <code>INSTANCE</code> with a deprecated flag</li>
+<li>&gt;= 1.4: companion object <code>INSTANCE</code> field has proper visibility</li>
+</ul>
+</blockquote>
+<h3 id="outer-finally-block-inserted-before-return-is-not-excluded-from-thecatch-interval-of-the-inner-try-block-without-finally">Outer <code>finally</code> block inserted before <code>return</code> is not excluded from the<code>catch</code> interval of the inner <code>try</code> block without <code>finally</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-31923" target="_blank">KT-31923</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, the catch interval will be computed properly for nested <code>try/catch</code> blocks</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-ProperFinally</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="use-the-boxed-version-of-an-inline-class-in-return-type-position-for-covariant-and-generic-specialized-overrides">Use the boxed version of an inline class in return type position for covariant and generic-specialized overrides</h3>
+<blockquote>
+<p><strong>Issues</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-30419" target="_blank">KT-30419</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, functions using covariant and generic-specialized overrides will return boxed values of inline classes   </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed </li>
+</ul>
+</blockquote>
+<h3 id="do-not-declare-checked-exceptions-in-jvm-bytecode-when-using-delegation-to-kotlin-interfaces">Do not declare checked exceptions in JVM bytecode when using delegation to Kotlin interfaces</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35834" target="_blank">KT-35834</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: Kotlin 1.4 will not generate checked exceptions during interface delegation to Kotlin interfaces</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-DoNotGenerateThrowsForDelegatedKotlinMembers</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="changed-behavior-of-signature-polymorphic-calls-to-methods-with-a-single-vararg-parameter-to-avoid-wrapping-the-argument-into-another-array">Changed behavior of signature-polymorphic calls to methods with a single vararg parameter to avoid wrapping the argument into another array</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35469" target="_blank">KT-35469</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: Kotlin 1.4 will not wrap the argument into another array on a signature-polymorphic call</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed</li>
+</ul>
+</blockquote>
+<h3 id="incorrect-generic-signature-in-annotations-when-kclass-is-used-as-a-generic-parameter">Incorrect generic signature in annotations when KClass is used as a generic parameter</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35207" target="_blank">KT-35207</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: Kotlin 1.4 will fix incorrect type mapping in annotations when KClass is used as a generic parameter </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed</li>
+</ul>
+</blockquote>
+<h3 id="forbid-spread-operator-in-signature-polymorphic-calls">Forbid spread operator in signature-polymorphic calls</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-35226" target="_blank">KT-35226</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: Kotlin 1.4 will prohibit the use of spread operator (*) on signature-polymorphic calls </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: report a warning on the use of a spread operator in signature-polymorphic calls</li>
+<li>&gt;= 1.5: raise this warning to an error,
+<code>-XXLanguage:-ProhibitSpreadOnSignaturePolymorphicCall</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="change-initialization-order-of-default-values-for-tail-recursive-optimized-functions">Change initialization order of default values for tail-recursive optimized functions</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-31540" target="_blank">KT-31540</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: Since Kotlin 1.4, the initialization order for tail-recursive functions will be the same as for regular functions </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: report a warning at declaration-site for problematic functions</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-ProperComputationOrderOfTailrecDefaultParameters</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="do-not-generate-constantvalue-attribute-for-non-const-vals">Do not generate <code>ConstantValue</code> attribute for non-<code>const</code> <code>val</code>s</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-16615" target="_blank">KT-16615</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: Since Kotlin 1.4, the compiler will not generate the <code>ConstantValue</code> attribute for non-<code>const</code> <code>val</code>s</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: report a warning through an IntelliJ IDEA inspection</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-NoConstantValueAttributeForNonConstVals</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="generated-overloads-for-jvmoverloads-on-open-methods-should-be-final">Generated overloads for <code>@JvmOverloads</code> on <code>open</code> methods should be <code>final</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-33240" target="_blank">KT-33240</a></p>
+<p><strong>Components</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: overloads for functions with <code>@JvmOverloads</code> will be generated as <code>final</code></p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed,
+<code>-XXLanguage:-GenerateJvmOverloadsAsFinal</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="lambdas-returning-kotlinresult-now-return-boxed-value-instead-of-unboxed">Lambdas returning <code>kotlin.Result</code> now return boxed value instead of unboxed</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-39198" target="_blank">KT-39198</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, lambdas returning values of <code>kotlin.Result</code> type will return boxed value instead of unboxed</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed</li>
+</ul>
+</blockquote>
+<h3 id="unify-exceptions-from-null-checks">Unify exceptions from null checks</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-22275" target="_blank">KT-22275</a></p>
+<p><strong>Component</strong>: Kotlin/JVM</p>
+<p><strong>Incompatible change type</strong>: behavior</p>
+<p><strong>Short summary</strong>: Starting from Kotlin 1.4, all runtime null checks will throw a <code>java.lang.NullPointerException</code></p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: runtime null checks throw different exceptions, such as <code>KotlinNullPointerException</code>, <code>IllegalStateException</code>, 
+<code>IllegalArgumentException</code>, and <code>TypeCastException</code></li>
+<li>&gt;= 1.4: all runtime null checks throw a <code>java.lang.NullPointerException</code>.
+<code>-Xno-unified-null-checks</code> can be used to temporarily revert to pre-1.4 behavior</li>
+</ul>
+</blockquote>
+<h3 id="comparing-floating-point-values-in-arraylist-operations-contains-indexof-lastindexof-ieee-754-or-total-order">Comparing floating-point values in array/list operations <code>contains</code>, <code>indexOf</code>, <code>lastIndexOf</code>: IEEE 754 or total order</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-28753" target="_blank">KT-28753</a></p>
+<p><strong>Component</strong>: kotlin-stdlib (JVM)</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: the <code>List</code> implementation returned from <code>Double/FloatArray.asList()</code> will implement <code>contains</code>, <code>indexOf</code>, and <code>lastIndexOf</code>, so that they use total order equality</p>
+<p><strong>Deprecation cycle</strong>: </p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed</li>
+</ul>
+</blockquote>
+<h3 id="gradually-change-the-return-type-of-collection-min-and-max-functions-to-non-nullable">Gradually change the return type of collection <code>min</code> and <code>max</code> functions to non-nullable</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-38854" target="_blank">KT-38854</a></p>
+<p><strong>Component</strong>: kotlin-stdlib (JVM)</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: return type of collection <code>min</code> and <code>max</code> functions will be changed to non-nullable in 1.6</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>1.4: introduce <code>...OrNull</code> functions as synonyms and deprecate the affected API (see details in the issue)</li>
+<li>1.5.x: raise the deprecation level of the affected API to error</li>
+<li>&gt;=1.6: reintroduce the affected API but with non-nullable return type</li>
+</ul>
+</blockquote>
+<h3 id="deprecate-appendln-in-favor-of-appendline">Deprecate <code>appendln</code> in favor of <code>appendLine</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-38754" target="_blank">KT-38754</a></p>
+<p><strong>Component</strong>: kotlin-stdlib (JVM)</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: <code>StringBuilder.appendln()</code> will be deprecated in favor of <code>StringBuilder.appendLine()</code></p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>1.4: introduce <code>appendLine</code> function as a replacement for <code>appendln</code> and deprecate <code>appendln</code></li>
+<li>&gt;=1.5: raise the deprecation level to error</li>
+</ul>
+</blockquote>
+<h3 id="deprecate-conversions-of-floating-point-types-to-short-and-byte">Deprecate conversions of floating-point types to <code>Short</code> and <code>Byte</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-30360" target="_blank">KT-30360</a></p>
+<p><strong>Component</strong>: kotlin-stdlib (JVM)</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, conversions of floating-point types to <code>Short</code> and <code>Byte</code> will be deprecated </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>1.4: deprecate <code>Double.toShort()/toByte()</code> and <code>Float.toShort()/toByte()</code> and propose replacement</li>
+<li>&gt;=1.5: raise the deprecation level to error</li>
+</ul>
+</blockquote>
+<h3 id="fail-fast-in-regexfindall-on-an-invalid-startindex">Fail fast in <code>Regex.findAll</code> on an invalid <code>startIndex</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-28356" target="_blank">KT-28356</a></p>
+<p><strong>Component</strong>: kotlin-stdlib</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, <code>findAll</code> will be improved to check that <code>startIndex</code> is in the range of the valid position indices of the input char sequence at the moment of entering <code>findAll</code>, and throw <code>IndexOutOfBoundsException</code> if it&apos;s not </p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed</li>
+</ul>
+</blockquote>
+<h3 id="remove-deprecated-kotlincoroutinesexperimental">Remove deprecated <code>kotlin.coroutines.experimental</code></h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-36083" target="_blank">KT-36083</a></p>
+<p><strong>Component</strong>: kotlin-stdlib</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, the deprecated <code>kotlin.coroutines.experimental</code> API is removed from stdlib</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: <code>kotlin.coroutines.experimental</code> is deprecated with the <code>ERROR</code> level</li>
+<li>&gt;= 1.4: <code>kotlin.coroutines.experimental</code> is removed from stdlib. On the JVM, a separate compatibility artifact is provided (see details in the issue).</li>
+</ul>
+</blockquote>
+<h3 id="remove-deprecated-mod-operator">Remove deprecated <code>mod</code> operator</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-26654" target="_blank">KT-26654</a></p>
+<p><strong>Component</strong>: kotlin-stdlib</p>
+<p><strong>Incompatible change type</strong>: source</p>
+<p><strong>Short summary</strong>: since Kotlin 1.4, <code>mod</code> operator on numeric types is removed from stdlib</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: <code>mod</code> is deprecated with the <code>ERROR</code> level</li>
+<li>&gt;= 1.4: <code>mod</code> is removed from stdlib</li>
+</ul>
+</blockquote>
+<h3 id="hide-throwableaddsuppressed-member-and-prefer-extension-instead">Hide <code>Throwable.addSuppressed</code> member and prefer extension instead</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-38777" target="_blank">KT-38777</a></p>
+<p><strong>Component</strong>: kotlin-stdlib</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: <code>Throwable.addSuppressed()</code> extension function is now preferred over the <code>Throwable.addSuppressed()</code> member function</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: old behavior (see details in the issue)</li>
+<li>&gt;= 1.4: behavior changed</li>
+</ul>
+</blockquote>
+<h3 id="capitalize-should-convert-digraphs-to-title-case"><code>capitalize</code> should convert digraphs to title case</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-38817" target="_blank">KT-38817</a></p>
+<p><strong>Component</strong>: kotlin-stdlib</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: <code>String.capitalize()</code> function now capitalizes digraphs from the <a href="https://en.wikipedia.org/wiki/Gaj%27s_Latin_alphabet" target="_blank">Serbo-Croatian Gaj&apos;s Latin alphabet</a>
+in the title case (<code>&#x1C5;</code> instead of <code>&#x1C4;</code>)</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: digraphs are capitalized in the upper case (<code>&#x1C4;</code>)</li>
+<li>&gt;= 1.4: digraphs are capitalized in the title case (<code>&#x1C5;</code>)</li>
+</ul>
+</blockquote>
+<h2 id="tools">Tools</h2>
+<h3 id="compiler-arguments-with-delimiter-characters-must-be-passed-in-double-quotes-on-windows">Compiler arguments with delimiter characters must be passed in double quotes on Windows</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-30211" target="_blank">KT-30211</a></p>
+<p><strong>Component</strong>: CLI</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: on Windows, <code>kotlinc.bat</code> arguments that contain delimiter characters (whitespace, <code>=</code>, <code>;</code>, <code>,</code>) now
+require double quotes (<code>&quot;</code>)</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: all compiler arguments are passed without quotes</li>
+<li>&gt;= 1.4: compiler arguments that contain delimiter characters (whitespace, <code>=</code>, <code>;</code>, <code>,</code>) require double quotes (<code>&quot;</code>)</li>
+</ul>
+</blockquote>
+<h3 id="kapt-names-of-synthetic-annotations-methods-for-properties-have-changed">KAPT: Names of synthetic <code>$annotations()</code> methods for properties have changed</h3>
+<blockquote>
+<p><strong>Issue</strong>: <a href="https://youtrack.jetbrains.com/issue/KT-36926" target="_blank">KT-36926</a></p>
+<p><strong>Component</strong>: KAPT</p>
+<p><strong>Incompatible change type</strong>: behavioral</p>
+<p><strong>Short summary</strong>: names of synthetic <code>$annotations()</code> methods generated by KAPT for properties have changed in 1.4</p>
+<p><strong>Deprecation cycle</strong>:</p>
+<ul>
+<li>&lt; 1.4: names of synthetic <code>$annotations()</code> methods for properties follow the template <code>&lt;propertyName&gt;@annotations()</code></li>
+<li>&gt;= 1.4: names of synthetic <code>$annotations()</code> methods for properties include the <code>get</code> prefix: <code>get&lt;PropertyName&gt;@annotations()</code></li>
+</ul>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="compatibility-guide-13.html" class="navigation navigation-prev " aria-label="Previous page: Kotlin 1.3 的兼容性指南">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="faq0.html" class="navigation navigation-next " aria-label="Next page: 常见问题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Kotlin 1.4 的兼容性指南","level":"1.18.4","depth":2,"next":{"title":"常见问题","level":"1.19","depth":1,"path":"txt/faq0.md","ref":"txt/faq0.md","articles":[{"title":"FAQ","level":"1.19.1","depth":2,"path":"txt/faq.md","ref":"txt/faq.md","articles":[]},{"title":"与 Java 比较","level":"1.19.2","depth":2,"path":"txt/comparison-to-java.md","ref":"txt/comparison-to-java.md","articles":[]},{"title":"与 Scala 比较","level":"1.19.3","depth":2,"path":"txt/comparison-to-scala.md","ref":"txt/comparison-to-scala.md","articles":[]}]},"previous":{"title":"Kotlin 1.3 的兼容性指南","level":"1.18.3","depth":2,"path":"txt/compatibility-guide-13.md","ref":"txt/compatibility-guide-13.md","articles":[]},"dir":"ltr"},"config":{"plugins":["regexplace"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<em>([^<]+)</em>\\{: ?\\.keyword\\ ?}","flags":"g","substitute":"<em><strong><code>$1</code></strong></em>"},{"pattern":"<p>\\{:#([^} ]+)\\}</p>","flags":"g","substitute":"<a name=\"$1\"></a>"},{"pattern":"\"/docs/tutorials/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/tutorials/"},{"pattern":"\"/docs/diagnostics/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/diagnostics/"},{"pattern":"\"/community/","flags":"g","substitute":"\"https://www.kotlincn.net/community/"}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"txt/compatibility-guide-14.md","mtime":"2021-08-18T05:20:05.937Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-18T05:55:43.929Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

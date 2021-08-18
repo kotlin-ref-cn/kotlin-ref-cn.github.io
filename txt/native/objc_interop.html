@@ -1,0 +1,2602 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>与 Objective-C 及 Swift 互操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="cocoapods.html" />
+    
+    
+    <link rel="prev" href="c_interop.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../index0.html">
+            
+                <a href="../index0.html">
+            
+                    
+                    语言指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../overview.html">
+            
+                <a href="../overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../server-overview.html">
+            
+                <a href="../server-overview.html">
+            
+                    
+                    Kotlin 用于服务器端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../android-overview.html">
+            
+                <a href="../android-overview.html">
+            
+                    
+                    Kotlin 用于 Android 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-overview.html">
+            
+                <a href="../js-overview.html">
+            
+                    
+                    Kotlin 用于 JavaScript 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../native-overview.html">
+            
+                <a href="../native-overview.html">
+            
+                    
+                    Kotlin 用于原生开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../data-science-overview.html">
+            
+                <a href="../data-science-overview.html">
+            
+                    
+                    Kotlin 用于数据科学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../coroutines-overview.html">
+            
+                <a href="../coroutines-overview.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../multiplatform.html">
+            
+                <a href="../multiplatform.html">
+            
+                    
+                    多平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../whatsnew.html">
+            
+                <a href="../whatsnew.html">
+            
+                    
+                    新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../whatsnew1430.html">
+            
+                <a href="../whatsnew1430.html">
+            
+                    
+                    1.4.30 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../whatsnew-plugin-20203.html">
+            
+                <a href="../whatsnew-plugin-20203.html">
+            
+                    
+                    Kotlin 插件 2020.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../whatsnew1420.html">
+            
+                <a href="../whatsnew1420.html">
+            
+                    
+                    1.4.20 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../whatsnew14.html">
+            
+                <a href="../whatsnew14.html">
+            
+                    
+                    1.4 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../whatsnew13.html">
+            
+                <a href="../whatsnew13.html">
+            
+                    
+                    1.3 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../whatsnew12.html">
+            
+                <a href="../whatsnew12.html">
+            
+                    
+                    1.2 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../whatsnew11.html">
+            
+                <a href="../whatsnew11.html">
+            
+                    
+                    1.1 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../basic-syntax.html">
+            
+                <a href="../basic-syntax.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../idioms.html">
+            
+                <a href="../idioms.html">
+            
+                    
+                    习惯用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../coding-conventions.html">
+            
+                <a href="../coding-conventions.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../basics.html">
+            
+                <a href="../basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../basic-types.html">
+            
+                <a href="../basic-types.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../packages.html">
+            
+                <a href="../packages.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../control-flow.html">
+            
+                <a href="../control-flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../returns.html">
+            
+                <a href="../returns.html">
+            
+                    
+                    返回与跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../classes-and-objects.html">
+            
+                <a href="../classes-and-objects.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../classes.html">
+            
+                <a href="../classes.html">
+            
+                    
+                    类与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../properties.html">
+            
+                <a href="../properties.html">
+            
+                    
+                    属性与字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../interfaces.html">
+            
+                <a href="../interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../fun-interfaces.html">
+            
+                <a href="../fun-interfaces.html">
+            
+                    
+                    函数式（SAM）接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../visibility-modifiers.html">
+            
+                <a href="../visibility-modifiers.html">
+            
+                    
+                    可见性修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../extensions.html">
+            
+                <a href="../extensions.html">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../data-classes.html">
+            
+                <a href="../data-classes.html">
+            
+                    
+                    数据类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../sealed-classes.html">
+            
+                <a href="../sealed-classes.html">
+            
+                    
+                    密封类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../generics.html">
+            
+                <a href="../generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nested-classes.html">
+            
+                <a href="../nested-classes.html">
+            
+                    
+                    嵌套类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../enum-classes.html">
+            
+                <a href="../enum-classes.html">
+            
+                    
+                    枚举类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../object-declarations.html">
+            
+                <a href="../object-declarations.html">
+            
+                    
+                    对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../type-aliases.html">
+            
+                <a href="../type-aliases.html">
+            
+                    
+                    类型别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../inline-classes.html">
+            
+                <a href="../inline-classes.html">
+            
+                    
+                    内联类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../delegation.html">
+            
+                <a href="../delegation.html">
+            
+                    
+                    委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../delegated-properties.html">
+            
+                <a href="../delegated-properties.html">
+            
+                    
+                    委托属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../functions-and-lambdas.html">
+            
+                <a href="../functions-and-lambdas.html">
+            
+                    
+                    函数与 Lambda 表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../functions.html">
+            
+                <a href="../functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../lambdas.html">
+            
+                <a href="../lambdas.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../inline-functions.html">
+            
+                <a href="../inline-functions.html">
+            
+                    
+                    内联函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../collections.html">
+            
+                <a href="../collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../collections-overview.html">
+            
+                <a href="../collections-overview.html">
+            
+                    
+                    集合概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../constructing-collections.html">
+            
+                <a href="../constructing-collections.html">
+            
+                    
+                    构造集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../iterators.html">
+            
+                <a href="../iterators.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../ranges.html">
+            
+                <a href="../ranges.html">
+            
+                    
+                    区间与数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../sequences.html">
+            
+                <a href="../sequences.html">
+            
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../collection-operations.html">
+            
+                <a href="../collection-operations.html">
+            
+                    
+                    操作概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../collection-transformations.html">
+            
+                <a href="../collection-transformations.html">
+            
+                    
+                    转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../collection-filtering.html">
+            
+                <a href="../collection-filtering.html">
+            
+                    
+                    过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../collection-plus-minus.html">
+            
+                <a href="../collection-plus-minus.html">
+            
+                    
+                    加减操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../collection-grouping.html">
+            
+                <a href="../collection-grouping.html">
+            
+                    
+                    分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../collection-parts.html">
+            
+                <a href="../collection-parts.html">
+            
+                    
+                    取集合的一部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../collection-elements.html">
+            
+                <a href="../collection-elements.html">
+            
+                    
+                    取单个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../collection-ordering.html">
+            
+                <a href="../collection-ordering.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../collection-aggregate.html">
+            
+                <a href="../collection-aggregate.html">
+            
+                    
+                    聚合操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../collection-write.html">
+            
+                <a href="../collection-write.html">
+            
+                    
+                    集合写操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../list-operations.html">
+            
+                <a href="../list-operations.html">
+            
+                    
+                    List 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../set-operations.html">
+            
+                <a href="../set-operations.html">
+            
+                    
+                    Set 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../map-operations.html">
+            
+                <a href="../map-operations.html">
+            
+                    
+                    Map 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../coroutines.html">
+            
+                <a href="../coroutines.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../coroutines/coroutines-guide.html">
+            
+                <a href="../coroutines/coroutines-guide.html">
+            
+                    
+                    协程指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../coroutines/basics.html">
+            
+                <a href="../coroutines/basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../coroutines/cancellation-and-timeouts.html">
+            
+                <a href="../coroutines/cancellation-and-timeouts.html">
+            
+                    
+                    取消与超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../coroutines/composing-suspending-functions.html">
+            
+                <a href="../coroutines/composing-suspending-functions.html">
+            
+                    
+                    组合挂起函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../coroutines/coroutine-context-and-dispatchers.html">
+            
+                <a href="../coroutines/coroutine-context-and-dispatchers.html">
+            
+                    
+                    协程上下文与调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../coroutines/flow.html">
+            
+                <a href="../coroutines/flow.html">
+            
+                    
+                    异步流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../coroutines/channels.html">
+            
+                <a href="../coroutines/channels.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../coroutines/exception-handling.html">
+            
+                <a href="../coroutines/exception-handling.html">
+            
+                    
+                    异常处理与监督
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../coroutines/shared-mutable-state-and-concurrency.html">
+            
+                <a href="../coroutines/shared-mutable-state-and-concurrency.html">
+            
+                    
+                    共享的可变状态与并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../coroutines/select-expression.html">
+            
+                <a href="../coroutines/select-expression.html">
+            
+                    
+                    Select 表达式（实验性的）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../multiplatform-programming.html">
+            
+                <a href="../multiplatform-programming.html">
+            
+                    
+                    多平台程序设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../platform-specific-declarations.html">
+            
+                <a href="../platform-specific-declarations.html">
+            
+                    
+                    平台相关声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../building-mpp-with-gradle.html">
+            
+                <a href="../building-mpp-with-gradle.html">
+            
+                    
+                    以 Gradle 构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../mpp-dsl-reference.html">
+            
+                <a href="../mpp-dsl-reference.html">
+            
+                    
+                    多平台 Gradle DSL 参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../other.html">
+            
+                <a href="../other.html">
+            
+                    
+                    更多语言结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../multi-declarations.html">
+            
+                <a href="../multi-declarations.html">
+            
+                    
+                    解构声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../typecasts.html">
+            
+                <a href="../typecasts.html">
+            
+                    
+                    类型检测与转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../this-expressions.html">
+            
+                <a href="../this-expressions.html">
+            
+                    
+                    This 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../equality.html">
+            
+                <a href="../equality.html">
+            
+                    
+                    相等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../operator-overloading.html">
+            
+                <a href="../operator-overloading.html">
+            
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../null-safety.html">
+            
+                <a href="../null-safety.html">
+            
+                    
+                    空安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../exceptions.html">
+            
+                <a href="../exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../annotations.html">
+            
+                <a href="../annotations.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../reflection.html">
+            
+                <a href="../reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../serialization.html">
+            
+                <a href="../serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../scope-functions.html">
+            
+                <a href="../scope-functions.html">
+            
+                    
+                    作用域函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../type-safe-builders.html">
+            
+                <a href="../type-safe-builders.html">
+            
+                    
+                    类型安全的构建器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../opt-in-requirements.html">
+            
+                <a href="../opt-in-requirements.html">
+            
+                    
+                    选择加入要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../corelibs.html">
+            
+                <a href="../corelibs.html">
+            
+                    
+                    核心库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../reflink.html">
+            
+                <a href="../../reflink.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../testlink.html">
+            
+                <a href="../../testlink.html">
+            
+                    
+                    kotlin.test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../reference0.html">
+            
+                <a href="../reference0.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../keyword-reference.html">
+            
+                <a href="../keyword-reference.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../grammar.html">
+            
+                <a href="../grammar.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../code-style-migration-guide.html">
+            
+                <a href="../code-style-migration-guide.html">
+            
+                    
+                    编码风格约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../interop.html">
+            
+                <a href="../interop.html">
+            
+                    
+                    Java 互操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../java-interop.html">
+            
+                <a href="../java-interop.html">
+            
+                    
+                    Kotlin 中调用 Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../java-to-kotlin-interop.html">
+            
+                <a href="../java-to-kotlin-interop.html">
+            
+                    
+                    Java 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../javascript.html">
+            
+                <a href="../javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../js-project-setup.html">
+            
+                <a href="../js-project-setup.html">
+            
+                    
+                    搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../dynamic-type.html">
+            
+                <a href="../dynamic-type.html">
+            
+                    
+                    动态类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../js-interop.html">
+            
+                <a href="../js-interop.html">
+            
+                    
+                    Kotlin 中调用 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../js-to-kotlin-interop.html">
+            
+                <a href="../js-to-kotlin-interop.html">
+            
+                    
+                    JavaScript 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../js-modules.html">
+            
+                <a href="../js-modules.html">
+            
+                    
+                    JavaScript 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../js-reflection.html">
+            
+                <a href="../js-reflection.html">
+            
+                    
+                    JavaScript 反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../javascript-dce.html">
+            
+                <a href="../javascript-dce.html">
+            
+                    
+                    JavaScript DCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../js-ir-compiler.html">
+            
+                <a href="../js-ir-compiler.html">
+            
+                    
+                    IR 编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="../js-external-declarations-with-dukat.html">
+            
+                <a href="../js-external-declarations-with-dukat.html">
+            
+                    
+                    用 Dukat 生成外部声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../native.html">
+            
+                <a href="../native.html">
+            
+                    
+                    原生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="concurrency.html">
+            
+                <a href="concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="immutability.html">
+            
+                <a href="immutability.html">
+            
+                    
+                    不可变性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="libraries.html">
+            
+                <a href="libraries.html">
+            
+                    
+                    Kotlin 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="platform_libs.html">
+            
+                <a href="platform_libs.html">
+            
+                    
+                    平台库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="c_interop.html">
+            
+                <a href="c_interop.html">
+            
+                    
+                    与 C 语言互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16.6" data-path="objc_interop.html">
+            
+                <a href="objc_interop.html">
+            
+                    
+                    与 Objective-C 及 Swift 互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="cocoapods.html">
+            
+                <a href="cocoapods.html">
+            
+                    
+                    CocoaPods 集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="gradle_plugin.html">
+            
+                <a href="gradle_plugin.html">
+            
+                    
+                    Gradle 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="debugging.html">
+            
+                <a href="debugging.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../tools.html">
+            
+                <a href="../tools.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../using-gradle.html">
+            
+                <a href="../using-gradle.html">
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../using-maven.html">
+            
+                <a href="../using-maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../using-ant.html">
+            
+                <a href="../using-ant.html">
+            
+                    
+                    Ant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../compiler-reference.html">
+            
+                <a href="../compiler-reference.html">
+            
+                    
+                    编译器选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../compiler-plugins.html">
+            
+                <a href="../compiler-plugins.html">
+            
+                    
+                    编译器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../kapt.html">
+            
+                <a href="../kapt.html">
+            
+                    
+                    Kapt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../kotlin-doc.html">
+            
+                <a href="../kotlin-doc.html">
+            
+                    
+                    Dokka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../kotlin-osgi.html">
+            
+                <a href="../kotlin-osgi.html">
+            
+                    
+                    OSGi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../evolution.html">
+            
+                <a href="../evolution.html">
+            
+                    
+                    演进
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../evolution/kotlin-evolution.html">
+            
+                <a href="../evolution/kotlin-evolution.html">
+            
+                    
+                    Kotlin 语言演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../evolution/components-stability.html">
+            
+                <a href="../evolution/components-stability.html">
+            
+                    
+                    不同组件的稳定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../compatibility-guide-13.html">
+            
+                <a href="../compatibility-guide-13.html">
+            
+                    
+                    Kotlin 1.3 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../compatibility-guide-14.html">
+            
+                <a href="../compatibility-guide-14.html">
+            
+                    
+                    Kotlin 1.4 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../faq0.html">
+            
+                <a href="../faq0.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../comparison-to-java.html">
+            
+                <a href="../comparison-to-java.html">
+            
+                    
+                    与 Java 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../comparison-to-scala.html">
+            
+                <a href="../comparison-to-scala.html">
+            
+                    
+                    与 Scala 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >与 Objective-C 及 Swift 互操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="kotlinnative-&#x4E0E;-swiftobjective-c-&#x4E92;&#x64CD;&#x4F5C;"><em>Kotlin/Native</em> &#x4E0E; Swift/Objective-C &#x4E92;&#x64CD;&#x4F5C;</h1>
+<p>This document covers some details of Kotlin/Native interoperability with
+Swift/Objective-C.</p>
+<h2 id="usage">Usage</h2>
+<p>Kotlin/Native provides bidirectional interoperability with Objective-C.
+Objective-C frameworks and libraries can be used in Kotlin code if
+properly imported to the build (system frameworks are imported by default).
+See e.g. &quot;Using cinterop&quot; in
+<a href="GRADLE_PLUGIN.md#using-cinterop">Gradle plugin documentation</a>.
+A Swift library can be used in Kotlin code if its API is exported to Objective-C
+with <code>@objc</code>. Pure Swift modules are not yet supported.</p>
+<p>Kotlin modules can be used in Swift/Objective-C code if compiled into a
+framework (see &quot;Targets and output kinds&quot; section in <a href="GRADLE_PLUGIN.md#targets-and-output-kinds">Gradle plugin documentation</a>).
+See <a href="https://github.com/JetBrains/kotlin-native/tree/master/samples/calculator" target="_blank">calculator sample</a> for an example.</p>
+<h2 id="mappings">Mappings</h2>
+<p>The table below shows how Kotlin concepts are mapped to Swift/Objective-C and vice versa.</p>
+<p>&quot;-&gt;&quot; and &quot;&lt;-&quot; indicate that mapping only goes one way.</p>
+<table>
+<thead>
+<tr>
+<th>Kotlin</th>
+<th>Swift</th>
+<th>Objective-C</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class</code></td>
+<td><code>class</code></td>
+<td><code>@interface</code></td>
+<td><a href="#name-translation">note</a></td>
+</tr>
+<tr>
+<td><code>interface</code></td>
+<td><code>protocol</code></td>
+<td><code>@protocol</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>constructor</code>/<code>create</code></td>
+<td>Initializer</td>
+<td>Initializer</td>
+<td><a href="#initializers">note</a></td>
+</tr>
+<tr>
+<td>Property</td>
+<td>Property</td>
+<td>Property</td>
+<td><a href="#top-level-functions-and-properties">note</a> <a href="#setters">note</a></td>
+</tr>
+<tr>
+<td>Method</td>
+<td>Method</td>
+<td>Method</td>
+<td><a href="#top-level-functions-and-properties">note</a> <a href="#method-names-translation">note</a></td>
+</tr>
+<tr>
+<td><code>suspend</code> -&gt;</td>
+<td><code>completionHandler:</code></td>
+<td></td>
+<td><a href="#errors-and-exceptions">note</a></td>
+</tr>
+<tr>
+<td><code>@Throws fun</code></td>
+<td><code>throws</code></td>
+<td><code>error:(NSError**)error</code></td>
+<td><a href="#errors-and-exceptions">note</a></td>
+</tr>
+<tr>
+<td>Extension</td>
+<td>Extension</td>
+<td>Category member</td>
+<td><a href="#extensions-and-category-members">note</a></td>
+</tr>
+<tr>
+<td><code>companion</code> member &lt;-</td>
+<td>Class method or property</td>
+<td>Class method or property</td>
+<td></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>nil</code></td>
+<td><code>nil</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Singleton</code></td>
+<td><code>Singleton()</code></td>
+<td><code>[Singleton singleton]</code></td>
+<td><a href="#kotlin-singletons">note</a></td>
+</tr>
+<tr>
+<td>Primitive type</td>
+<td>Primitive type / <code>NSNumber</code></td>
+<td></td>
+<td><a href="#nsnumber">note</a></td>
+</tr>
+<tr>
+<td><code>Unit</code> return type</td>
+<td><code>Void</code></td>
+<td><code>void</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>String</code></td>
+<td><code>String</code></td>
+<td><code>NSString</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>String</code></td>
+<td><code>NSMutableString</code></td>
+<td><code>NSMutableString</code></td>
+<td><a href="#nsmutablestring">note</a></td>
+</tr>
+<tr>
+<td><code>List</code></td>
+<td><code>Array</code></td>
+<td><code>NSArray</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>MutableList</code></td>
+<td><code>NSMutableArray</code></td>
+<td><code>NSMutableArray</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Set</code></td>
+<td><code>Set</code></td>
+<td><code>NSSet</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>MutableSet</code></td>
+<td><code>NSMutableSet</code></td>
+<td><code>NSMutableSet</code></td>
+<td><a href="#collections">note</a></td>
+</tr>
+<tr>
+<td><code>Map</code></td>
+<td><code>Dictionary</code></td>
+<td><code>NSDictionary</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>MutableMap</code></td>
+<td><code>NSMutableDictionary</code></td>
+<td><code>NSMutableDictionary</code></td>
+<td><a href="#collections">note</a></td>
+</tr>
+<tr>
+<td>Function type</td>
+<td>Function type</td>
+<td>Block pointer type</td>
+<td><a href="#function-types">note</a></td>
+</tr>
+<tr>
+<td>Inline classes</td>
+<td>Unsupported</td>
+<td>Unsupported</td>
+<td><a href="#unsupported">note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="name-translation">Name translation</h3>
+<p>Objective-C classes are imported into Kotlin with their original names.
+Protocols are imported as interfaces with <code>Protocol</code> name suffix,
+i.e. <code>@protocol Foo</code> -&gt; <code>interface FooProtocol</code>.
+These classes and interfaces are placed into a package <a href="#usage">specified in build configuration</a>
+(<code>platform.*</code> packages for preconfigured system frameworks).</p>
+<p>The names of Kotlin classes and interfaces are prefixed when imported to Objective-C.
+The prefix is derived from the framework name.</p>
+<h3 id="initializers">Initializers</h3>
+<p>Swift/Objective-C initializers are imported to Kotlin as constructors and factory methods
+named <code>create</code>. The latter happens with initializers declared in the Objective-C category or
+as a Swift extension, because Kotlin has no concept of extension constructors.</p>
+<p>Kotlin constructors are imported as initializers to Swift/Objective-C. </p>
+<h3 id="setters">Setters</h3>
+<p>Writeable Objective-C properties overriding read-only properties of the superclass are represented as <code>setFoo()</code> method for the property <code>foo</code>. Same goes for a protocol&apos;s read-only properties that are implemented as mutable.</p>
+<h3 id="top-level-functions-and-properties">Top-level functions and properties</h3>
+<p>Top-level Kotlin functions and properties are accessible as members of special classes.
+Each Kotlin file is translated into such a class. E.g.</p>
+<pre><code class="lang-kotlin"><span class="hljs-comment">// MyLibraryUtils.kt</span>
+<span class="hljs-keyword">package</span> my.library
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> {}</span>
+</code></pre>
+<p>can be called from Swift like</p>
+<pre><code class="lang-swift"><span class="hljs-type">MyLibraryUtilsKt</span>.foo()
+</code></pre>
+<h3 id="method-names-translation">Method names translation</h3>
+<p>Generally Swift argument labels and Objective-C selector pieces are mapped to Kotlin
+parameter names. Anyway these two concepts have different semantics, so sometimes
+Swift/Objective-C methods can be imported with a clashing Kotlin signature. In this case
+the clashing methods can be called from Kotlin using named arguments, e.g.:</p>
+<pre><code class="lang-swift">[player moveTo:<span class="hljs-type">LEFT</span> byMeters:<span class="hljs-number">17</span>]
+[player moveTo:<span class="hljs-type">UP</span> byInches:<span class="hljs-number">42</span>]
+</code></pre>
+<p>in Kotlin it would be:</p>
+<pre><code class="lang-kotlin">player.moveTo(LEFT, byMeters = <span class="hljs-number">17</span>)
+player.moveTo(UP, byInches = <span class="hljs-number">42</span>)
+</code></pre>
+<h3 id="errors-and-exceptions">Errors and exceptions</h3>
+<p>Kotlin has no concept of checked exceptions, all Kotlin exceptions are unchecked.
+Swift has only checked errors. So if Swift or Objective-C code calls a Kotlin method
+which throws an exception to be handled, then the Kotlin method should be marked
+with a <code>@Throws</code> annotation specifying a list of &quot;expected&quot; exception classes.</p>
+<p>When compiling to Objective-C/Swift framework, non-<code>suspend</code> functions having or inheriting
+<code>@Throws</code> annotation are represented as <code>NSError*</code>-producing methods in Objective-C
+and as <code>throws</code> methods in Swift. Representations for <code>suspend</code> functions always have
+<code>NSError*</code>/<code>Error</code> parameter in completion handler.</p>
+<p>When Kotlin function called from Swift/Objective-C code throws an exception
+which is an instance of one of the <code>@Throws</code>-specified classes or their subclasses,
+it is propagated as <code>NSError</code>. Other Kotlin exceptions reaching Swift/Objective-C
+are considered unhandled and cause program termination.</p>
+<p><code>suspend</code> functions without <code>@Throws</code> propagate only
+<code>CancellationException</code> as <code>NSError</code>. Non-<code>suspend</code> functions without <code>@Throws</code>
+don&apos;t propagate Kotlin exceptions at all.</p>
+<p>Note that the opposite reversed translation is not implemented yet:
+Swift/Objective-C error-throwing methods aren&apos;t imported to Kotlin as
+exception-throwing.</p>
+<h3 id="extensions-and-category-members">Extensions and category members</h3>
+<p>Members of Objective-C categories and Swift extensions are imported to Kotlin
+as extensions. That&apos;s why these declarations can&apos;t be overridden in Kotlin.
+And the extension initializers aren&apos;t available as Kotlin constructors.</p>
+<p>Kotlin extensions to &quot;regular&quot; Kotlin classes are imported to Swift and Objective-C as extensions and category members respectively.
+Kotlin extensions to other types are treated as <a href="#top-level-functions-and-properties">top-level declarations</a>
+with an additional receiver parameter. These types include:</p>
+<ul>
+<li>Kotlin <code>String</code> type</li>
+<li>Kotlin collection types and subtypes</li>
+<li>Kotlin <code>interface</code> types</li>
+<li>Kotlin primitive types</li>
+<li>Kotlin <code>inline</code> classes</li>
+<li>Kotlin <code>Any</code> type</li>
+<li>Kotlin function types and subtypes</li>
+<li>Objective-C classes and protocols</li>
+</ul>
+<h3 id="kotlin-singletons">Kotlin singletons</h3>
+<p>Kotlin singleton (made with an <code>object</code> declaration, including <code>companion object</code>)
+is imported to Swift/Objective-C as a class with a single instance.
+The instance is available through the factory method, i.e. as
+<code>[MySingleton mySingleton]</code> in Objective-C and <code>MySingleton()</code> in Swift.</p>
+<h3 id="nsnumber">NSNumber</h3>
+<p>Kotlin primitive type boxes are mapped to special Swift/Objective-C classes.
+For example, <code>kotlin.Int</code> box is represented as <code>KotlinInt</code> class instance in Swift
+(or <code>${prefix}Int</code> instance in Objective-C, where <code>prefix</code> is the framework names prefix).
+These classes are derived from <code>NSNumber</code>, so the instances are proper <code>NSNumber</code>s
+supporting all corresponding operations.</p>
+<p><code>NSNumber</code> type is not automatically translated to Kotlin primitive types
+when used as a Swift/Objective-C parameter type or return value.
+The reason is that <code>NSNumber</code> type doesn&apos;t provide enough information
+about a wrapped primitive value type, i.e. <code>NSNumber</code> is statically not known
+to be a e.g. <code>Byte</code>, <code>Boolean</code>, or <code>Double</code>. So Kotlin primitive values
+should be cast to/from <code>NSNumber</code> manually (see <a href="#casting-between-mapped-types">below</a>).</p>
+<h3 id="nsmutablestring">NSMutableString</h3>
+<p><code>NSMutableString</code> Objective-C class is not available from Kotlin.
+All instances of <code>NSMutableString</code> are copied when passed to Kotlin.</p>
+<h3 id="collections">Collections</h3>
+<p>Kotlin collections are converted to Swift/Objective-C collections as described
+in the table above. Swift/Objective-C collections are mapped to Kotlin in the same way,
+except for <code>NSMutableSet</code> and <code>NSMutableDictionary</code>. <code>NSMutableSet</code> isn&apos;t converted to
+a Kotlin <code>MutableSet</code>. To pass an object for Kotlin <code>MutableSet</code>,
+you can create this kind of Kotlin collection explicitly by either creating it 
+in Kotlin with e.g. <code>mutableSetOf()</code>, or using the <code>KotlinMutableSet</code> class in Swift 
+(or <code>${prefix}MutableSet</code> in Objective-C, where <code>prefix</code> is the framework names prefix).
+The same holds for <code>MutableMap</code>.</p>
+<h3 id="function-types">Function types</h3>
+<p>Kotlin function-typed objects (e.g. lambdas) are converted to 
+Swift functions / Objective-C blocks. However there is a difference in how
+types of parameters and return values are mapped when translating a function
+and a function type. In the latter case primitive types are mapped to their
+boxed representation. Kotlin <code>Unit</code> return value is represented
+as a corresponding <code>Unit</code> singleton in Swift/Objective-C. The value of this singleton
+can be retrieved in the same way as it is for any other Kotlin <code>object</code>
+(see singletons in the table above).
+To sum the things up:</p>
+<pre><code class="lang-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">foo</span><span class="hljs-params">(block: <span class="hljs-type">(Int</span>)</span> -&gt; <span class="hljs-keyword">Unit</span>) { ... }</span>
+</code></pre>
+<p>would be represented in Swift as</p>
+<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">foo</span><span class="hljs-params">(block: <span class="hljs-params">(KotlinInt)</span></span></span> -&gt; <span class="hljs-type">KotlinUnit</span>)
+</code></pre>
+<p>and can be called like</p>
+<pre><code class="lang-kotlin">foo {
+    bar($<span class="hljs-number">0</span> <span class="hljs-keyword">as</span>! Int32)
+    <span class="hljs-keyword">return</span> KotlinUnit()
+}
+</code></pre>
+<h3 id="generics">Generics</h3>
+<p>Objective-C supports &quot;lightweight generics&quot; defined on classes, with a relatively limited feature set. Swift can import 
+generics defined on classes to help provide additional type information to the compiler.</p>
+<p>Generic feature support for Objective-C and Swift differ from Kotlin, so the translation will inevitably lose some information,
+but the features supported retain meaningful information.</p>
+<h4 id="limitations">Limitations</h4>
+<p>Objective-C generics do not support all features of either Kotlin or Swift, so there will be some information lost
+in the translation.</p>
+<p>Generics can only be defined on classes, not on interfaces (protocols in Objective-C and Swift) or functions.</p>
+<h4 id="nullability">Nullability</h4>
+<p>Kotlin and Swift both define nullability as part of the type specification, while Objective-C defines nullability on methods
+and properties of a type. As such, the following:</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span>&lt;<span class="hljs-type">T</span>&gt;</span>() {
+  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">myVal</span><span class="hljs-params">()</span>: T</span>
+}
+</code></pre>
+<p>will (logically) look like this:</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span>&lt;<span class="hljs-title">T</span>&gt;() </span>{
+  fun myVal(): <span class="hljs-type">T</span>?
+}
+</code></pre>
+<p>In order to support a potentially nullable type, the Objective-C header needs to define <code>myVal</code> with a nullable return value.</p>
+<p>To mitigate this, when defining your generic classes, if the generic type should <em>never</em> be null, provide a non-null 
+type constraint:</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span>&lt;<span class="hljs-type">T : Any</span>&gt;</span>() {
+  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">myVal</span><span class="hljs-params">()</span>: T</span>
+}
+</code></pre>
+<p>That will force the Objective-C header to mark <code>myVal</code> as non-null.</p>
+<h4 id="variance">Variance</h4>
+<p>Objective-C allows generics to be declared covariant or contravariant. Swift has no support for variance. Generic classes coming
+from Objective-C can be force-cast as needed.</p>
+<pre><code class="lang-kotlin">data <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SomeData</span></span>(<span class="hljs-variable"><span class="hljs-keyword">val</span> num</span>: <span class="hljs-keyword">Int</span> = <span class="hljs-number">42</span>) : BaseData()
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenVarOut</span>&lt;<span class="hljs-type">out T : Any</span>&gt;</span>(<span class="hljs-variable"><span class="hljs-keyword">val</span> arg</span>: T)
+</code></pre>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> variOut = <span class="hljs-type">GenVarOut</span>&lt;<span class="hljs-type">SomeData</span>&gt;(arg: sd)
+<span class="hljs-keyword">let</span> variOutAny : <span class="hljs-type">GenVarOut</span>&lt;<span class="hljs-type">BaseData</span>&gt; = variOut <span class="hljs-keyword">as</span>! <span class="hljs-type">GenVarOut</span>&lt;<span class="hljs-type">BaseData</span>&gt;
+</code></pre>
+<h4 id="constraints">Constraints</h4>
+<p>In Kotlin you can provide upper bounds for a generic type. Objective-C also supports this, but that support is unavailable 
+in more complex cases, and is currently not supported in the Kotlin - Objective-C interop. The exception here being a non-null
+upper bound will make Objective-C methods/properties non-null.</p>
+<h3 id="to-disable">To disable</h3>
+<p>To have the framework header written without generics, add the flag to the compiler config:</p>
+<pre><code class="lang-kotlin">binaries.framework {
+     freeCompilerArgs += <span class="hljs-string">&quot;-Xno-objc-generics&quot;</span>
+}
+</code></pre>
+<h2 id="casting-between-mapped-types">Casting between mapped types</h2>
+<p>When writing Kotlin code, an object may need to be converted from a Kotlin type
+to the equivalent Swift/Objective-C type (or vice versa). In this case a plain old
+Kotlin cast can be used, e.g.</p>
+<pre><code class="lang-kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> nsArray</span> = listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">as</span> NSArray
+<span class="hljs-variable"><span class="hljs-keyword">val</span> string</span> = nsString <span class="hljs-keyword">as</span> String
+<span class="hljs-variable"><span class="hljs-keyword">val</span> nsNumber</span> = <span class="hljs-number">42</span> <span class="hljs-keyword">as</span> NSNumber
+</code></pre>
+<h2 id="subclassing">Subclassing</h2>
+<h3 id="subclassing-kotlin-classes-and-interfaces-from-swiftobjective-c">Subclassing Kotlin classes and interfaces from Swift/Objective-C</h3>
+<p>Kotlin classes and interfaces can be subclassed by Swift/Objective-C classes
+and protocols.</p>
+<h3 id="subclassing-swiftobjective-c-classes-and-protocols-from-kotlin">Subclassing Swift/Objective-C classes and protocols from Kotlin</h3>
+<p>Swift/Objective-C classes and protocols can be subclassed with a Kotlin <code>final</code> class.
+Non-<code>final</code> Kotlin classes inheriting Swift/Objective-C types aren&apos;t supported yet, so it is
+not possible to declare a complex class hierarchy inheriting Swift/Objective-C types.</p>
+<p>Normal methods can be overridden using the <code>override</code> Kotlin keyword. In this case
+the overriding method must have the same parameter names as the overridden one.</p>
+<p>Sometimes it is required to override initializers, e.g. when subclassing <code>UIViewController</code>. 
+Initializers imported as Kotlin constructors can be overridden by Kotlin constructors
+marked with the <code>@OverrideInit</code> annotation:</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span> : <span class="hljs-title">UIViewController</span> </span>{
+    @<span class="hljs-type">OverrideInit</span> constructor(coder: <span class="hljs-type">NSCoder</span>) : <span class="hljs-keyword">super</span>(coder)
+
+    ...
+}
+</code></pre>
+<p>The overriding constructor must have the same parameter names and types as the overridden one.</p>
+<p>To override different methods with clashing Kotlin signatures, you can add a
+<code>@Suppress(&quot;CONFLICTING_OVERLOADS&quot;)</code> annotation to the class.</p>
+<p>By default the Kotlin/Native compiler doesn&apos;t allow calling a non-designated
+Objective-C initializer as a <code>super(...)</code> constructor. This behaviour can be
+inconvenient if the designated initializers aren&apos;t marked properly in the Objective-C
+library. Adding a <code>disableDesignatedInitializerChecks = true</code> to the <code>.def</code> file for
+this library would disable these compiler checks.</p>
+<h2 id="c-features">C features</h2>
+<p>See <a href="INTEROP.md">INTEROP.md</a> for an example case where the library uses some plain C features
+(e.g. unsafe pointers, structs etc.).</p>
+<h2 id="unsupported">Unsupported</h2>
+<p>Some features of Kotlin programming language are not yet mapped into respective features of Objective-C or Swift.
+Currently, following features are not properly exposed in generated framework headers:</p>
+<ul>
+<li>inline classes (arguments are mapped as either underlying primitive type or <code>id</code>)</li>
+<li>custom classes implementing standard Kotlin collection interfaces (<code>List</code>, <code>Map</code>, <code>Set</code>) and other special classes</li>
+<li>Kotlin subclasses of Objective-C classes</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="c_interop.html" class="navigation navigation-prev " aria-label="Previous page: 与 C 语言互操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="cocoapods.html" class="navigation navigation-next " aria-label="Next page: CocoaPods 集成">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"与 Objective-C 及 Swift 互操作","level":"1.16.6","depth":2,"next":{"title":"CocoaPods 集成","level":"1.16.7","depth":2,"path":"txt/native/cocoapods.md","ref":"txt/native/cocoapods.md","articles":[]},"previous":{"title":"与 C 语言互操作","level":"1.16.5","depth":2,"path":"txt/native/c_interop.md","ref":"txt/native/c_interop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["regexplace"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<em>([^<]+)</em>\\{: ?\\.keyword\\ ?}","flags":"g","substitute":"<em><strong><code>$1</code></strong></em>"},{"pattern":"<p>\\{:#([^} ]+)\\}</p>","flags":"g","substitute":"<a name=\"$1\"></a>"},{"pattern":"\"/docs/tutorials/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/tutorials/"},{"pattern":"\"/docs/diagnostics/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/diagnostics/"},{"pattern":"\"/community/","flags":"g","substitute":"\"https://www.kotlincn.net/community/"}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"txt/native/objc_interop.md","mtime":"2021-08-17T05:13:50.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-18T05:55:43.929Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

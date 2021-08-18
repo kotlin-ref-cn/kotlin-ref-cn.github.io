@@ -1,0 +1,2545 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>组合挂起函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="coroutine-context-and-dispatchers.html" />
+    
+    
+    <link rel="prev" href="cancellation-and-timeouts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../index0.html">
+            
+                <a href="../index0.html">
+            
+                    
+                    语言指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../overview.html">
+            
+                <a href="../overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../server-overview.html">
+            
+                <a href="../server-overview.html">
+            
+                    
+                    Kotlin 用于服务器端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../android-overview.html">
+            
+                <a href="../android-overview.html">
+            
+                    
+                    Kotlin 用于 Android 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-overview.html">
+            
+                <a href="../js-overview.html">
+            
+                    
+                    Kotlin 用于 JavaScript 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../native-overview.html">
+            
+                <a href="../native-overview.html">
+            
+                    
+                    Kotlin 用于原生开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../data-science-overview.html">
+            
+                <a href="../data-science-overview.html">
+            
+                    
+                    Kotlin 用于数据科学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../coroutines-overview.html">
+            
+                <a href="../coroutines-overview.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../multiplatform.html">
+            
+                <a href="../multiplatform.html">
+            
+                    
+                    多平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../whatsnew.html">
+            
+                <a href="../whatsnew.html">
+            
+                    
+                    新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../whatsnew1430.html">
+            
+                <a href="../whatsnew1430.html">
+            
+                    
+                    1.4.30 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../whatsnew-plugin-20203.html">
+            
+                <a href="../whatsnew-plugin-20203.html">
+            
+                    
+                    Kotlin 插件 2020.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../whatsnew1420.html">
+            
+                <a href="../whatsnew1420.html">
+            
+                    
+                    1.4.20 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../whatsnew14.html">
+            
+                <a href="../whatsnew14.html">
+            
+                    
+                    1.4 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../whatsnew13.html">
+            
+                <a href="../whatsnew13.html">
+            
+                    
+                    1.3 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../whatsnew12.html">
+            
+                <a href="../whatsnew12.html">
+            
+                    
+                    1.2 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../whatsnew11.html">
+            
+                <a href="../whatsnew11.html">
+            
+                    
+                    1.1 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../basic-syntax.html">
+            
+                <a href="../basic-syntax.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../idioms.html">
+            
+                <a href="../idioms.html">
+            
+                    
+                    习惯用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../coding-conventions.html">
+            
+                <a href="../coding-conventions.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../basics.html">
+            
+                <a href="../basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../basic-types.html">
+            
+                <a href="../basic-types.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../packages.html">
+            
+                <a href="../packages.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../control-flow.html">
+            
+                <a href="../control-flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../returns.html">
+            
+                <a href="../returns.html">
+            
+                    
+                    返回与跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../classes-and-objects.html">
+            
+                <a href="../classes-and-objects.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../classes.html">
+            
+                <a href="../classes.html">
+            
+                    
+                    类与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../properties.html">
+            
+                <a href="../properties.html">
+            
+                    
+                    属性与字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../interfaces.html">
+            
+                <a href="../interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../fun-interfaces.html">
+            
+                <a href="../fun-interfaces.html">
+            
+                    
+                    函数式（SAM）接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../visibility-modifiers.html">
+            
+                <a href="../visibility-modifiers.html">
+            
+                    
+                    可见性修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../extensions.html">
+            
+                <a href="../extensions.html">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../data-classes.html">
+            
+                <a href="../data-classes.html">
+            
+                    
+                    数据类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../sealed-classes.html">
+            
+                <a href="../sealed-classes.html">
+            
+                    
+                    密封类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../generics.html">
+            
+                <a href="../generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nested-classes.html">
+            
+                <a href="../nested-classes.html">
+            
+                    
+                    嵌套类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../enum-classes.html">
+            
+                <a href="../enum-classes.html">
+            
+                    
+                    枚举类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../object-declarations.html">
+            
+                <a href="../object-declarations.html">
+            
+                    
+                    对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../type-aliases.html">
+            
+                <a href="../type-aliases.html">
+            
+                    
+                    类型别名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../inline-classes.html">
+            
+                <a href="../inline-classes.html">
+            
+                    
+                    内联类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../delegation.html">
+            
+                <a href="../delegation.html">
+            
+                    
+                    委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../delegated-properties.html">
+            
+                <a href="../delegated-properties.html">
+            
+                    
+                    委托属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../functions-and-lambdas.html">
+            
+                <a href="../functions-and-lambdas.html">
+            
+                    
+                    函数与 Lambda 表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../functions.html">
+            
+                <a href="../functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../lambdas.html">
+            
+                <a href="../lambdas.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../inline-functions.html">
+            
+                <a href="../inline-functions.html">
+            
+                    
+                    内联函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../collections.html">
+            
+                <a href="../collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../collections-overview.html">
+            
+                <a href="../collections-overview.html">
+            
+                    
+                    集合概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../constructing-collections.html">
+            
+                <a href="../constructing-collections.html">
+            
+                    
+                    构造集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../iterators.html">
+            
+                <a href="../iterators.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../ranges.html">
+            
+                <a href="../ranges.html">
+            
+                    
+                    区间与数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../sequences.html">
+            
+                <a href="../sequences.html">
+            
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../collection-operations.html">
+            
+                <a href="../collection-operations.html">
+            
+                    
+                    操作概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../collection-transformations.html">
+            
+                <a href="../collection-transformations.html">
+            
+                    
+                    转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../collection-filtering.html">
+            
+                <a href="../collection-filtering.html">
+            
+                    
+                    过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../collection-plus-minus.html">
+            
+                <a href="../collection-plus-minus.html">
+            
+                    
+                    加减操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../collection-grouping.html">
+            
+                <a href="../collection-grouping.html">
+            
+                    
+                    分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../collection-parts.html">
+            
+                <a href="../collection-parts.html">
+            
+                    
+                    取集合的一部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../collection-elements.html">
+            
+                <a href="../collection-elements.html">
+            
+                    
+                    取单个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../collection-ordering.html">
+            
+                <a href="../collection-ordering.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../collection-aggregate.html">
+            
+                <a href="../collection-aggregate.html">
+            
+                    
+                    聚合操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../collection-write.html">
+            
+                <a href="../collection-write.html">
+            
+                    
+                    集合写操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../list-operations.html">
+            
+                <a href="../list-operations.html">
+            
+                    
+                    List 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../set-operations.html">
+            
+                <a href="../set-operations.html">
+            
+                    
+                    Set 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../map-operations.html">
+            
+                <a href="../map-operations.html">
+            
+                    
+                    Map 相关操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../coroutines.html">
+            
+                <a href="../coroutines.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="coroutines-guide.html">
+            
+                <a href="coroutines-guide.html">
+            
+                    
+                    协程指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="cancellation-and-timeouts.html">
+            
+                <a href="cancellation-and-timeouts.html">
+            
+                    
+                    取消与超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.4" data-path="composing-suspending-functions.html">
+            
+                <a href="composing-suspending-functions.html">
+            
+                    
+                    组合挂起函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="coroutine-context-and-dispatchers.html">
+            
+                <a href="coroutine-context-and-dispatchers.html">
+            
+                    
+                    协程上下文与调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="flow.html">
+            
+                <a href="flow.html">
+            
+                    
+                    异步流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="channels.html">
+            
+                <a href="channels.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="exception-handling.html">
+            
+                <a href="exception-handling.html">
+            
+                    
+                    异常处理与监督
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="shared-mutable-state-and-concurrency.html">
+            
+                <a href="shared-mutable-state-and-concurrency.html">
+            
+                    
+                    共享的可变状态与并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="select-expression.html">
+            
+                <a href="select-expression.html">
+            
+                    
+                    Select 表达式（实验性的）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../multiplatform-programming.html">
+            
+                <a href="../multiplatform-programming.html">
+            
+                    
+                    多平台程序设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../platform-specific-declarations.html">
+            
+                <a href="../platform-specific-declarations.html">
+            
+                    
+                    平台相关声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../building-mpp-with-gradle.html">
+            
+                <a href="../building-mpp-with-gradle.html">
+            
+                    
+                    以 Gradle 构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../mpp-dsl-reference.html">
+            
+                <a href="../mpp-dsl-reference.html">
+            
+                    
+                    多平台 Gradle DSL 参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../other.html">
+            
+                <a href="../other.html">
+            
+                    
+                    更多语言结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../multi-declarations.html">
+            
+                <a href="../multi-declarations.html">
+            
+                    
+                    解构声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../typecasts.html">
+            
+                <a href="../typecasts.html">
+            
+                    
+                    类型检测与转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../this-expressions.html">
+            
+                <a href="../this-expressions.html">
+            
+                    
+                    This 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../equality.html">
+            
+                <a href="../equality.html">
+            
+                    
+                    相等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../operator-overloading.html">
+            
+                <a href="../operator-overloading.html">
+            
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../null-safety.html">
+            
+                <a href="../null-safety.html">
+            
+                    
+                    空安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../exceptions.html">
+            
+                <a href="../exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../annotations.html">
+            
+                <a href="../annotations.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../reflection.html">
+            
+                <a href="../reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../serialization.html">
+            
+                <a href="../serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../scope-functions.html">
+            
+                <a href="../scope-functions.html">
+            
+                    
+                    作用域函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../type-safe-builders.html">
+            
+                <a href="../type-safe-builders.html">
+            
+                    
+                    类型安全的构建器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../opt-in-requirements.html">
+            
+                <a href="../opt-in-requirements.html">
+            
+                    
+                    选择加入要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../corelibs.html">
+            
+                <a href="../corelibs.html">
+            
+                    
+                    核心库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../reflink.html">
+            
+                <a href="../../reflink.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../testlink.html">
+            
+                <a href="../../testlink.html">
+            
+                    
+                    kotlin.test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../reference0.html">
+            
+                <a href="../reference0.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../keyword-reference.html">
+            
+                <a href="../keyword-reference.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../grammar.html">
+            
+                <a href="../grammar.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../code-style-migration-guide.html">
+            
+                <a href="../code-style-migration-guide.html">
+            
+                    
+                    编码风格约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../interop.html">
+            
+                <a href="../interop.html">
+            
+                    
+                    Java 互操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../java-interop.html">
+            
+                <a href="../java-interop.html">
+            
+                    
+                    Kotlin 中调用 Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../java-to-kotlin-interop.html">
+            
+                <a href="../java-to-kotlin-interop.html">
+            
+                    
+                    Java 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../javascript.html">
+            
+                <a href="../javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../js-project-setup.html">
+            
+                <a href="../js-project-setup.html">
+            
+                    
+                    搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../dynamic-type.html">
+            
+                <a href="../dynamic-type.html">
+            
+                    
+                    动态类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../js-interop.html">
+            
+                <a href="../js-interop.html">
+            
+                    
+                    Kotlin 中调用 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../js-to-kotlin-interop.html">
+            
+                <a href="../js-to-kotlin-interop.html">
+            
+                    
+                    JavaScript 中调用 Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../js-modules.html">
+            
+                <a href="../js-modules.html">
+            
+                    
+                    JavaScript 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../js-reflection.html">
+            
+                <a href="../js-reflection.html">
+            
+                    
+                    JavaScript 反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../javascript-dce.html">
+            
+                <a href="../javascript-dce.html">
+            
+                    
+                    JavaScript DCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../js-ir-compiler.html">
+            
+                <a href="../js-ir-compiler.html">
+            
+                    
+                    IR 编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="../js-external-declarations-with-dukat.html">
+            
+                <a href="../js-external-declarations-with-dukat.html">
+            
+                    
+                    用 Dukat 生成外部声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../native.html">
+            
+                <a href="../native.html">
+            
+                    
+                    原生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../native/concurrency.html">
+            
+                <a href="../native/concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../native/immutability.html">
+            
+                <a href="../native/immutability.html">
+            
+                    
+                    不可变性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../native/libraries.html">
+            
+                <a href="../native/libraries.html">
+            
+                    
+                    Kotlin 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../native/platform_libs.html">
+            
+                <a href="../native/platform_libs.html">
+            
+                    
+                    平台库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../native/c_interop.html">
+            
+                <a href="../native/c_interop.html">
+            
+                    
+                    与 C 语言互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../native/objc_interop.html">
+            
+                <a href="../native/objc_interop.html">
+            
+                    
+                    与 Objective-C 及 Swift 互操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../native/cocoapods.html">
+            
+                <a href="../native/cocoapods.html">
+            
+                    
+                    CocoaPods 集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../native/gradle_plugin.html">
+            
+                <a href="../native/gradle_plugin.html">
+            
+                    
+                    Gradle 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../native/debugging.html">
+            
+                <a href="../native/debugging.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../native/faq.html">
+            
+                <a href="../native/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../tools.html">
+            
+                <a href="../tools.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../using-gradle.html">
+            
+                <a href="../using-gradle.html">
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../using-maven.html">
+            
+                <a href="../using-maven.html">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../using-ant.html">
+            
+                <a href="../using-ant.html">
+            
+                    
+                    Ant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../compiler-reference.html">
+            
+                <a href="../compiler-reference.html">
+            
+                    
+                    编译器选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../compiler-plugins.html">
+            
+                <a href="../compiler-plugins.html">
+            
+                    
+                    编译器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../kapt.html">
+            
+                <a href="../kapt.html">
+            
+                    
+                    Kapt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../kotlin-doc.html">
+            
+                <a href="../kotlin-doc.html">
+            
+                    
+                    Dokka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../kotlin-osgi.html">
+            
+                <a href="../kotlin-osgi.html">
+            
+                    
+                    OSGi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../evolution.html">
+            
+                <a href="../evolution.html">
+            
+                    
+                    演进
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../evolution/kotlin-evolution.html">
+            
+                <a href="../evolution/kotlin-evolution.html">
+            
+                    
+                    Kotlin 语言演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../evolution/components-stability.html">
+            
+                <a href="../evolution/components-stability.html">
+            
+                    
+                    不同组件的稳定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../compatibility-guide-13.html">
+            
+                <a href="../compatibility-guide-13.html">
+            
+                    
+                    Kotlin 1.3 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../compatibility-guide-14.html">
+            
+                <a href="../compatibility-guide-14.html">
+            
+                    
+                    Kotlin 1.4 的兼容性指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../faq0.html">
+            
+                <a href="../faq0.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../comparison-to-java.html">
+            
+                <a href="../comparison-to-java.html">
+            
+                    
+                    与 Java 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../comparison-to-scala.html">
+            
+                <a href="../comparison-to-scala.html">
+            
+                    
+                    与 Scala 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >组合挂起函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--- TEST_NAME ComposingGuideTest -->
+<p><strong>&#x76EE;&#x5F55;</strong></p>
+<!--- TOC -->
+<ul>
+<li><a href="#&#x7EC4;&#x5408;&#x6302;&#x8D77;&#x51FD;&#x6570;">&#x7EC4;&#x5408;&#x6302;&#x8D77;&#x51FD;&#x6570;</a><ul>
+<li><a href="#&#x9ED8;&#x8BA4;&#x987A;&#x5E8F;&#x8C03;&#x7528;">&#x9ED8;&#x8BA4;&#x987A;&#x5E8F;&#x8C03;&#x7528;</a></li>
+<li><a href="#&#x4F7F;&#x7528;-async-&#x5E76;&#x53D1;">&#x4F7F;&#x7528; async &#x5E76;&#x53D1;</a></li>
+<li><a href="#&#x60F0;&#x6027;&#x542F;&#x52A8;&#x7684;-async">&#x60F0;&#x6027;&#x542F;&#x52A8;&#x7684; async</a></li>
+<li><a href="#async-&#x98CE;&#x683C;&#x7684;&#x51FD;&#x6570;">async &#x98CE;&#x683C;&#x7684;&#x51FD;&#x6570;</a></li>
+<li><a href="#&#x4F7F;&#x7528;-async-&#x7684;&#x7ED3;&#x6784;&#x5316;&#x5E76;&#x53D1;">&#x4F7F;&#x7528; async &#x7684;&#x7ED3;&#x6784;&#x5316;&#x5E76;&#x53D1;</a></li>
+</ul>
+</li>
+</ul>
+<!--- END -->
+<h2 id="&#x7EC4;&#x5408;&#x6302;&#x8D77;&#x51FD;&#x6570;">&#x7EC4;&#x5408;&#x6302;&#x8D77;&#x51FD;&#x6570;</h2>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x5C06;&#x6302;&#x8D77;&#x51FD;&#x6570;&#x7EC4;&#x5408;&#x7684;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x9ED8;&#x8BA4;&#x987A;&#x5E8F;&#x8C03;&#x7528;">&#x9ED8;&#x8BA4;&#x987A;&#x5E8F;&#x8C03;&#x7528;</h3>
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x8FDB;&#x884C;&#x67D0;&#x79CD;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x6216;&#x8005;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x7684;<!--
+-->&#x6302;&#x8D77;&#x51FD;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x5047;&#x8BBE;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x5B83;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x53EA;&#x662F;<!--
+-->&#x4E3A;&#x4E86;&#x8BE5;&#x76EE;&#x7684;&#x800C;&#x5EF6;&#x8FDF;&#x4E86;&#x4E00;&#x79D2;&#x949F;&#xFF1A;</p>
+<pre><code class="lang-kotlin">suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulOne</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">13</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulTwo</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">29</span>
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x6309; <em>&#x987A;&#x5E8F;</em> &#x8C03;&#x7528;&#x5B83;&#x4EEC;&#xFF0C;&#x6211;&#x4EEC;&#x63A5;&#x4E0B;&#x6765;&#x4F1A;&#x505A;&#x4EC0;&#x4E48;&#x2014;&#x2014;&#x9996;&#x5148;&#x8C03;&#x7528; <code>doSomethingUsefulOne</code> <em>&#x63A5;&#x4E0B;&#x6765;</em>
+&#x8C03;&#x7528; <code>doSomethingUsefulTwo</code>&#xFF0C;&#x5E76;&#x4E14;&#x8BA1;&#x7B97;&#x5B83;&#x4EEC;&#x7ED3;&#x679C;&#x7684;&#x548C;&#x5417;&#xFF1F;
+&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x6839;&#x636E;&#x7B2C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x679C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x6211;&#x4EEC;&#x9700;&#x8981;<!--
+-->&#x8C03;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x51FD;&#x6570;&#x6216;&#x8005;&#x51B3;&#x5B9A;&#x5982;&#x4F55;&#x8C03;&#x7528;&#x5B83;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x8FD9;&#x6837;&#x505A;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7684;&#x987A;&#x5E8F;&#x6765;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x534F;&#x7A0B;&#x4E2D;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x50CF;&#x5E38;&#x89C4;&#x7684;<!--
+-->&#x4EE3;&#x7801;&#x4E00;&#x6837; <em>&#x987A;&#x5E8F;</em> &#x90FD;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x5C55;&#x793A;&#x4E86;&#x6D4B;&#x91CF;<!--
+-->&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x6302;&#x8D77;&#x51FD;&#x6570;&#x6240;&#x9700;&#x8981;&#x7684;&#x603B;&#x65F6;&#x95F4;&#xFF1A;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlin.system.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> time</span> = measureTimeMillis {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = doSomethingUsefulOne()
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = doSomethingUsefulTwo()
+        println(<span class="hljs-string">&quot;The answer is ${one + two}&quot;</span>)
+    }
+    println(<span class="hljs-string">&quot;Completed in $time ms&quot;</span>)
+<span class="hljs-comment">//sampleEnd    </span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulOne</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">13</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulTwo</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">29</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-compose-01.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5B83;&#x7684;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">The answer is 42
+Completed in 2017 ms
+</code></pre>
+<!--- TEST ARBITRARY_TIME -->
+<h3 id="&#x4F7F;&#x7528;-async-&#x5E76;&#x53D1;">&#x4F7F;&#x7528; async &#x5E76;&#x53D1;</h3>
+<p>&#x5982;&#x679C; <code>doSomethingUsefulOne</code> &#x4E0E; <code>doSomethingUsefulTwo</code> &#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;&#xFF0C;&#x5E76;&#x4E14;<!--
+-->&#x6211;&#x4EEC;&#x60F3;&#x66F4;&#x5FEB;&#x7684;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#xFF0C;&#x8BA9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C; <em>&#x5E76;&#x53D1;</em> &#x5417;&#xFF1F;&#x8FD9;&#x5C31;&#x662F; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+<p>&#x5728;&#x6982;&#x5FF5;&#x4E0A;&#xFF0C;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x5C31;&#x7C7B;&#x4F3C;&#x4E8E; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/launch.html" target="_blank">launch</a>&#x3002;&#x5B83;&#x542F;&#x52A8;&#x4E86;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x534F;&#x7A0B;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x7EBF;&#x7A0B;<!--
+-->&#x5E76;&#x4E0E;&#x5176;&#x5B83;&#x6240;&#x6709;&#x7684;&#x534F;&#x7A0B;&#x4E00;&#x8D77;&#x5E76;&#x53D1;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E; <code>launch</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html" target="_blank">Job</a> &#x5E76;&#x4E14;<!--
+-->&#x4E0D;&#x9644;&#x5E26;&#x4EFB;&#x4F55;&#x7ED3;&#x679C;&#x503C;&#xFF0C;&#x800C; <code>async</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html" target="_blank">Deferred</a> &#x2014;&#x2014; &#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x975E;&#x963B;&#x585E; future&#xFF0C;
+&#x8FD9;&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x5C06;&#x4F1A;&#x5728;&#x7A0D;&#x540E;&#x63D0;&#x4F9B;&#x7ED3;&#x679C;&#x7684; promise&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>.await()</code> &#x5728;&#x4E00;&#x4E2A;&#x5EF6;&#x671F;&#x7684;&#x503C;&#x4E0A;&#x5F97;&#x5230;&#x5B83;&#x7684;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#xFF0C;
+&#x4F46;&#x662F; <code>Deferred</code> &#x4E5F;&#x662F;&#x4E00;&#x4E2A; <code>Job</code>&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x5B83;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlin.system.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> time</span> = measureTimeMillis {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = async { doSomethingUsefulOne() }
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = async { doSomethingUsefulTwo() }
+        println(<span class="hljs-string">&quot;The answer is ${one.await() + two.await()}&quot;</span>)
+    }
+    println(<span class="hljs-string">&quot;Completed in $time ms&quot;</span>)
+<span class="hljs-comment">//sampleEnd    </span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulOne</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">13</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulTwo</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">29</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-compose-02.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5B83;&#x7684;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">The answer is 42
+Completed in 1017 ms
+</code></pre>
+<!--- TEST ARBITRARY_TIME -->
+<p>&#x8FD9;&#x91CC;&#x5FEB;&#x4E86;&#x4E24;&#x500D;&#xFF0C;&#x56E0;&#x4E3A;&#x4E24;&#x4E2A;&#x534F;&#x7A0B;&#x5E76;&#x53D1;&#x6267;&#x884C;&#x3002;
+&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x4F7F;&#x7528;&#x534F;&#x7A0B;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x603B;&#x662F;&#x663E;&#x5F0F;&#x7684;&#x3002;</p>
+<h3 id="&#x60F0;&#x6027;&#x542F;&#x52A8;&#x7684;-async">&#x60F0;&#x6027;&#x542F;&#x52A8;&#x7684; async</h3>
+<p>&#x53EF;&#x9009;&#x7684;&#xFF0C;<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06; <code>start</code> &#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-start/-l-a-z-y.html" target="_blank">CoroutineStart.LAZY</a> &#x800C;&#x53D8;&#x4E3A;&#x60F0;&#x6027;&#x7684;&#x3002;
+&#x5728;&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;&#x7ED3;&#x679C;&#x901A;&#x8FC7; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html" target="_blank">await</a>
+&#x83B7;&#x53D6;&#x7684;&#x65F6;&#x5019;&#x534F;&#x7A0B;&#x624D;&#x4F1A;&#x542F;&#x52A8;&#xFF0C;&#x6216;&#x8005;&#x5728; <code>Job</code> &#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/start.html" target="_blank">start</a>
+&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x3002;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlin.system.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> time</span> = measureTimeMillis {
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = async(start = CoroutineStart.LAZY) { doSomethingUsefulOne() }
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = async(start = CoroutineStart.LAZY) { doSomethingUsefulTwo() }
+        <span class="hljs-comment">// &#x6267;&#x884C;&#x4E00;&#x4E9B;&#x8BA1;&#x7B97;</span>
+        one.start() <span class="hljs-comment">// &#x542F;&#x52A8;&#x7B2C;&#x4E00;&#x4E2A;</span>
+        two.start() <span class="hljs-comment">// &#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;</span>
+        println(<span class="hljs-string">&quot;The answer is ${one.await() + two.await()}&quot;</span>)
+    }
+    println(<span class="hljs-string">&quot;Completed in $time ms&quot;</span>)
+<span class="hljs-comment">//sampleEnd    </span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulOne</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">13</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulTwo</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">29</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-compose-03.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5B83;&#x7684;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">The answer is 42
+Completed in 1017 ms
+</code></pre>
+<!--- TEST ARBITRARY_TIME -->
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x5148;&#x524D;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x7684;&#x4E24;&#x4E2A;&#x534F;&#x7A0B;&#x6CA1;&#x6709;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x63A7;&#x5236;&#x6743;&#x5728;&#x4E8E;<!--
+-->&#x7A0B;&#x5E8F;&#x5458;&#x51C6;&#x786E;&#x7684;&#x5728;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x65F6;&#x8C03;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/start.html" target="_blank">start</a>&#x3002;&#x6211;&#x4EEC;&#x9996;&#x5148;
+&#x8C03;&#x7528; <code>one</code>&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>two</code>&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x534F;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x5728; <code>println</code> &#x4E2D;&#x8C03;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html" target="_blank">await</a>&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x5728;<!--
+-->&#x5355;&#x72EC;&#x7684;&#x534F;&#x7A0B;&#x4E2D;&#x8C03;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/start.html" target="_blank">start</a>&#xFF0C;&#x8FD9;&#x5C06;&#x4F1A;&#x5BFC;&#x81F4;&#x987A;&#x5E8F;&#x884C;&#x4E3A;&#xFF0C;&#x76F4;&#x5230; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/await.html" target="_blank">await</a> &#x542F;&#x52A8;&#x8BE5;&#x534F;&#x7A0B;
+&#x6267;&#x884C;&#x5E76;&#x7B49;&#x5F85;&#x81F3;&#x5B83;&#x7ED3;&#x675F;&#xFF0C;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x60F0;&#x6027;&#x7684;&#x9884;&#x671F;&#x7528;&#x4F8B;&#x3002;
+&#x5728;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x503C;&#x6D89;&#x53CA;&#x6302;&#x8D77;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A; <code>async(start = CoroutineStart.LAZY)</code> &#x7684;&#x7528;&#x4F8B;&#x7528;&#x4E8E;&#x66FF;&#x4EE3;<!--
+-->&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684; <code>lazy</code> &#x51FD;&#x6570;&#x3002;</p>
+<h3 id="async-&#x98CE;&#x683C;&#x7684;&#x51FD;&#x6570;">async &#x98CE;&#x683C;&#x7684;&#x51FD;&#x6570;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5F02;&#x6B65;&#x98CE;&#x683C;&#x7684;&#x51FD;&#x6570;&#x6765; <em>&#x5F02;&#x6B65;</em> &#x7684;&#x8C03;&#x7528; <code>doSomethingUsefulOne</code> &#x548C; <code>doSomethingUsefulTwo</code>
+&#x5E76;&#x4F7F;&#x7528; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x534F;&#x7A0B;&#x5EFA;&#x9020;&#x5668;&#x5E76;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x663E;&#x5F0F;&#x7684; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-global-scope/index.html" target="_blank">GlobalScope</a> &#x5F15;&#x7528;&#x3002;
+&#x6211;&#x4EEC;&#x7ED9;&#x8FD9;&#x6837;&#x7684;&#x51FD;&#x6570;&#x7684;&#x540D;&#x79F0;&#x4E2D;&#x52A0;&#x4E0A;<!--
+-->&#x201C;&#x2026;&#x2026;Async&#x201D;&#x540E;&#x7F00;&#x6765;&#x7A81;&#x51FA;&#x8868;&#x660E;&#xFF1A;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5B83;&#x4EEC;&#x53EA;&#x505A;&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x5E76;&#x4E14;&#x9700;&#x8981;<!--
+-->&#x4F7F;&#x7528;&#x5EF6;&#x671F;&#x7684;&#x503C;&#x6765;&#x83B7;&#x5F97;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code class="lang-kotlin"><span class="hljs-comment">// somethingUsefulOneAsync &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x662F; Deferred&lt;Int&gt;</span>
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">somethingUsefulOneAsync</span><span class="hljs-params">()</span> = GlobalScope.async {</span>
+    doSomethingUsefulOne()
+}
+
+<span class="hljs-comment">// somethingUsefulTwoAsync &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x662F; Deferred&lt;Int&gt;</span>
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">somethingUsefulTwoAsync</span><span class="hljs-params">()</span> = GlobalScope.async {</span>
+    doSomethingUsefulTwo()
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E9B; <code>xxxAsync</code> &#x51FD;&#x6570;<strong>&#x4E0D;&#x662F;</strong> <em>&#x6302;&#x8D77;</em> &#x51FD;&#x6570;&#x3002;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x3002;
+&#x7136;&#x800C;&#xFF0C;&#x5B83;&#x4EEC;&#x603B;&#x662F;&#x5728;&#x8C03;&#x7528;&#x5B83;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x610F;&#x5473;&#x7740;<!--
+-->&#x5F02;&#x6B65;&#xFF08;&#x8FD9;&#x91CC;&#x7684;&#x610F;&#x601D;&#x662F; <em>&#x5E76;&#x53D1;</em> &#xFF09;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x5B83;&#x4EEC;&#x5728;&#x534F;&#x7A0B;&#x7684;&#x5916;&#x9762;&#x662F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x7684;&#xFF1A;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlin.system.*
+
+<span class="hljs-comment">//sampleStart</span>
+<span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x6211;&#x4EEC;&#x5728; `main` &#x51FD;&#x6570;&#x7684;&#x53F3;&#x8FB9;&#x6CA1;&#x6709;&#x52A0;&#x4E0A; `runBlocking`</span>
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> time</span> = measureTimeMillis {
+        <span class="hljs-comment">// &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x534F;&#x7A0B;&#x5916;&#x9762;&#x542F;&#x52A8;&#x5F02;&#x6B65;&#x6267;&#x884C;</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = somethingUsefulOneAsync()
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = somethingUsefulTwoAsync()
+        <span class="hljs-comment">// &#x4F46;&#x662F;&#x7B49;&#x5F85;&#x7ED3;&#x679C;&#x5FC5;&#x987B;&#x8C03;&#x7528;&#x5176;&#x5B83;&#x7684;&#x6302;&#x8D77;&#x6216;&#x8005;&#x963B;&#x585E;</span>
+        <span class="hljs-comment">// &#x5F53;&#x6211;&#x4EEC;&#x7B49;&#x5F85;&#x7ED3;&#x679C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528; `runBlocking { &#x2026;&#x2026; }` &#x6765;&#x963B;&#x585E;&#x4E3B;&#x7EBF;&#x7A0B;</span>
+        runBlocking {
+            println(<span class="hljs-string">&quot;The answer is ${one.await() + two.await()}&quot;</span>)
+        }
+    }
+    println(<span class="hljs-string">&quot;Completed in $time ms&quot;</span>)
+}
+<span class="hljs-comment">//sampleEnd</span>
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">somethingUsefulOneAsync</span><span class="hljs-params">()</span> = GlobalScope.async {</span>
+    doSomethingUsefulOne()
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">somethingUsefulTwoAsync</span><span class="hljs-params">()</span> = GlobalScope.async {</span>
+    doSomethingUsefulTwo()
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulOne</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">13</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulTwo</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">29</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-compose-04.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<!--- TEST ARBITRARY_TIME
+The answer is 42
+Completed in 1085 ms
+-->
+<blockquote>
+<p>&#x8FD9;&#x79CD;&#x5E26;&#x6709;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#x7684;&#x7F16;&#x7A0B;&#x98CE;&#x683C;&#x4EC5;&#x4F9B;&#x53C2;&#x8003;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x5728;&#x5176;&#x5B83;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;<!--
+-->&#x662F;&#x4E00;&#x79CD;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#x98CE;&#x683C;&#x3002;&#x5728; Kotlin &#x7684;&#x534F;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x98CE;&#x683C;&#x662F;<strong>&#x5F3A;&#x70C8;&#x4E0D;&#x63A8;&#x8350;</strong>&#x7684;&#xFF0C;
+&#x539F;&#x56E0;&#x5982;&#x4E0B;&#x6240;&#x8FF0;&#x3002;</p>
+</blockquote>
+<p>&#x8003;&#x8651;&#x4E00;&#x4E0B;&#x5982;&#x679C; <code>val one = somethingUsefulOneAsync()</code> &#x8FD9;&#x4E00;&#x884C;&#x548C; <code>one.await()</code> &#x8868;&#x8FBE;&#x5F0F;&#x8FD9;&#x91CC;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x6709;&#x903B;&#x8F91;&#x9519;&#x8BEF;&#xFF0C;
+&#x5E76;&#x4E14;&#x7A0B;&#x5E8F;&#x629B;&#x51FA;&#x4E86;&#x5F02;&#x5E38;&#x4EE5;&#x53CA;&#x7A0B;&#x5E8F;&#x5728;&#x64CD;&#x4F5C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E2D;&#x6B62;&#xFF0C;&#x5C06;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x3002;
+&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8005;&#x4F1A;&#x6355;&#x83B7;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x5C06;&#x5F02;&#x5E38;&#x6253;&#x5370;&#x6210;&#x65E5;&#x8BB0;&#x5E76;&#x62A5;&#x544A;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x4F46;&#x662F;&#x53CD;&#x4E4B;<!--
+-->&#x8BE5;&#x7A0B;&#x5E8F;&#x5C06;&#x4F1A;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5176;&#x5B83;&#x64CD;&#x4F5C;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x7684; <code>somethingUsefulOneAsync</code> &#x4ECD;&#x7136;&#x5728;&#x540E;&#x53F0;&#x6267;&#x884C;&#xFF0C;
+&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x542F;&#x52A8;&#x5B83;&#x7684;&#x90A3;&#x6B21;&#x64CD;&#x4F5C;&#x4E5F;&#x4F1A;&#x88AB;&#x7EC8;&#x6B62;&#x3002;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5C06;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x5316;<!--
+-->&#x5E76;&#x53D1;&#xFF0C;&#x5982;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x6240;&#x793A;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;-async-&#x7684;&#x7ED3;&#x6784;&#x5316;&#x5E76;&#x53D1;">&#x4F7F;&#x7528; async &#x7684;&#x7ED3;&#x6784;&#x5316;&#x5E76;&#x53D1;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<a href="#&#x4F7F;&#x7528;-async-&#x7684;&#x7ED3;&#x6784;&#x5316;&#x5E76;&#x53D1;">&#x4F7F;&#x7528; async &#x7684;&#x5E76;&#x53D1;</a>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x7684;&#x4F8B;&#x5B50;&#x5E76;&#x4E14;&#x63D0;&#x53D6;&#x51FA;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<!--
+-->&#x5E76;&#x53D1;&#x7684;&#x8C03;&#x7528; <code>doSomethingUsefulOne</code> &#x4E0E; <code>doSomethingUsefulTwo</code> &#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x5B83;&#x4EEC;&#x4E24;&#x4E2A;&#x7684;&#x7ED3;&#x679C;&#x4E4B;&#x548C;&#x3002;
+&#x7531;&#x4E8E; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html" target="_blank">async</a> &#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x4E86; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html" target="_blank">CoroutineScope</a> &#x4E0A;&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x5B83;&#x5199;&#x5728;<!--
+-->&#x4F5C;&#x7528;&#x57DF;&#x5185;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x662F; <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/coroutine-scope.html" target="_blank">coroutineScope</a> &#x51FD;&#x6570;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-kotlin">suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">concurrentSum</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> = coroutineScope {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = async { doSomethingUsefulOne() }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = async { doSomethingUsefulTwo() }
+    one.await() + two.await()
+}
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x5728; <code>concurrentSum</code> &#x51FD;&#x6570;&#x5185;&#x90E8;&#x53D1;&#x751F;&#x4E86;&#x9519;&#x8BEF;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x629B;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;
+&#x6240;&#x6709;&#x5728;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x542F;&#x52A8;&#x7684;&#x534F;&#x7A0B;&#x90FD;&#x4F1A;&#x88AB;&#x53D6;&#x6D88;&#x3002;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+<span class="hljs-keyword">import</span> kotlin.system.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+<span class="hljs-comment">//sampleStart</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> time</span> = measureTimeMillis {
+        println(<span class="hljs-string">&quot;The answer is ${concurrentSum()}&quot;</span>)
+    }
+    println(<span class="hljs-string">&quot;Completed in $time ms&quot;</span>)
+<span class="hljs-comment">//sampleEnd    </span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">concurrentSum</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> = coroutineScope {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = async { doSomethingUsefulOne() }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = async { doSomethingUsefulTwo() }
+    one.await() + two.await()
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulOne</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">13</span>
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doSomethingUsefulTwo</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+    delay(<span class="hljs-number">1000</span>L) <span class="hljs-comment">// &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4E8B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">29</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-compose-05.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684; <code>main</code> &#x51FD;&#x6570;&#x7684;&#x8F93;&#x51FA;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6267;&#x884C;&#x8FD9;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-text">The answer is 42
+Completed in 1017 ms
+</code></pre>
+<!--- TEST ARBITRARY_TIME -->
+<p>&#x53D6;&#x6D88;&#x59CB;&#x7EC8;&#x901A;&#x8FC7;&#x534F;&#x7A0B;&#x7684;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x6765;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#xFF1A;</p>
+<!--- CLEAR -->
+<pre><code class="lang-kotlin"><span class="hljs-keyword">import</span> kotlinx.coroutines.*
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> = runBlocking<span class="hljs-type">&lt;Unit&gt;</span> {</span>
+    <span class="hljs-keyword">try</span> {
+        failedConcurrentSum()
+    } <span class="hljs-keyword">catch</span>(e: ArithmeticException) {
+        println(<span class="hljs-string">&quot;Computation failed with ArithmeticException&quot;</span>)
+    }
+}
+
+suspend <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">failedConcurrentSum</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> = coroutineScope {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> one</span> = async<span class="hljs-type">&lt;Int&gt;</span> { 
+        <span class="hljs-keyword">try</span> {
+            delay(<span class="hljs-keyword">Long</span>.MAX_VALUE) <span class="hljs-comment">// &#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x957F;&#x65F6;&#x95F4;&#x7684;&#x8FD0;&#x7B97;</span>
+            <span class="hljs-number">42</span>
+        } <span class="hljs-keyword">finally</span> {
+            println(<span class="hljs-string">&quot;First child was cancelled&quot;</span>)
+        }
+    }
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> two</span> = async<span class="hljs-type">&lt;Int&gt;</span> { 
+        println(<span class="hljs-string">&quot;Second child throws an exception&quot;</span>)
+        <span class="hljs-keyword">throw</span> ArithmeticException()
+    }
+    one.await() + two.await()
+}
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="../kotlinx-coroutines-core/jvm/test/guide/example-compose-06.kt">&#x8FD9;&#x91CC;</a>&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5B50;&#x534F;&#x7A0B;&#xFF08;&#x5373; <code>two</code>&#xFF09;&#x5931;&#x8D25;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A; <code>async</code> &#x4EE5;&#x53CA;&#x7B49;&#x5F85;&#x4E2D;&#x7684;&#x7236;&#x534F;&#x7A0B;&#x90FD;&#x4F1A;&#x88AB;&#x53D6;&#x6D88;<!--
+-->&#xFF1A;</p>
+<pre><code class="lang-text">Second child throws an exception
+First child was cancelled
+Computation failed with ArithmeticException
+</code></pre>
+<!--- TEST -->
+<!--- MODULE kotlinx-coroutines-core -->
+<!--- INDEX kotlinx.coroutines -->
+<!--- END -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cancellation-and-timeouts.html" class="navigation navigation-prev " aria-label="Previous page: 取消与超时">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="coroutine-context-and-dispatchers.html" class="navigation navigation-next " aria-label="Next page: 协程上下文与调度器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"组合挂起函数","level":"1.9.4","depth":2,"next":{"title":"协程上下文与调度器","level":"1.9.5","depth":2,"path":"txt/coroutines/coroutine-context-and-dispatchers.md","ref":"txt/coroutines/coroutine-context-and-dispatchers.md","articles":[]},"previous":{"title":"取消与超时","level":"1.9.3","depth":2,"path":"txt/coroutines/cancellation-and-timeouts.md","ref":"txt/coroutines/cancellation-and-timeouts.md","articles":[]},"dir":"ltr"},"config":{"plugins":["regexplace"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<em>([^<]+)</em>\\{: ?\\.keyword\\ ?}","flags":"g","substitute":"<em><strong><code>$1</code></strong></em>"},{"pattern":"<p>\\{:#([^} ]+)\\}</p>","flags":"g","substitute":"<a name=\"$1\"></a>"},{"pattern":"\"/docs/tutorials/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/tutorials/"},{"pattern":"\"/docs/diagnostics/","flags":"g","substitute":"\"https://www.kotlincn.net/docs/diagnostics/"},{"pattern":"\"/community/","flags":"g","substitute":"\"https://www.kotlincn.net/community/"}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"txt/coroutines/composing-suspending-functions.md","mtime":"2021-08-17T05:13:50.066Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-18T05:55:43.929Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
